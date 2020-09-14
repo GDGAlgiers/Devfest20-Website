@@ -28,12 +28,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-tailwind-styled-components`,
+        short_name: `tailwindsc`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#f5f5f5`,
+        theme_color: `#f5f5f5`,
+        display: `standalone`,
         icon: `docs/logo.svg`, // This path is relative to the root of the site.
       },
     },

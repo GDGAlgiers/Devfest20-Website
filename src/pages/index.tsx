@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from "react"
 import { PageProps } from "gatsby"
 import styled from "styled-components"
 import cls from "classnames"
-interface Props {}
+interface Props { }
 
 function Index(props: PageProps<Props>): ReactElement {
   const [isMenuOpen, setMenuOpen] = useState(false)
