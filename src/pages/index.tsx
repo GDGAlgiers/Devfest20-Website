@@ -1,8 +1,9 @@
 import React, { ReactElement, useState } from "react"
-
+import { PageProps } from "gatsby"
+import styled from "styled-components"
 interface Props {}
 
-function Index({}: Props): ReactElement {
+function Index(props: PageProps<Props>): ReactElement {
   const [isMenuOpen, setMenuOpen] = useState(false)
   return (
     <>
@@ -25,7 +26,7 @@ function Index({}: Props): ReactElement {
           <div className="block lg:hidden">
             <button
               onClick={() => {
-                setMenuOpen(isMenuOpen => !isMenuOpen)
+                setMenuOpen((isMenuOpen) => !isMenuOpen)
               }}
               className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
             >
@@ -65,12 +66,12 @@ function Index({}: Props): ReactElement {
               </a>
             </div>
             <div>
-              <a
-                href="/"
-                className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+              <DownloadButton
+                download
+                href="https://tailwindcss.com/img/card-top.jpg"
               >
                 Download
-              </a>
+              </DownloadButton>
             </div>
           </div>
         </nav>
@@ -106,5 +107,9 @@ function Index({}: Props): ReactElement {
     </>
   )
 }
+const DownloadButton = styled.a.attrs({
+  className:
+    "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0",
+})``
 
 export default Index

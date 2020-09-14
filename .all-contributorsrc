@@ -13,10 +13,19 @@
       "contributions": [
         "code"
       ]
+    },
+        {
+      "login": "MeridjaNassim",
+      "name": "Meridja Abdellah Nassim",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/40475473?s=460&u=b481eb1df0ab15e7a581c55c873301eba770f1e7&v=4",
+      "profile": "https://github.com/MeridjaNassim",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "gatsby-typescript-tailwind",
+  "projectName": "gatsby-typescript-tailwind-styledcomponents",
   "projectOwner": "impulse",
   "repoType": "github",
   "repoHost": "https://github.com"
