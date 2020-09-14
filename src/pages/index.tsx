@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from "react"
 import { PageProps } from "gatsby"
 import styled from "styled-components"
+import cls from "classnames"
 interface Props {}
 
 function Index(props: PageProps<Props>): ReactElement {
@@ -28,7 +29,7 @@ function Index(props: PageProps<Props>): ReactElement {
               onClick={() => {
                 setMenuOpen((isMenuOpen) => !isMenuOpen)
               }}
-              className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white outline-none"
             >
               <svg
                 className="fill-current h-3 w-3"
@@ -41,9 +42,10 @@ function Index(props: PageProps<Props>): ReactElement {
             </button>
           </div>
           <div
-            className={`w-full ${
+            className={cls(
+              "w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto",
               isMenuOpen ? "block" : "hidden"
-            } lg:block flex-grow lg:flex lg:items-center lg:w-auto`}
+            )}
           >
             <div className="text-sm lg:flex-grow">
               <a
