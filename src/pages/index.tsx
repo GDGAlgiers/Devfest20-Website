@@ -9,7 +9,7 @@ function index({}: PageProps<Props>): ReactElement {
       <h1>Hello in index page</h1>
       <p>
         <Link to="/example" className="line">
-          Go to example page
+          Go to TEST
         </Link>
       </p>
     </div>
