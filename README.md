@@ -5,9 +5,6 @@
     <img alt="Gatsby TypeScript Tailwind" src="./docs/logo.svg" width="230" />
   </a>
 </p>
-<h1 align="center">
-Gatsby TypeScript Tailwind
-</h1>
 
 ## 🚀 Quick start
 
