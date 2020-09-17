@@ -13639,6 +13639,13 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwindcss-typography@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-typography/-/tailwindcss-typography-3.1.0.tgz#b60690d97a53b0d94eab286cd02f68d6d30e2d3d"
+  integrity sha512-uqovHMt9orPs1kl2U+bidlcO25tmUGJjjluQdI67yRnOy/IlqKe6tYcHHAsQPhehlk3r11/T3CE7Uc0PSUJcNg==
+  dependencies:
+    lodash "^4.17.15"
+
 tailwindcss@1.8.9:
   version "1.8.9"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.9.tgz#86aa05f019b4975675d1c67a2c9962d9c833ea13"
