@@ -7,9 +7,9 @@ interface Props {}
 function index({}: PageProps<Props>): ReactElement {
   return (
     <div>
-      <H1>Hello in index page</H1>
+      <H1 className="text-blue">Hello in index page</H1>
       <p>
-        <Link to="/example" className="line">
+        <Link to="/example" className="no-underline hover:text-blue">
           Go to example page
         </Link>
       </p>

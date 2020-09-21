@@ -5,6 +5,15 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Product Sans"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-next-seo`,
     {
