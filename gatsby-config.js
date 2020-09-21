@@ -8,6 +8,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
+        google: {
+          families: ["Roboto", "Montserrat"],
+        },
         custom: {
           families: ["Product Sans"],
           urls: ["/fonts/fonts.css"],
