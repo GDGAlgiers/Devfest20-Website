@@ -34,9 +34,9 @@ function Index(props: PageProps<Props>): ReactElement {
   return (
     <>
       <SEO title="Home" description="The home page of the site" language="en" />
-      <div>
-        <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-          <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <div className="bg-nightBlue text-yellow-lighter">
+        <nav className="flex items-center justify-between flex-wrap p-6">
+          <div className="flex items-center flex-shrink-0  mr-6">
             <svg
               className="fill-current h-8 w-8 mr-2"
               width="54"
@@ -69,7 +69,7 @@ function Index(props: PageProps<Props>): ReactElement {
           </div>
           <div
             className={cls(
-              "w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto",
+              "w-full  flex-grow lg:flex lg:items-center lg:w-auto",
               isMenuOpen ? "block" : "hidden"
             )}
           >
@@ -105,7 +105,7 @@ function Index(props: PageProps<Props>): ReactElement {
         </nav>
       </div>
       <div className="container max-w-md mx-auto mt-10">
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="rounded overflow-hidden shadow-lg bg-yellow-lighter text-black-darker">
           <Image
             className="w-full"
             fluid={data.file.childImageSharp.fluid}
@@ -137,7 +137,7 @@ function Index(props: PageProps<Props>): ReactElement {
 }
 const DownloadButton = styled.a.attrs({
   className:
-    "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0",
+    "inline-block text-sm px-4 py-2 leading-none border rounded hover:bg-yellow hover:text-black mt-4 lg:mt-0",
 })``
 
 export default Index
