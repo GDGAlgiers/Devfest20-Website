@@ -1,5 +1,28 @@
 module.exports = {
   theme: {
+    colors: {
+      black: {
+        lighter: "#212121",
+        default: "#2D2D2D",
+        darker: "#000000",
+      },
+      white: {
+        lighter: "#FFFFFF",
+        default: "#F8F9FA",
+      },
+
+      green: {
+        default: "#0CAD4D",
+        darker: "#0F9D58",
+      },
+      red: "#EA4335",
+      yellow: {
+        lighter: "#FBBC04",
+        default: "#F9AB00",
+      },
+      blue: "#4285F4",
+      nightBlue: "#191C48",
+    },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
     },
@@ -155,6 +178,11 @@ module.exports = {
         },
       },
     }),
+    // extend: {
+    //   colors : {
+    //     "dark-blue": "#191C48"
+    //   }
+    // }
   },
   variants: {
     // all the following default to ['responsive']
