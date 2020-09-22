@@ -1,23 +1,32 @@
-import React, { PropsWithChildren, ReactElement } from "react"
+import React, { CSSProperties, PropsWithChildren, ReactElement } from "react"
 import styled from "styled-components"
 import cls from "classnames"
 import { customShadow } from "../css"
-interface Props {
-  className?: string
+export interface CardProps {
+  containerClassName?: string
   topBarClassName?: string
   contentAreaClassName?: string
+  containerStyle?: CSSProperties
+  topBarStyle?: CSSProperties
+  contentAreaStyle?: CSSProperties
 }
 
 function Card({
-  className,
+  containerClassName,
   topBarClassName,
   contentAreaClassName,
+  containerStyle,
+  topBarStyle,
+  contentAreaStyle,
   children,
-}: PropsWithChildren<Props>): ReactElement {
+}: PropsWithChildren<CardProps>): ReactElement {
   return (
-    <CardContainer className={className}>
-      <CardTopBar className={topBarClassName}></CardTopBar>
-      <CardContentArea className={contentAreaClassName}>
+    <CardContainer style={containerStyle} className={containerClassName}>
+      <CardTopBar style={topBarStyle} className={topBarClassName}></CardTopBar>
+      <CardContentArea
+        style={contentAreaStyle}
+        className={contentAreaClassName}
+      >
         {children}
       </CardContentArea>
     </CardContainer>
@@ -43,5 +52,8 @@ const CardTopBar = styled.div.attrs((props) => ({
 }))``
 const CardContentArea = styled.div.attrs((props) => ({
   ...props,
-  className: cls("flex justify-center items-center", props.className),
+  className: cls(
+    "flex flex-col justify-center items-center self-stretch h-full",
+    props.className
+  ),
 }))``
