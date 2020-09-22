@@ -1,16 +1,56 @@
 import React, { ReactElement, useEffect, useState } from "react"
 import styled from "styled-components"
 import cls from "classnames"
-import { useAtleastSmall } from "../../utils/medias"
+import { useAtleastMedium } from "../../utils/medias"
+import {
+  INDEX_ABOUT_SECTION,
+  INDEX_AGENDA_SECTION,
+  INDEX_CHALLENGES_SECTION,
+  INDEX_SPEAKERS_SECTION,
+  INDEX_SPONSORS_SECTION,
+} from "../../utils/links"
+import { Link } from "gatsby"
 
+const links = [
+  {
+    linkName: "About",
+    linkUrl: INDEX_ABOUT_SECTION,
+  },
+  {
+    linkName: "Agenda",
+    linkUrl: INDEX_AGENDA_SECTION,
+  },
+  {
+    linkName: "Speakers",
+    linkUrl: INDEX_SPEAKERS_SECTION,
+  },
+  {
+    linkName: "Challenges",
+    linkUrl: INDEX_CHALLENGES_SECTION,
+  },
+  {
+    linkName: "Sponsors",
+    linkUrl: INDEX_SPONSORS_SECTION,
+  },
+]
 interface Props {}
 function Navbar(props: Props): ReactElement {
-  const isSM = useAtleastSmall()
+  const isMD = useAtleastMedium()
   const [open, setOpen] = useState(false)
   const toggleNavbar = () => setOpen(!open)
   useEffect(() => {
     console.log("Navbar open ? ", open)
   }, [open])
+  const renderLinks = () => {
+    return links.map((link) => (
+      <NavLink>
+        <Link to={link.linkUrl} activeClassName="text-yellow-lighter underline">
+          {" "}
+          {link.linkName}
+        </Link>
+      </NavLink>
+    ))
+  }
   return (
     <StyledNav className="text-xl sm:text-lg">
       <MenuButton
@@ -20,12 +60,8 @@ function Navbar(props: Props): ReactElement {
       >
         Menu
       </MenuButton>
-      <NavLinks open={open} isSM={isSM}>
-        <NavLink>About</NavLink>
-        <NavLink>Agenda</NavLink>
-        <NavLink>Speakers</NavLink>
-        <NavLink>Challenges</NavLink>
-        <NavLink>Sponsors</NavLink>
+      <NavLinks open={open} isMD={isMD}>
+        {renderLinks()}
       </NavLinks>
     </StyledNav>
   )
@@ -42,12 +78,12 @@ const StyledNav = styled.nav.attrs((props) => ({
     props.className
   ),
 }))``
-const NavLinks = styled.ul.attrs<{ isSM: boolean; open: boolean }>((props) => ({
+const NavLinks = styled.ul.attrs<{ isMD: boolean; open: boolean }>((props) => ({
   ...props,
   className: cls(
     "flex flex-col w-full justify-evenly sm:w-3/4 md:w-1/2 sm:flex-row items-center sm:mx-auto p-4 sm:p-2",
     cls({
-      hidden: !props.isSM && !props.open,
+      hidden: !props.isMD && !props.open,
     }),
     props.className
   ),
