@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect, useState } from "react"
 import styled from "styled-components"
 import cls from "classnames"
-import { useAtleastMedium } from "../../utils/medias"
+import { useAtleastSmall } from "../../utils/medias"
 import {
   INDEX_ABOUT_SECTION,
   INDEX_AGENDA_SECTION,
@@ -35,17 +35,13 @@ const links = [
 ]
 interface Props {}
 function Navbar(props: Props): ReactElement {
-  const isMD = useAtleastMedium()
+  const isSM = useAtleastSmall()
   const [open, setOpen] = useState(false)
   const toggleNavbar = () => setOpen(!open)
-  useEffect(() => {
-    console.log("Navbar open ? ", open)
-  }, [open])
   const renderLinks = () => {
     return links.map((link) => (
       <NavLink>
         <Link to={link.linkUrl} activeClassName="text-yellow-lighter underline">
-          {" "}
           {link.linkName}
         </Link>
       </NavLink>
@@ -60,7 +56,7 @@ function Navbar(props: Props): ReactElement {
       >
         Menu
       </MenuButton>
-      <NavLinks open={open} isMD={isMD}>
+      <NavLinks open={open} isSM={isSM}>
         {renderLinks()}
       </NavLinks>
     </StyledNav>
@@ -78,12 +74,12 @@ const StyledNav = styled.nav.attrs((props) => ({
     props.className
   ),
 }))``
-const NavLinks = styled.ul.attrs<{ isMD: boolean; open: boolean }>((props) => ({
+const NavLinks = styled.ul.attrs<{ isSM: boolean; open: boolean }>((props) => ({
   ...props,
   className: cls(
-    "flex flex-col w-full justify-evenly sm:w-3/4 md:w-1/2 sm:flex-row items-center sm:mx-auto p-4 sm:p-2",
+    "flex flex-col w-full justify-evenly sm:w-3/4 lg:w-1/2 sm:flex-row items-center sm:mx-auto p-4 sm:p-2",
     cls({
-      hidden: !props.isMD && !props.open,
+      hidden: !props.isSM && !props.open,
     }),
     props.className
   ),
