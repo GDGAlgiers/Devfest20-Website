@@ -1,5 +1,6 @@
 import { Link, PageProps } from "gatsby"
 import React, { ReactElement } from "react"
+import Button from "../components/common/Button/Button"
 import { H1 } from "../components/typography/typography"
 import Layout from "../layout/Layout"
 
@@ -13,6 +14,8 @@ function index({}: PageProps<Props>): ReactElement {
         <Link to="/example" className="no-underline hover:text-blue">
           Go to example page
         </Link>
+        <Button text="Register" className="bg-yellow text-nightBlue"></Button>
+        <Button text="About" className="bg-blue text-white"></Button>
       </p>
     </Layout>
   )
