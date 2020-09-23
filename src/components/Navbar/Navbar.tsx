@@ -116,7 +116,10 @@ const NavLinks = styled.ul.attrs<{ open: boolean }>((props) => {
 `
 const NavLink = styled.li.attrs((props) => ({
   ...props,
-  className: cls("my-2", props.className),
+  className: cls(
+    "my-2 hover:text-yellow transition-all duration-500 ease",
+    props.className
+  ),
 }))``
 
 const MenuButton = styled.button.attrs<{ open: boolean }>((props) => ({
