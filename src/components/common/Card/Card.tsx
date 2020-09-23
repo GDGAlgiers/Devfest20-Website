@@ -4,8 +4,8 @@ import cls from "classnames"
 import { customShadow } from "../css"
 export interface CardProps {
   containerClassName?: string
-  topBarClassName?: string
   contentAreaClassName?: string
+  topBarClassName?: string
   containerStyle?: CSSProperties
   topBarStyle?: CSSProperties
   contentAreaStyle?: CSSProperties
@@ -13,8 +13,8 @@ export interface CardProps {
 
 function Card({
   containerClassName,
-  topBarClassName,
   contentAreaClassName,
+  topBarClassName,
   containerStyle,
   topBarStyle,
   contentAreaStyle,
@@ -48,12 +48,11 @@ const CardContainer = styled.div.attrs((props) => ({
 `
 const CardTopBar = styled.div.attrs((props) => ({
   ...props,
-  className: cls("h-4 w-full border-b-2", props.className),
+  className: cls("h-4 w-full border-b-2"),
 }))``
 const CardContentArea = styled.div.attrs((props) => ({
   ...props,
   className: cls(
-    "flex flex-col justify-center items-center self-stretch h-full",
-    props.className
+    "flex flex-col justify-center items-center self-stretch h-full"
   ),
 }))``

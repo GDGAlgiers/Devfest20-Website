@@ -7,14 +7,18 @@ interface AgendaProps {
   header?: string
   cardOptions: CardProps
   containerClassName?: string
+  topBarColor: string
+  hoverToBarColor: string
 }
 
 function AgendaCard({
   header,
   cardOptions,
   containerClassName,
+  topBarColor,
+  hoverToBarColor,
 }: AgendaProps): ReactElement {
-  const [showText, setShowText] = useState(false)
+  const [hover, setHover] = useState(false)
 
   return (
     <div
@@ -22,22 +26,30 @@ function AgendaCard({
         "inline-block transition-all ease-in-out duration-500",
         containerClassName
       )}
-      onMouseEnter={(e) => setShowText(true)}
-      onMouseLeave={(e) => setShowText(false)}
+      onMouseEnter={(e) => setHover(true)}
+      onMouseLeave={(e) => setHover(false)}
     >
       {" "}
       <Card
-        {...cardOptions}
         contentAreaClassName={cls(cardOptions.contentAreaClassName, "p-10")}
         containerClassName={cls(cardOptions.containerClassName, "max-h-screen")}
+        topBarClassName={cls(
+          cardOptions.topBarClassName,
+          "transition-all duration-200 ease",
+          {
+            [hoverToBarColor]: hover,
+            [topBarColor]: !hover,
+          }
+        )}
       >
         <HeaderText>{header}</HeaderText>
-        <ContentText show={showText}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
-          error labore magni quidem repudiandae. Consequatur pariatur provident
-          amet, laudantium ipsam animi laborum error quibusdam eum aut. Mollitia
-          facilis rerum assumenda.
-        </ContentText>
+        <Agenda show={hover}>
+          <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
+          <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
+          <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
+          <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
+          <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
+        </Agenda>
       </Card>
     </div>
   )
@@ -50,10 +62,10 @@ const HeaderText = styled(H3).attrs((props) => ({
   ...props,
   className: cls(),
 }))``
-const ContentText = styled.p.attrs<{ show: boolean }>((props) => ({
+const Agenda = styled.ul.attrs<{ show: boolean }>((props) => ({
   ...props,
   className: cls(
-    "text-center mt-2 origin-bottom-right transition-all ease duration-500",
+    "text-center mt-2 origin-bottom-right transition-all ease duration-500 font-bold text-xl",
     {
       collapse: !props.show,
       show: props.show,
@@ -73,3 +85,4 @@ const ContentText = styled.p.attrs<{ show: boolean }>((props) => ({
     overflow: auto;
   }
 `
+const AgendaItem = styled.li``
