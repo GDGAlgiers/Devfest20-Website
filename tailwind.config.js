@@ -24,7 +24,7 @@ module.exports = {
       nightBlue: "#191C48",
     },
     fontFamily: {
-      sans: ['"Product Sans"', "Roboto", "sans-serif"],
+      sans: ['"Open Sans"', "Roboto", "sans-serif"],
     },
     textIndent: {
       // defaults to {}
