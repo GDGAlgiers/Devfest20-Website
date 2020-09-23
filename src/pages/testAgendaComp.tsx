@@ -7,8 +7,9 @@ interface Props {}
 
 function index({}: PageProps<Props>): ReactElement {
   return (
-    <div className="w-full">
+    <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center self-start m-auto">
       <AgendaCard
+        containerClassName="flex-1"
         header="< / Day One >"
         cardOptions={{
           topBarClassName: "bg-yellow",
@@ -16,6 +17,7 @@ function index({}: PageProps<Props>): ReactElement {
         }}
       />
       <AgendaCard
+        containerClassName="flex-1"
         header="< / Day One >"
         cardOptions={{
           topBarClassName: "bg-yellow",
