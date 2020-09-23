@@ -1,7 +1,8 @@
 import { PageProps } from "gatsby"
 import React, { ReactElement } from "react"
 import { H1 } from "../components/typography/typography"
-import Header from "../layout/header"
+import Header from "../layout/Header"
+
 interface Props {}
 
 function TestNavbar({}: PageProps<Props>): ReactElement {
