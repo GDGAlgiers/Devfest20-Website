@@ -32,7 +32,10 @@ function AgendaCard({
       {" "}
       <Card
         contentAreaClassName={cls(cardOptions.contentAreaClassName, "p-10")}
-        containerClassName={cls(cardOptions.containerClassName, "max-h-screen")}
+        containerClassName={cls(
+          cardOptions.containerClassName,
+          "max-h-screen relative"
+        )}
         topBarClassName={cls(
           cardOptions.topBarClassName,
           "transition-all duration-200 ease",
@@ -42,7 +45,7 @@ function AgendaCard({
           }
         )}
       >
-        <HeaderText>{header}</HeaderText>
+        <HeaderText hover={hover}>{header}</HeaderText>
         <Agenda show={hover}>
           <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
           <AgendaItem>10h:00 - 11h:00 Openning Ceremony</AgendaItem>
@@ -58,9 +61,15 @@ function AgendaCard({
 export default AgendaCard
 
 /// Styled Components
-const HeaderText = styled(H3).attrs((props) => ({
+const HeaderText = styled(H3).attrs<{ hover: boolean }>((props) => ({
   ...props,
-  className: cls(),
+  className: cls(
+    "transform translate-all ease duration-500 pb-6 text-5xl font-light",
+    {
+      "translate-y-20": !props.hover,
+      "translate-y-0": props.hover,
+    }
+  ),
 }))``
 const Agenda = styled.ul.attrs<{ show: boolean }>((props) => ({
   ...props,
@@ -74,15 +83,11 @@ const Agenda = styled.ul.attrs<{ show: boolean }>((props) => ({
 }))`
   &.collapse {
     opacity: 0;
-    max-height: 0px;
     transform: scale(0);
-    overflow: hidden;
   }
   &.show {
     opacity: 1;
-    max-height: 100vh;
     transform: scale(1);
-    overflow: auto;
   }
 `
 const AgendaItem = styled.li``
