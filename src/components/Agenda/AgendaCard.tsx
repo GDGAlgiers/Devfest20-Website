@@ -31,10 +31,7 @@ function AgendaCard({
     >
       {" "}
       <Card
-        contentAreaClassName={cls(
-          cardOptions.contentAreaClassName,
-          "p-1 sm:p-4"
-        )}
+        contentAreaClassName={cls(cardOptions.contentAreaClassName)}
         containerClassName={cls(
           cardOptions.containerClassName,
           "max-h-screen relative"
