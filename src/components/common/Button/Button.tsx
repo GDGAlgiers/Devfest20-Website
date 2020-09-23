@@ -11,7 +11,7 @@ function Button(props: ButtonProps): ReactElement {
   return (
     <StyledButton
       className={cls(
-        "py-5 px-10 text-xl sm:text-lg outline-none focus:outline-none rounded-sm",
+        "py-5 px-10 text-xl sm:text-lg outline-none focus:outline-none",
         props.className
       )}
     >
