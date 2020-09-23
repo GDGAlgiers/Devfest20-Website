@@ -1,4 +1,4 @@
-import { PageProps } from "gatsby"
+import { Link, PageProps } from "gatsby"
 import React from "react"
 import styled, { css, keyframes } from "styled-components"
 import { H1 } from "../components/typography/typography"
@@ -6,10 +6,17 @@ import cls from "classnames"
 export default function (props: PageProps) {
   return (
     <Wrapper>
+      <Link
+        to="/"
+        className="transition-all duration-200 ease border-2 border-solid rounded-md p-2 text-yellow-lighter absolute top-0 left-0 m-4 hover:bg-yellow-lighter hover:text-nightBlue"
+      >
+        {" "}
+        {"<- "} Take me back
+      </Link>
       <Title>
-        <span className="text-purple-700 font-medium">404</span>
-        <VerticalLine className="bg-purple-700 sm:h-12 h-10 align-baseline"></VerticalLine>
-        <span>Page not found</span>
+        <span className="text-yellow-lighter font-medium">404</span>
+        <VerticalLine className="bg-yellow sm:h-12 h-10 align-baseline"></VerticalLine>
+        <span className="text-white">Page not found</span>
       </Title>
     </Wrapper>
   )
@@ -29,7 +36,7 @@ const PageFadeIn = css`
   animation: ${FadeInKeyFrames} 0.2s ease forwards;
 `
 const Wrapper = styled.div.attrs((props) => ({
-  className: cls("flex justify-center items-center", "bg-gray-200"),
+  className: cls("flex justify-center items-center", "bg-nightBlue"),
 }))`
   height: 100vh;
   width: 100%;
