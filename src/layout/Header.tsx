@@ -6,7 +6,7 @@ interface HeaderProps {}
 
 function Header(props: HeaderProps): ReactElement {
   return (
-    <StyledHeader>
+    <StyledHeader className="z-10">
       <Navbar />
     </StyledHeader>
   )
