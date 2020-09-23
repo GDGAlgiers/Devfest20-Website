@@ -1,10 +1,7 @@
 import { Link, PageProps } from "gatsby"
 import React, { ReactElement } from "react"
-<<<<<<< HEAD
 import AgendaSection from "../components/Agenda/AgendaSection"
-=======
 import Button from "../components/common/Button/Button"
->>>>>>> ffafcb4... Added: Devfest Button
 import { H1 } from "../components/typography/typography"
 import Layout from "../layout/Layout"
 import Card from "../components/common/Card/Card"
