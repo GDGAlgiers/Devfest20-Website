@@ -16,7 +16,7 @@ function Layout({
     <>
       <SEO title={pageTitle} description={pageDescription} />
       <Header />
-      <main className="py-24 px-16">{children}</main>
+      <main className="pt-24">{children}</main>
       <footer>All rights reserved to GDG Algiers</footer>
     </>
   )
