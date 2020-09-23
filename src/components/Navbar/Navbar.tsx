@@ -1,9 +1,4 @@
-import React, {
-  ReactElement,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react"
+import React, { ReactElement, useLayoutEffect, useState } from "react"
 import styled from "styled-components"
 import cls from "classnames"
 import { SMALL, useAtleastSmall } from "../../utils/medias"
@@ -38,8 +33,10 @@ const links = [
     linkUrl: INDEX_SPONSORS_SECTION,
   },
 ]
-interface Props {}
-function Navbar(props: Props): ReactElement {
+interface NavBarProps {
+  className?: string
+}
+function Navbar({ className }: NavBarProps): ReactElement {
   /// when true it means the screen is atleast 640px wide
   const isSM = useAtleastSmall()
   const [open, setOpen] = useState(false)
@@ -63,7 +60,7 @@ function Navbar(props: Props): ReactElement {
     ))
   }
   return (
-    <StyledNav className="text-xl sm:text-lg">
+    <StyledNav className={className}>
       <MenuButton
         open={open}
         onClick={(e) => toggleNavbar()}
@@ -82,7 +79,10 @@ export default Navbar
 
 const StyledNav = styled.nav.attrs((props) => ({
   ...props,
-  className: cls("flex flex-col py-2 sm:py-4", props.className),
+  className: cls(
+    "flex flex-col py-2 sm:py-4 text-2xl sm:text-xl",
+    props.className
+  ),
 }))``
 const NavLinks = styled.ul.attrs<{ open: boolean }>((props) => {
   const { open } = props
@@ -107,7 +107,7 @@ const NavLinks = styled.ul.attrs<{ open: boolean }>((props) => {
     max-height: 100vh;
     overflow-y: visible;
   }
-  @media (min-width: 640px) {
+  @media ${SMALL} {
     &.collapsed {
       max-height: 100vh;
       overflow-y: visible;
