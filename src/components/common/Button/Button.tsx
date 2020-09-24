@@ -1,21 +1,29 @@
-import React, { ReactElement } from "react"
+import React, {
+  CSSProperties,
+  MouseEventHandler,
+  PropsWithChildren,
+  ReactElement,
+} from "react"
 import styled from "styled-components"
 import cls from "classnames"
 import { customShadow } from "../css"
 interface ButtonProps {
   className?: string
-  text?: string
+  style?: CSSProperties
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
-
-function Button(props: ButtonProps): ReactElement {
+/**
+ * Custom Devfest20 Button to be used in all the project
+ * @param props Properties that can be passed to customize the component of type {ButtonProps}
+ */
+function Button(props: PropsWithChildren<ButtonProps>): ReactElement {
   return (
     <StyledButton
-      className={cls(
-        "py-5 px-10 text-xl sm:text-lg outline-none focus:outline-none",
-        props.className
-      )}
+      onClick={props.onClick}
+      style={props.style}
+      className={cls("outline-none focus:outline-none", props.className)}
     >
-      {props.text}
+      {props.children}
     </StyledButton>
   )
 }
