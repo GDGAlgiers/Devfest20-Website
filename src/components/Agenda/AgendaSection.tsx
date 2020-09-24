@@ -41,7 +41,7 @@ function AgendaSection(props: Props): ReactElement {
               contentAreaClassName: "p-10",
             }}
             topBarColor="bg-yellow"
-            hoverToBarColor="bg-green"
+            hoverTopBarColor="bg-green"
           />
           <AgendaCard
             containerClassName="flex-1"
@@ -51,7 +51,7 @@ function AgendaSection(props: Props): ReactElement {
               contentAreaClassName: "p-10",
             }}
             topBarColor="bg-yellow"
-            hoverToBarColor="bg-green"
+            hoverTopBarColor="bg-green"
           />
         </div>
         <div className="w-full  xl:w-9/12 flex justify-center md:justify-end text-center md:text-right m-auto items-center text-white opacity-75 md:px-10 pb-12">
