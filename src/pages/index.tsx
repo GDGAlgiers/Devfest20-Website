@@ -1,5 +1,6 @@
 import { Link, PageProps } from "gatsby"
 import React, { ReactElement } from "react"
+import AgendaCard from "../components/AgendaComponent/AgendaCard"
 import { H1 } from "../components/typography/typography"
 
 interface Props {}
@@ -13,6 +14,40 @@ function index({}: PageProps<Props>): ReactElement {
           Go to example page
         </Link>
       </p>
+      <AgendaCard
+        header="First Day"
+        headerClassName="text-blue"
+        topBarColor="bg-yellow"
+        hoverTopBarColor="bg-green"
+        cardOptions={{}}
+        items={[
+          {
+            startHour: "10h00",
+            endHour: "11h00",
+            name: "Openning Ceremony",
+          },
+          {
+            startHour: "10h00",
+            endHour: "11h00",
+            name: "Openning Ceremony",
+          },
+          {
+            startHour: "10h00",
+            endHour: "11h00",
+            name: "Openning Ceremony",
+          },
+          {
+            startHour: "10h00",
+            endHour: "11h00",
+            name: "Openning Ceremony",
+          },
+          {
+            startHour: "10h00",
+            endHour: "11h00",
+            name: "Openning Ceremony",
+          },
+        ]}
+      />
     </div>
   )
 }
