@@ -2,6 +2,7 @@ import React, { ReactElement } from "react"
 import styled from "styled-components"
 import cls from "classnames"
 import Navbar from "../components/Navbar/Navbar"
+import { customShadow } from "../components/common/css"
 interface HeaderProps {}
 
 function Header(props: HeaderProps): ReactElement {
@@ -19,4 +20,6 @@ export default Header
 const StyledHeader = styled.header.attrs((props) => ({
   ...props,
   className: cls("fixed w-full bg-nightBlue text-white justify-center"),
-}))``
+}))`
+  ${customShadow}
+`
