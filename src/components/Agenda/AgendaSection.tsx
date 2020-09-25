@@ -54,8 +54,7 @@ function AgendaSection(props: Props): ReactElement {
             hoverToBarColor="bg-green"
           />
         </div>
-        <div className="w-full  xl:w-9/12 flex justify-center md:justify-end text-center md:text-right m-auto items-center text-white opacity-75 md:px-10 pb-12">
-          {" "}
+        <div className="w-full  xl:w-9/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-white opacity-75 md:px-10 pb-12">
           🛈 Hover to check detailed agenda
         </div>
       </WithDotsBackgroundContainer>
