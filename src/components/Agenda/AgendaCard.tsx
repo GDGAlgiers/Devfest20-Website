@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useRef } from "react"
+import React, { ReactElement, useState } from "react"
 import styled from "styled-components"
 import Card, { CardProps } from "../common/Card/Card"
 import { H3 } from "../typography/typography"

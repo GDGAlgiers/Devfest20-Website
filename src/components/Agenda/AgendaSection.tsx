@@ -36,6 +36,33 @@ function AgendaSection(props: Props): ReactElement {
           <AgendaCard
             containerClassName="mb-6 lg:mb-0 lg:mr-4 flex-1"
             header="< /DayOne>"
+            items={[
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+            ]}
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
               contentAreaClassName: "p-10",
@@ -45,6 +72,33 @@ function AgendaSection(props: Props): ReactElement {
           />
           <AgendaCard
             containerClassName="flex-1"
+            items={[
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+            ]}
             header="< /DayTwo>"
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
