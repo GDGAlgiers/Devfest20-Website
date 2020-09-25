@@ -1,7 +1,7 @@
 import React, { ReactElement, useLayoutEffect, useState } from "react"
 import styled from "styled-components"
 import cls from "classnames"
-import { SMALL, useAtleastSmall } from "../../utils/medias"
+import { LARGE, useAtleastLarge } from "../../utils/medias"
 import {
   INDEX_ABOUT_SECTION,
   INDEX_AGENDA_SECTION,
@@ -38,17 +38,17 @@ interface NavBarProps {
 }
 function Navbar({ className }: NavBarProps): ReactElement {
   /// when true it means the screen is atleast 640px wide
-  const isSM = useAtleastSmall()
+  const isLG = useAtleastLarge()
   const [open, setOpen] = useState(false)
   /// If it detects that the device is small screen device, it sets the navbar to closed
   useLayoutEffect(() => {
-    if (!isSM) setOpen(false)
+    if (!isLG) setOpen(false)
   }, [])
   /// When screen size changes it closes or opens the navbar accordingly
   useLayoutEffect(() => {
-    if (!isSM && open) return setOpen(false)
+    if (!isLG && open) return setOpen(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSM])
+  }, [isLG])
   const toggleNavbar = () => setOpen(!open)
   const renderLinks = () => {
     return links.map((link) => (
@@ -107,7 +107,7 @@ const NavLinks = styled.ul.attrs<{ open: boolean }>((props) => {
     max-height: 100vh;
     overflow-y: visible;
   }
-  @media ${SMALL} {
+  @media ${LARGE} {
     &.collapsed {
       max-height: 100vh;
       overflow-y: visible;
@@ -125,7 +125,7 @@ const NavLink = styled.li.attrs((props) => ({
 const MenuButton = styled.button.attrs<{ open: boolean }>((props) => ({
   ...props,
   className: cls(
-    "text-yellow transition-all duration-500 ease border-yellow border-2 rounded-md p-2 m-2 sm:hidden self-end focus:outline-none",
+    "text-yellow transition-all duration-500 ease border-yellow border-2 rounded-md p-2 m-2 lg:hidden self-end focus:outline-none",
     {
       "bg-yellow-lighter": props.open,
       "text-nightBlue": props.open,
