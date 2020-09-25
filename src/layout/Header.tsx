@@ -8,7 +8,7 @@ interface HeaderProps {}
 
 function Header(props: HeaderProps): ReactElement {
   return (
-    <StyledHeader className="z-10 relative">
+    <StyledHeader className="z-10">
       <Brand src={require("../assets/svgs/devfest.svg")}></Brand>
       <Navbar />
     </StyledHeader>
@@ -28,8 +28,8 @@ const StyledHeader = styled.header.attrs((props) => ({
 const Brand = styled.img.attrs((props) => ({
   className: "flex-col z-10 absolute self-stretch justify-center",
 }))`
-  top: 1.4rem;
-  left: 2%;
+  top: 1rem;
+  left: 4%;
   @media ${LARGE} {
     top: 25%;
   }

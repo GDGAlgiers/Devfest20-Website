@@ -1,4 +1,10 @@
-import React, { ReactElement, useLayoutEffect, useState } from "react"
+import React, {
+  ReactElement,
+  ReactSVG,
+  SVGProps,
+  useLayoutEffect,
+  useState,
+} from "react"
 import styled from "styled-components"
 import cls from "classnames"
 import { LARGE, useAtleastLarge } from "../../utils/medias"
@@ -66,7 +72,10 @@ function Navbar({ className }: NavBarProps): ReactElement {
         onClick={(e) => toggleNavbar()}
         title="click to open navigation"
       >
-        Menu
+        <DownArrowSVG
+          className="max-h-full max-w-full"
+          fill="#FBBC04"
+        ></DownArrowSVG>
       </MenuButton>
       <NavLinks open={open}>{renderLinks()}</NavLinks>
     </StyledNav>
@@ -125,11 +134,22 @@ const NavLink = styled.li.attrs((props) => ({
 const MenuButton = styled.button.attrs<{ open: boolean }>((props) => ({
   ...props,
   className: cls(
-    "text-yellow transition-all duration-500 ease border-yellow border-2 rounded-md p-2 m-2 lg:hidden self-end focus:outline-none",
+    "text-yellow transition-all duration-500 ease  p-2 mr-4 lg:hidden self-end focus:outline-none w-12 h-12",
     {
-      "bg-yellow-lighter": props.open,
-      "text-nightBlue": props.open,
+      "menu-flip": props.open,
     },
     props.className
   ),
-}))``
+}))`
+  &.menu-flip {
+    transform: rotateZ(180deg);
+  }
+`
+
+function DownArrowSVG(props: SVGProps<SVGSVGElement>): ReactElement {
+  return (
+    <svg viewBox="0 0 512 512" {...props}>
+      <path d="M506.157 132.386c-7.803-7.819-20.465-7.831-28.285-.029l-207.73 207.299c-7.799 7.798-20.486 7.797-28.299-.015L34.128 132.357c-7.819-7.803-20.481-7.79-28.285.029-7.802 7.819-7.789 20.482.029 28.284l207.701 207.27c11.701 11.699 27.066 17.547 42.433 17.547 15.358 0 30.719-5.846 42.405-17.533L506.128 160.67c7.818-7.802 7.831-20.465.029-28.284z" />
+    </svg>
+  )
+}
