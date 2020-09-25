@@ -1,5 +1,6 @@
 import { Link, PageProps } from "gatsby"
 import React, { ReactElement } from "react"
+import AgendaSection from "../components/Agenda/AgendaSection"
 import { H1 } from "../components/typography/typography"
 import Layout from "../layout/Layout"
 
@@ -14,6 +15,7 @@ function index({}: PageProps<Props>): ReactElement {
           Go to example page
         </Link>
       </p>
+      <AgendaSection></AgendaSection>
     </Layout>
   )
 }

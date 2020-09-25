@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98.493" height="142.994" viewBox="0 0 98.493 142.994">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="Groupe_41" transform="translate(-1120.802 -1806.006)">
+        <g id="Groupe_4" transform="translate(1120.802 1806.006)">
+            <path id="Tracé_1" d="M1302.7 3082.217v-6.389h6.389v-6.389h6.389v-6.389h6.389v-6.389h6.393v-31.949h6.389v-6.389H1238.8v6.389h6.389v31.949h6.393v6.389h6.389v6.389h6.389v6.389h6.389v6.389h6.389v13.439h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.393v31.949h-6.389v6.389h95.844v-6.389h-6.389v-31.949h-6.393v-6.389h-6.389v-6.389h-6.389v-6.389h-6.384v-6.389h-6.389v-13.439zm-6.389 19.828v6.389h6.389v6.389h6.389v6.389h6.389v6.389h6.389v25.56h-70.28V3127.6h6.389v-6.389h6.389v-6.389h6.389v-6.389h6.389v-6.389h6.389v-26.217h-6.389v-6.389h-6.389v-6.389h-6.389v-6.389h-6.389v-6.389h-6.389v-25.56h70.28v25.56h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.389v26.217z" class="cls-1" transform="translate(-1238.802 -3018.323)"/>
+            <path id="Tracé_2" d="M1352.781 3305.333v6.389h-44.724v-6.389h6.389v-12.782h6.389v-12.778H1340v12.778h6.389v12.782z" class="cls-1" transform="translate(-1282.495 -3183.272)"/>
+            <path id="Rectangle_1" d="M0 0H8.631V8.631H0z" class="cls-1" transform="translate(43.606 44.314)"/>
+            <path id="Rectangle_2" d="M0 0H6.994V6.994H0z" class="cls-1" transform="translate(56.488 32.958)"/>
+            <path id="Rectangle_3" d="M0 0H6.994V6.994H0z" class="cls-1" transform="translate(32.866 32.958)"/>
+            <path id="Rectangle_4" d="M0 0H8.307V8.307H0z" class="cls-1" transform="translate(43.77 31.644)"/>
+        </g>
+        <g id="Groupe_40" opacity="0.29" transform="translate(1123.451 1807.772)">
+            <path id="Tracé_1-2" d="M1302.7 3082.217v-6.389h6.389v-6.389h6.389v-6.389h6.389v-6.389h6.393v-31.949h6.389v-6.389H1238.8v6.389h6.389v31.949h6.393v6.389h6.389v6.389h6.389v6.389h6.389v6.389h6.389v13.439h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.393v31.949h-6.389v6.389h95.844v-6.389h-6.389v-31.949h-6.393v-6.389h-6.389v-6.389h-6.389v-6.389h-6.384v-6.389h-6.389v-13.439zm-6.389 19.828v6.389h6.389v6.389h6.389v6.389h6.389v6.389h6.389v25.56h-70.28V3127.6h6.389v-6.389h6.389v-6.389h6.389v-6.389h6.389v-6.389h6.389v-26.217h-6.389v-6.389h-6.389v-6.389h-6.389v-6.389h-6.389v-6.389h-6.389v-25.56h70.28v25.56h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.389v6.389h-6.389v26.217z" opacity="0.6" transform="translate(-1238.802 -3018.323)"/>
+            <path id="Tracé_2-2" d="M1352.781 3305.333v6.389h-44.724v-6.389h6.389v-12.782h6.389v-12.778H1340v12.778h6.389v12.782z" transform="translate(-1282.495 -3183.272)"/>
+            <path id="Rectangle_1-2" d="M0 0H8.631V8.631H0z" transform="translate(43.606 44.314)"/>
+            <path id="Rectangle_2-2" d="M0 0H6.994V6.994H0z" transform="translate(56.488 32.958)"/>
+            <path id="Rectangle_3-2" d="M0 0H6.994V6.994H0z" transform="translate(32.866 32.958)"/>
+            <path id="Rectangle_4-2" d="M0 0H8.307V8.307H0z" transform="translate(43.77 31.644)"/>
+        </g>
+    </g>
+</svg>
