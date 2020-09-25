@@ -11,7 +11,7 @@ function AgendaSection(props: Props): ReactElement {
     <Section id="#agenda" className="bg-nightBlue">
       <ThickBorder className="bg-yellow"></ThickBorder>
       <WithDotsBackgroundContainer>
-        <div className="flex flex-col w-full  m-auto px-6 py-4 md:flex-row md:w-7/8 sm:px-6 sm:py-4 lg:px-20">
+        <div className="flex flex-col w-full  m-auto px-6 py-4 md:flex-row md:w-7/8 sm:px-6 sm:py-2 lg:px-20">
           <div className="p-4 lg:mt-4 lg:ml-6 bg-nightBlue">
             <H1 className="text-white mb-4 font-light">Agenda</H1>
             <p className="text-white text-xl">
@@ -32,9 +32,9 @@ function AgendaSection(props: Props): ReactElement {
             />
           </div>
         </div>
-        <div className="w-full xl:w-3/4 m-auto flex flex-col lg:flex-row p-10 justify-evenly items-center pb-20">
+        <div className="w-full  xl:w-9/12  m-auto flex flex-col lg:flex-row md:px-10 justify-evenly items-center ">
           <AgendaCard
-            containerClassName="mb-6 lg:mb-0"
+            containerClassName="mb-6 lg:mb-0 lg:mr-4 flex-1"
             header="< /DayOne>"
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
@@ -44,6 +44,7 @@ function AgendaSection(props: Props): ReactElement {
             hoverToBarColor="bg-green"
           />
           <AgendaCard
+            containerClassName="flex-1"
             header="< /DayTwo>"
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
@@ -52,6 +53,10 @@ function AgendaSection(props: Props): ReactElement {
             topBarColor="bg-yellow"
             hoverToBarColor="bg-green"
           />
+        </div>
+        <div className="w-full  xl:w-9/12 flex justify-center md:justify-end text-center md:text-right m-auto items-center text-white opacity-75 md:px-10 pb-12">
+          {" "}
+          🛈 Hover to check detailed agenda
         </div>
       </WithDotsBackgroundContainer>
       <ThickBorder className="bg-blue"></ThickBorder>
