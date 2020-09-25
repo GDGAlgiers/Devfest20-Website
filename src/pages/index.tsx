@@ -3,6 +3,7 @@ import React, { ReactElement } from "react"
 import AgendaSection from "../components/Agenda/AgendaSection"
 import { H1 } from "../components/typography/typography"
 import Layout from "../layout/Layout"
+import Card from "../components/common/Card/Card"
 
 interface Props {}
 
