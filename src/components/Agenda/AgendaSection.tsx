@@ -11,8 +11,8 @@ function AgendaSection(props: Props): ReactElement {
     <Section id="#agenda" className="bg-nightBlue">
       <ThickBorder className="bg-yellow"></ThickBorder>
       <WithDotsBackgroundContainer>
-        <div className="flex flex-col w-full  m-auto px-6 py-4 sm:flex-row md:w-7/8 sm:px-6 sm:py-4 lg:px-20">
-          <div className="p-10  bg-nightBlue">
+        <div className="flex flex-col w-full  m-auto px-6 py-4 md:flex-row md:w-7/8 sm:px-6 sm:py-4 lg:px-20">
+          <div className="p-4 lg:mt-4 lg:ml-6 bg-nightBlue">
             <H1 className="text-white mb-4 font-light">Agenda</H1>
             <p className="text-white text-xl">
               Join a global community of developers celebrating coding! Lorem
@@ -26,14 +26,15 @@ function AgendaSection(props: Props): ReactElement {
             }}
           >
             <img
-              src={require("../../assets/svgs/globe.svg")}
+              src={require("../../assets/svgs/hourglass.svg")}
               alt="globe"
               className="max-h-full max-w-full"
             />
           </div>
         </div>
-        <div className="w-full xl:w-1/2 m-auto flex flex-col sm:flex-row p-10 justify-evenly items-center pb-20">
+        <div className="w-full xl:w-3/4 m-auto flex flex-col lg:flex-row p-10 justify-evenly items-center pb-20">
           <AgendaCard
+            containerClassName="mb-6 lg:mb-0"
             header="< /DayOne>"
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
