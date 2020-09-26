@@ -3,18 +3,6 @@ import styled from "styled-components"
 import Card, { CardProps } from "../common/Card/Card"
 import { H4 } from "../typography/typography"
 import cls from "classnames"
-let allLogos = {
-  vueLogo: require("../../assets/pngs/vueLogo.png"),
-  reactLogo: require("../../assets/pngs/reactLogo.png"),
-  angularLogo: require("../../assets/pngs/angularLogo.png"),
-  djangoLogo: require("../../assets/pngs/djangoLogo.png"),
-  nodeLogo: require("../../assets/pngs/nodeLogo.png"),
-  laravelLogo: require("../../assets/pngs/laravelLogo.png"),
-}
-let allIcons = {
-  frontendIcon: require("../../assets/pngs/frontendIcon.png"),
-  mlIcon: require("../../assets/pngs/mlIcon.png"),
-}
 
 interface ChallengeProps {
   headerText?: string
@@ -49,7 +37,7 @@ function ChallengeCard({
       <div className="justify-end flex">
         {logos.map((logo) => (
           <Image
-            src={allLogos[logo.src]}
+            src={require("../../assets/pngs/" + logo.src + ".png")}
             hover={hover}
             imgStyle={logo.imgStyle}
             initialStyle={logo.initialStyle}
@@ -82,7 +70,10 @@ function ChallengeCard({
         <HeaderText dark={dark}> {headerText} </HeaderText>
         <BodyText dark={dark}> {bodyText} </BodyText>
         <ActionTextContainer>
-          <ChallengeIcon src={allIcons[icon]} hover={hover} />
+          <ChallengeIcon
+            src={require("../../assets/pngs/" + icon + ".png")}
+            hover={hover}
+          />
           <ActionText hover={hover} color={actionTextColor}>
             {" "}
             {actionText}{" "}
