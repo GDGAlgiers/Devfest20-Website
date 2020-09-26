@@ -4,12 +4,15 @@ import cls from "classnames"
 import Navbar from "../components/Navbar/Navbar"
 import { customShadow } from "../components/common/css"
 import { LARGE } from "../utils/medias"
+import { Link } from "gatsby"
 interface HeaderProps {}
 
 function Header(props: HeaderProps): ReactElement {
   return (
     <StyledHeader className="z-10">
-      <Brand src={require("../assets/svgs/devfest.svg")}></Brand>
+      <Link to="/">
+        <Brand src={require("../assets/svgs/devfest.svg")}></Brand>
+      </Link>
       <Navbar />
     </StyledHeader>
   )
