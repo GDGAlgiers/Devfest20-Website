@@ -79,7 +79,7 @@ export default AgendaCard
 const HeaderText = styled(H3).attrs<{ hover: boolean }>((props) => ({
   ...props,
   className: cls(
-    "transform translate-all ease duration-500 text-3xl sm:text-4xl font-light",
+    "transform translate-all ease duration-500 text-4xl sm:text-5xl font-light",
     {
       "translate-y-full": !props.hover,
       "translate-y-0": props.hover,
@@ -89,7 +89,7 @@ const HeaderText = styled(H3).attrs<{ hover: boolean }>((props) => ({
 const Agenda = styled.ul.attrs<{ show: boolean }>((props) => ({
   ...props,
   className: cls(
-    "text-center mt-2 sm:mt-0 origin-bottom-right transition-all ease duration-500 font-bold text-xs sm:text-lg",
+    "text-center mt-2 sm:mt-0 origin-bottom-right transition-all ease duration-500 font-bold text-sm sm:text-xl",
     {
       collapse: !props.show,
       show: props.show,

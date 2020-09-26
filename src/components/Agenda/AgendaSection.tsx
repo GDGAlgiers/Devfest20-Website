@@ -34,84 +34,96 @@ function AgendaSection(props: Props): ReactElement {
             />
           </div>
         </div>
-        <div className="w-full  xl:w-9/12  m-auto flex flex-col lg:flex-row md:px-10 justify-evenly items-center ">
-          <AgendaCard
-            containerClassName="mb-6 lg:mb-0 lg:mr-20 flex-1"
-            header="<DayOne/ >"
-            items={[
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-            ]}
-            cardOptions={{
-              containerClassName: "text-nightBlue bg-white",
-              contentAreaClassName: "p-8",
+        <div className="w-full">
+          <div
+            className="w-full  xl:w-8/12   m-auto flex flex-col lg:flex-row  justify-evenly items-center "
+            style={{
+              maxWidth: 960,
             }}
-            topBarColor="bg-yellow"
-            hoverTopBarColor="bg-green"
-          />
-          <AgendaCard
-            containerClassName="flex-1"
-            items={[
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-              {
-                startHour: "10h00",
-                endHour: "11h:00",
-                name: "Openning Ceremony",
-              },
-            ]}
-            header="<DayTwo/ >"
-            cardOptions={{
-              containerClassName: "text-nightBlue bg-white",
-              contentAreaClassName: "p-8",
+          >
+            <AgendaCard
+              containerClassName="mb-6 lg:mb-0 lg:mr-20 flex-1"
+              header="<DayOne/ >"
+              items={[
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+              ]}
+              cardOptions={{
+                containerClassName: "text-nightBlue bg-white",
+                contentAreaClassName: "p-8",
+              }}
+              topBarColor="bg-yellow"
+              hoverTopBarColor="bg-green"
+            />
+            <AgendaCard
+              containerClassName="flex-1"
+              items={[
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+                {
+                  startHour: "10h00",
+                  endHour: "11h:00",
+                  name: "Openning Ceremony",
+                },
+              ]}
+              header="<DayTwo/ >"
+              cardOptions={{
+                containerClassName: "text-nightBlue bg-white",
+                contentAreaClassName: "p-8",
+              }}
+              topBarColor="bg-yellow"
+              hoverTopBarColor="bg-green"
+            />
+          </div>
+          <div
+            className="w-full  xl:w-8/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-sm text-white opacity-75 xl:pl-10 pb-12"
+            style={{
+              maxWidth: 960,
             }}
-            topBarColor="bg-yellow"
-            hoverTopBarColor="bg-green"
-          />
-        </div>
-        <div className="w-full  xl:w-9/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-sm text-white opacity-75 md:px-10 pb-12">
-          🛈 {!isLG ? "Click" : "Hover"} to check detailed agenda
+          >
+            🛈 {!isLG ? "Click" : "Hover"} to check detailed agenda
+          </div>
         </div>
       </WithDotsBackgroundContainer>
       <ThickBorder className="bg-blue"></ThickBorder>
