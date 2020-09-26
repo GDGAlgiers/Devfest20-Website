@@ -36,22 +36,76 @@ function AgendaSection(props: Props): ReactElement {
           <AgendaCard
             containerClassName="mb-6 lg:mb-0 lg:mr-4 flex-1"
             header="< /DayOne>"
+            items={[
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+            ]}
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
               contentAreaClassName: "p-10",
             }}
             topBarColor="bg-yellow"
-            hoverToBarColor="bg-green"
+            hoverTopBarColor="bg-green"
           />
           <AgendaCard
             containerClassName="flex-1"
+            items={[
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+              {
+                startHour: "10h00",
+                endHour: "11h:00",
+                name: "Openning Ceremony",
+              },
+            ]}
             header="< /DayTwo>"
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
               contentAreaClassName: "p-10",
             }}
             topBarColor="bg-yellow"
-            hoverToBarColor="bg-green"
+            hoverTopBarColor="bg-green"
           />
         </div>
         <div className="w-full  xl:w-9/12 flex justify-center md:justify-end text-center md:text-right m-auto items-center text-white opacity-75 md:px-10 pb-12">
