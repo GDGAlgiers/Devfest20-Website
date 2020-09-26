@@ -75,8 +75,7 @@ function ChallengeCard({
             hover={hover}
           />
           <ActionText hover={hover} color={actionTextColor}>
-            {" "}
-            {actionText}{" "}
+            {actionText}
           </ActionText>
         </ActionTextContainer>
       </Card>
