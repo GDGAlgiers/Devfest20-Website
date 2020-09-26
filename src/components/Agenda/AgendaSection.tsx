@@ -10,7 +10,7 @@ interface Props {}
 function AgendaSection(props: Props): ReactElement {
   const isLG = useAtleastLarge()
   return (
-    <Section id="#agenda" className="bg-nightBlue">
+    <Section id="agenda" className="bg-nightBlue">
       <ThickBorder className="bg-yellow"></ThickBorder>
       <WithDotsBackgroundContainer>
         <div className="flex flex-col w-full  m-auto px-6 py-4 md:flex-row md:w-7/8 sm:px-6 sm:py-2 lg:px-20">
