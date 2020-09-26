@@ -2,7 +2,7 @@ import { css } from "styled-components"
 import { LARGE } from "../../utils/medias"
 /// Style elements
 export const customShadow = css`
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
 `
 export const dotBackground = css`
   background-image: url(${require("../../assets/svgs/bgDots.svg")});
