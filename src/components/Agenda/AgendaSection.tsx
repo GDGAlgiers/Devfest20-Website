@@ -4,9 +4,11 @@ import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 import cls from "classnames"
 import { H1 } from "../typography/typography"
 import AgendaCard from "./AgendaCard"
+import { useAtleastLarge } from "../../utils/medias"
 interface Props {}
 
 function AgendaSection(props: Props): ReactElement {
+  const isLG = useAtleastLarge()
   return (
     <Section id="#agenda" className="bg-nightBlue">
       <ThickBorder className="bg-yellow"></ThickBorder>
@@ -34,8 +36,8 @@ function AgendaSection(props: Props): ReactElement {
         </div>
         <div className="w-full  xl:w-9/12  m-auto flex flex-col lg:flex-row md:px-10 justify-evenly items-center ">
           <AgendaCard
-            containerClassName="mb-6 lg:mb-0 lg:mr-4 flex-1"
-            header="< /DayOne>"
+            containerClassName="mb-6 lg:mb-0 lg:mr-20 flex-1"
+            header="<DayOne/ >"
             items={[
               {
                 startHour: "10h00",
@@ -65,7 +67,7 @@ function AgendaSection(props: Props): ReactElement {
             ]}
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
-              contentAreaClassName: "p-10",
+              contentAreaClassName: "p-8",
             }}
             topBarColor="bg-yellow"
             hoverTopBarColor="bg-green"
@@ -99,17 +101,17 @@ function AgendaSection(props: Props): ReactElement {
                 name: "Openning Ceremony",
               },
             ]}
-            header="< /DayTwo>"
+            header="<DayTwo/ >"
             cardOptions={{
               containerClassName: "text-nightBlue bg-white",
-              contentAreaClassName: "p-10",
+              contentAreaClassName: "p-8",
             }}
             topBarColor="bg-yellow"
             hoverTopBarColor="bg-green"
           />
         </div>
-        <div className="w-full  xl:w-9/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-white opacity-75 md:px-10 pb-12">
-          🛈 Hover to check detailed agenda
+        <div className="w-full  xl:w-9/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-sm text-white opacity-75 md:px-10 pb-12">
+          🛈 {!isLG ? "Click" : "Hover"} to check detailed agenda
         </div>
       </WithDotsBackgroundContainer>
       <ThickBorder className="bg-blue"></ThickBorder>

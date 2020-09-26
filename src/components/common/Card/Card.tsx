@@ -40,7 +40,7 @@ export default Card
 const CardContainer = styled.div.attrs((props) => ({
   ...props,
   className: cls(
-    "flex flex-col justify-start items-center border-2 border-nightBlue m-1",
+    "flex flex-col justify-start items-center border-2 m-1",
     props.className
   ),
 }))`
