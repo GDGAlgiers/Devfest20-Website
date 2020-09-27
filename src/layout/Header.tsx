@@ -6,11 +6,17 @@ import { customShadow } from "../components/common/css"
 import { LARGE } from "../utils/medias"
 import { Link } from "gatsby"
 import { useElementInViewPort } from "../utils/viewport"
+import { useLayoutEffect } from "react"
 interface HeaderProps {}
 
 function Header(props: HeaderProps): ReactElement {
   const [showBrand, setShowBrandImage] = useState(false)
-  const heroInViewPort = useElementInViewPort(document.getElementById("hero"))
+  const [heroElement, setHeroElement] = useState<HTMLElement | null>(null) /// This is needed to prevent problems with SSR
+  const heroInViewPort = useElementInViewPort(heroElement)
+  useLayoutEffect(() => {
+    /// As soon as the Component is loaded we set the true hero element
+    setHeroElement(document.getElementById("hero"))
+  }, [])
   useEffect(() => {
     setShowBrandImage(!heroInViewPort)
   }, [heroInViewPort])

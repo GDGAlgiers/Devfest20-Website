@@ -33,7 +33,7 @@ export const useRefElementInViewport = (ref: React.RefObject<Element>) => {
   return inViewport
 }
 
-export const useElementInViewPort = (element: HTMLElement) => {
+export const useElementInViewPort = (element: HTMLElement | null) => {
   const [inViewport, setInViewport] = useState(() => {
     if (element) return !outSideViewportCompletely(element)
     else return false
@@ -41,7 +41,8 @@ export const useElementInViewPort = (element: HTMLElement) => {
   useLayoutEffect(() => {
     if (element) {
       setInViewport(!outSideViewportCompletely(element))
-      window.addEventListener("scroll", (event) => {
+      ///nullish comparaison for SSR
+      window?.addEventListener("scroll", (event) => {
         if (element) setInViewport(!outSideViewportCompletely(element))
       })
     }
