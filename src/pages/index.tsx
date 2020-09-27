@@ -8,7 +8,12 @@ interface Props {}
 
 function index({}: PageProps<Props>): ReactElement {
   return (
-    <Layout pageTitle="Index" pageDescription="GDG Algiers' Devfest20 Website">
+    <Layout
+      seo={{
+        title: "Index",
+        description: "Index page of devfest20 by GDG Algiers",
+      }}
+    >
       <H1 className="text-blue">Hello in index page</H1>
       <p>
         <Link to="/example" className="no-underline hover:text-blue">

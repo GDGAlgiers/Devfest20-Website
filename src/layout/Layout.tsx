@@ -1,20 +1,15 @@
 import React, { PropsWithChildren, ReactElement } from "react"
 import Header from "./Header"
-import SEO from "./seo"
+import SEO, { SeoProps } from "./seo"
 
 interface Props {
-  pageTitle: string
-  pageDescription: string
+  seo: Partial<SeoProps>
 }
 
-function Layout({
-  pageTitle,
-  pageDescription,
-  children,
-}: PropsWithChildren<Props>): ReactElement {
+function Layout({ seo, children }: PropsWithChildren<Props>): ReactElement {
   return (
     <>
-      <SEO title={pageTitle} description={pageDescription} />
+      <SEO {...seo} />
       <Header />
       <div
         id="hero"
