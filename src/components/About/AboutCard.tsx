@@ -73,21 +73,28 @@ function AboutCard({
         )}
         containerClassName={cls(containerClassName)}
       >
-        <button className="z-10 -mr-3" onClick={previousImage}>
+        <ChangeImageButton className="-mr-3" onClick={previousImage}>
           <Image className=" w-8 " fluid={arrowLeft[0].node.fluid} />
-        </button>
+        </ChangeImageButton>
 
         <Image
           className="w-full max-w-sm border-2 border-solid border-white"
           fluid={images[imageIndex].node.fluid}
           alt=""
         />
-        <button className="z-10 -ml-3" onClick={nextImage}>
+        <ChangeImageButton className="-ml-3" onClick={nextImage}>
           <Image className=" w-8 " fluid={arrowRight[0].node.fluid} />
-        </button>
+        </ChangeImageButton>
       </Card>
     </div>
   )
 }
 
 export default AboutCard
+
+const ChangeImageButton = styled.button.attrs((props) => ({
+  ...props,
+  className: cls(props.className),
+}))`
+  z-index: 1;
+`
