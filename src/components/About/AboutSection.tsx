@@ -1,5 +1,5 @@
-import React, { ReactElement } from "react"
-
+import React, { ReactElement, useLayoutEffect, useState } from "react"
+import { useAtleastMedium } from "../../utils/medias"
 import styled from "styled-components"
 import Section from "../common/layout/Section"
 import AboutCard from "./AboutCard"
@@ -9,6 +9,16 @@ import { H1 } from "../typography/typography"
 interface Props {}
 
 function AboutSection(props: Props): ReactElement {
+  const isSM = useAtleastMedium()
+  const [showCard, setShowCard] = useState(true)
+  useLayoutEffect(() => {
+    if (!isSM) setShowCard(false)
+  }, [])
+  useLayoutEffect(() => {
+    if (!isSM && showCard) return setShowCard(false)
+    else if (isSM && !showCard) return setShowCard(true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSM])
   return (
     <Section id="#about" className="bg-transparent">
       <div className="flex flex-col text-nightBlue  mr-20 ml-20">
@@ -31,11 +41,13 @@ function AboutSection(props: Props): ReactElement {
             who chooses to enjoy a pleasure that has no annoying consequences,
             or one who avoids a pain that produces no resultant pleasure?"
           </Description>
-          <AboutCard
-            containerClassName="mt-8  w-full max-w-xl"
-            contentAreaClassName="bg-nightBlue flex  pt-4 pb-3 "
-            topBarColor="bg-yellow"
-          />
+          {showCard && (
+            <AboutCard
+              containerClassName="mt-8  w-full max-w-xl"
+              contentAreaClassName="bg-nightBlue flex  pt-4 pb-3 "
+              topBarColor="bg-yellow"
+            />
+          )}
         </div>
       </div>
     </Section>

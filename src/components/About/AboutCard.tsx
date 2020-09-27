@@ -34,13 +34,11 @@ const query = graphql`
 `
 
 interface AboutProps {
-  header?: string
   containerClassName?: string
   contentAreaClassName?: string
   topBarColor: string
 }
 function AboutCard({
-  header,
   containerClassName,
   contentAreaClassName,
   topBarColor,
@@ -91,9 +89,5 @@ function AboutCard({
     </div>
   )
 }
-
-const ButtonLeft = styled.button.attrs({
-  className: cls(""),
-})
 
 export default AboutCard
