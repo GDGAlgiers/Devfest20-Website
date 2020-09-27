@@ -10,7 +10,6 @@ module.exports = {
         lighter: "#FFFFFF",
         default: "#F8F9FA",
       },
-
       green: {
         default: "#0CAD4D",
         darker: "#0F9D58",
@@ -21,6 +20,7 @@ module.exports = {
         default: "#F9AB00",
       },
       blue: "#4285F4",
+      teal: "#1CE9B6",
       nightBlue: "#191C48",
     },
     fontFamily: {
