@@ -1,16 +1,16 @@
 import React, { ReactElement } from "react"
-import DevfestCard from "./HeroCard"
-import WithDotsBackgroundContainer from "../common/layout/Section"
+import HeroCard from "./HeroCard"
+import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 
 function heroSection(): ReactElement {
   return (
-    <section id="hero" className="bg-nightBlue">
+    <Section id="hero" className="bg-nightBlue">
       <WithDotsBackgroundContainer>
         <div>
-          <DevfestCard></DevfestCard>
+          <HeroCard></HeroCard>
         </div>
       </WithDotsBackgroundContainer>
-    </section>
+    </Section>
   )
 }
 
