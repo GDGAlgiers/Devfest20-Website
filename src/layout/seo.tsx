@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react"
 import { GatsbySeo, GatsbySeoProps } from "gatsby-plugin-next-seo"
 
-interface Props extends GatsbySeoProps {}
+export interface SeoProps extends GatsbySeoProps {}
 
-function SEO(props: Props): ReactElement {
+function SEO(props: SeoProps): ReactElement {
   return (
     <GatsbySeo
       title={props.title}
