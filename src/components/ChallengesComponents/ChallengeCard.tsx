@@ -9,7 +9,7 @@ interface ChallengeProps {
   bodyText?: string
   actionText: string
   dark?: boolean
-  icon?: string
+  icon?: any
   cardOptions?: CardProps
   secondaryColor?: string
   logos: any
@@ -30,13 +30,14 @@ function ChallengeCard({
   const actionTextColor = `text-${secondaryColor}`
   return (
     <div
-      className={cls("w-64 h-64 inline-block m-10")}
+      style={{ width: "18rem", height: "18rem" }}
+      className={cls("inline-block")}
       onMouseEnter={(e) => setHover(true)}
       onMouseLeave={(e) => setHover(false)}
     >
       <div className="justify-end flex">
         {logos.map((logo) => (
-          <Image
+          <AnimatedImage
             src={require("../../assets/pngs/" + logo.src + ".png")}
             hover={hover}
             imgStyle={logo.imgStyle}
@@ -70,9 +71,12 @@ function ChallengeCard({
         <HeaderText dark={dark}> {headerText} </HeaderText>
         <BodyText dark={dark}> {bodyText} </BodyText>
         <ActionTextContainer>
-          <ChallengeIcon
-            src={require("../../assets/pngs/" + icon + ".png")}
+          <AnimatedImage
+            src={require("../../assets/pngs/" + icon.src + ".png")}
             hover={hover}
+            imgStyle={icon.imgStyle}
+            initialStyle={icon.initialStyle}
+            translatedStyle={icon.translatedStyle}
           />
           <ActionText hover={hover} color={actionTextColor}>
             {actionText}
@@ -89,7 +93,7 @@ export default ChallengeCard
 
 const HeaderText = styled(H4).attrs((props) => ({
   ...props,
-  className: cls("font-light my-4", {
+  className: cls("font-light my-4 mx-4", {
     "text-nightBlue": !props.dark,
     "text-white": props.dark,
   }),
@@ -97,7 +101,7 @@ const HeaderText = styled(H4).attrs((props) => ({
 
 const BodyText = styled.div.attrs((props) => ({
   ...props,
-  className: cls("px-4", {
+  className: cls("px-6", {
     "text-nightBlue": !props.dark,
     "text-white": props.dark,
   }),
@@ -120,16 +124,7 @@ const ActionText = styled(H4).attrs((props) => ({
   ),
 }))``
 
-const ChallengeIcon = styled.img.attrs((props) => ({
-  ...props,
-  src: props.src,
-  className: cls("w-16 absolute mt-8 pl-0 transition duration-200 transform ", {
-    "translate-x-0": !props.hover,
-    "-translate-x-32": props.hover,
-  }),
-}))``
-
-const Image = styled.img.attrs((props) => ({
+const AnimatedImage = styled.img.attrs((props) => ({
   ...props,
   src: props.src,
   className: cls("absolute transition duration-200 transform", props.imgStyle, {
