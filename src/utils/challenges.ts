@@ -10,7 +10,10 @@ export default [
       translatedStyle: "-translate-x-32 translate-y-8",
     },
     dark: true,
-    secondaryColor: "yellow",
+    secondaryColor: {
+      topBarBgColor: "bg-yellow",
+      actionTextColor: "text-yellow",
+    },
     logos: [
       {
         src: "mlLogo",
@@ -30,7 +33,10 @@ export default [
       translatedStyle: "-translate-x-32 translate-y-12",
     },
     dark: false,
-    secondaryColor: "yellow",
+    secondaryColor: {
+      topBarBgColor: "bg-yellow",
+      actionTextColor: "text-yellow",
+    },
     logos: [
       {
         src: "vueLogo",
@@ -62,7 +68,10 @@ export default [
       translatedStyle: "-translate-x-32 translate-y-12",
     },
     dark: false,
-    secondaryColor: "blue",
+    secondaryColor: {
+      topBarBgColor: "bg-blue",
+      actionTextColor: "text-blue",
+    },
     logos: [
       {
         src: "mlLogo",
@@ -83,7 +92,10 @@ export default [
       translatedStyle: "-translate-x-32 translate-y-12",
     },
     dark: false,
-    secondaryColor: "green",
+    secondaryColor: {
+      topBarBgColor: "bg-green",
+      actionTextColor: "text-green",
+    },
     logos: [
       {
         src: "laravelLogo",
@@ -115,7 +127,10 @@ export default [
       translatedStyle: "-translate-x-32 translate-y-8",
     },
     dark: false,
-    secondaryColor: "teal",
+    secondaryColor: {
+      topBarBgColor: "bg-teal",
+      actionTextColor: "text-teal",
+    },
     logos: [
       {
         src: "onlineSafetyLogo",

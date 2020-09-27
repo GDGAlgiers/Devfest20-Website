@@ -4,15 +4,27 @@ import Card, { CardProps } from "../common/Card/Card"
 import { H4 } from "../typography/typography"
 import cls from "classnames"
 
-interface ChallengeProps {
+export interface ChallengeProps {
   headerText?: string
   bodyText?: string
   actionText: string
   dark?: boolean
-  icon?: any
   cardOptions?: CardProps
-  secondaryColor?: string
-  logos: any
+  icon?: ImageProps
+  secondaryColor?: SecondaryColorProps
+  logos: LogosProps
+}
+interface LogosProps extends Array<ImageProps> {}
+
+interface ImageProps {
+  src?: string
+  imgStyle?: string
+  initialStyle?: string
+  translatedStyle?: string
+}
+interface SecondaryColorProps {
+  topBarBgColor?: string
+  actionTextColor?: string
 }
 
 function ChallengeCard({
@@ -26,8 +38,7 @@ function ChallengeCard({
   cardOptions,
 }: ChallengeProps): ReactElement {
   const [hover, setHover] = useState(false)
-  const topBarBgColor = `bg-${secondaryColor}`
-  const actionTextColor = `text-${secondaryColor}`
+  const { topBarBgColor, actionTextColor } = secondaryColor
   return (
     <div
       style={{ width: "18rem", height: "18rem" }}
@@ -86,7 +97,6 @@ function ChallengeCard({
     </div>
   )
 }
-
 export default ChallengeCard
 
 /// Styled Components
