@@ -20,11 +20,11 @@ function AboutSection(props: Props): ReactElement {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSM]) //"flex flex-col text-nightBlue mr-20 ml-20"
   return (
-    <Section id="about" className="bg-transparent p-4 sm:p-8">
+    <Section id="about" className="bg-transparent p-4 sm:px-8 sm:py-12">
       <div className="flex flex-col  text-nightBlue mx-5 sm:mx-20">
-        <Title className="text-nightBlue">About Devfest</Title>
+        <Title>About Devfest</Title>
         <div className="flex flex-col lg:flex-row h-auto">
-          <Description className="text-nightBlue lg:mr-10">
+          <Description>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta
             nobis optio nostrum! Aspernatur earum hic veniam itaque saepe alias?
             Fugiat dolorum cumque eius reprehenderit inventore velit ab vel
@@ -57,7 +57,7 @@ const Title = styled(H1).attrs((props) => ({
   className: cls("mb-4"),
 }))``
 const Description = styled.p.attrs((props) => ({
-  className: cls("w-full font-medium text-2xl leading-tight"),
+  className: cls("w-full font-medium text-2xl leading-tight lg:mr-10"),
 }))``
 
 export default AboutSection
