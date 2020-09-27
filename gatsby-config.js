@@ -9,12 +9,8 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Open Sans", "Roboto", "Montserrat"],
+          families: ["Cairo", "Open Sans", "Roboto", "Montserrat"],
         },
-        // custom: {
-        //   families: ["Product Sans"],
-        //   urls: ["/fonts/fonts.css"],
-        // },
       },
     },
     `gatsby-plugin-styled-components`,
