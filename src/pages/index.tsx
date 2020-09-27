@@ -4,7 +4,7 @@ import AgendaSection from "../components/Agenda/AgendaSection"
 import { H1 } from "../components/typography/typography"
 import Layout from "../layout/Layout"
 import Card from "../components/common/Card/Card"
-
+import SpeakerSection from "../components/Speaker/SpeakerSection"
 interface Props {}
 
 function index({}: PageProps<Props>): ReactElement {
@@ -17,6 +17,45 @@ function index({}: PageProps<Props>): ReactElement {
         </Link>
       </p>
       <AgendaSection></AgendaSection>
+      <SpeakerSection
+        speakers={[
+          {
+            speakerName: "John Doe",
+            speakerField: "Software Engineer",
+            talkName: "Title of Talk",
+            imageSpeaker: "",
+            topBarColor: "bg-green",
+          },
+          {
+            speakerName: "John Doe",
+            speakerField: "Software Engineer",
+            talkName: "Title of Talk",
+            imageSpeaker: "",
+            topBarColor: "bg-yellow",
+          },
+          {
+            speakerName: "John Doe",
+            speakerField: "Software Engineer",
+            talkName: "Title of Talk",
+            imageSpeaker: "",
+            topBarColor: "bg-blue",
+          },
+          {
+            speakerName: "John Doe",
+            speakerField: "Software Engineer",
+            talkName: "Title of Talk",
+            imageSpeaker: "",
+            topBarColor: "bg-red",
+          },
+          {
+            speakerName: "John Doe",
+            speakerField: "Software Engineer",
+            talkName: "Title of Talk",
+            imageSpeaker: "",
+            topBarColor: "bg-red",
+          },
+        ]}
+      ></SpeakerSection>
     </Layout>
   )
 }
