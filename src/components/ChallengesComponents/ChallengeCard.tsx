@@ -5,13 +5,13 @@ import { H4 } from "../typography/typography"
 import cls from "classnames"
 
 export interface ChallengeProps {
-  headerText?: string
-  bodyText?: string
+  headerText: string
+  bodyText: string
   actionText: string
-  dark?: boolean
+  dark: boolean
   cardOptions?: CardProps
-  icon?: ImageProps
-  secondaryColor?: SecondaryColorProps
+  icon: ImageProps
+  secondaryColor: SecondaryColorProps
   logos: LogosProps
 }
 interface LogosProps extends Array<ImageProps> {}
@@ -38,7 +38,6 @@ function ChallengeCard({
   cardOptions,
 }: ChallengeProps): ReactElement {
   const [hover, setHover] = useState(false)
-  const { topBarBgColor, actionTextColor } = secondaryColor
   return (
     <div
       style={{ width: "18rem", height: "18rem" }}
@@ -59,7 +58,7 @@ function ChallengeCard({
       </div>{" "}
       <Card
         contentAreaClassName={cls(
-          cardOptions.contentAreaClassName,
+          cardOptions?.contentAreaClassName,
           "text-center",
           {
             "bg-white border-nightBlue": !dark,
@@ -67,17 +66,21 @@ function ChallengeCard({
           }
         )}
         containerClassName={cls(
-          cardOptions.containerClassName,
+          cardOptions?.containerClassName,
           "relative h-full w-full overflow-hidden",
           {
             "border-nightBlue": !dark,
             "border-white": dark,
           }
         )}
-        topBarClassName={cls(cardOptions.topBarClassName, topBarBgColor, {
-          "border-white": dark,
-          "border-nightBlue": !dark,
-        })}
+        topBarClassName={cls(
+          cardOptions?.topBarClassName,
+          secondaryColor?.topBarBgColor,
+          {
+            "border-white": dark,
+            "border-nightBlue": !dark,
+          }
+        )}
       >
         <HeaderText dark={dark}> {headerText} </HeaderText>
         <BodyText dark={dark}> {bodyText} </BodyText>
@@ -89,7 +92,7 @@ function ChallengeCard({
             initialStyle={icon.initialStyle}
             translatedStyle={icon.translatedStyle}
           />
-          <ActionText hover={hover} color={actionTextColor}>
+          <ActionText hover={hover} color={secondaryColor?.actionTextColor}>
             {actionText}
           </ActionText>
         </ActionTextContainer>
@@ -101,7 +104,7 @@ export default ChallengeCard
 
 /// Styled Components
 
-const HeaderText = styled(H4).attrs((props) => ({
+const HeaderText = styled(H4).attrs<{ dark: boolean }>((props) => ({
   ...props,
   className: cls("font-light my-4 mx-4", {
     "text-nightBlue": !props.dark,
@@ -109,7 +112,7 @@ const HeaderText = styled(H4).attrs((props) => ({
   }),
 }))``
 
-const BodyText = styled.div.attrs((props) => ({
+const BodyText = styled.div.attrs<{ dark: boolean }>((props) => ({
   ...props,
   className: cls("px-6", {
     "text-nightBlue": !props.dark,
@@ -122,7 +125,7 @@ const ActionTextContainer = styled.div.attrs((props) => ({
   className: cls("h-24"),
 }))``
 
-const ActionText = styled(H4).attrs((props) => ({
+const ActionText = styled(H4).attrs<{ hover: boolean }>((props) => ({
   ...props,
   className: cls(
     "font-light my-8 transition duration-200 transform",
@@ -134,7 +137,12 @@ const ActionText = styled(H4).attrs((props) => ({
   ),
 }))``
 
-const AnimatedImage = styled.img.attrs((props) => ({
+const AnimatedImage = styled.img.attrs<{
+  initialStyle: string
+  translatedStyle: string
+  imgStyle: string
+  hover: boolean
+}>((props) => ({
   ...props,
   src: props.src,
   className: cls("absolute transition duration-200 transform", props.imgStyle, {
