@@ -1,7 +1,6 @@
 import React, { ReactElement, useState } from "react"
 import styled from "styled-components"
 import Card, { CardProps } from "../common/Card/Card"
-import { H1, H3 } from "../typography/typography"
 import cls from "classnames"
 import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
@@ -56,10 +55,13 @@ function AboutCard({
     (edge) => edge.node.fluid["originalName"] == "ArrowRight.png"
   )
   const [imageIndex, setImageIndex] = useState(0)
-  const nextImage = () =>
+  const nextImage = () => {
+    var image1 = document.getElementById("image")
     setImageIndex(imageIndex + 1 < images.length ? imageIndex + 1 : 0)
-  const previousImage = () =>
+  }
+  const previousImage = () => {
     setImageIndex(imageIndex - 1 >= 0 ? imageIndex - 1 : images.length - 1)
+  }
 
   return (
     <div className={cls(containerClassName)}>
@@ -76,12 +78,10 @@ function AboutCard({
         <ChangeImageButton className="-mr-3" onClick={previousImage}>
           <Image className=" w-8 " fluid={arrowLeft[0].node.fluid} />
         </ChangeImageButton>
+        <Images id="image">
+          <Image fluid={images[imageIndex].node.fluid} />
+        </Images>
 
-        <Image
-          className="w-full max-w-sm border-2 border-solid border-white"
-          fluid={images[imageIndex].node.fluid}
-          alt=""
-        />
         <ChangeImageButton className="-ml-3" onClick={nextImage}>
           <Image className=" w-8 " fluid={arrowRight[0].node.fluid} />
         </ChangeImageButton>
@@ -91,6 +91,15 @@ function AboutCard({
 }
 
 export default AboutCard
+
+const Images = styled.div.attrs({
+  className:
+    "w-full max-w-sm border-2 border-solid border-white transition-all duration-500 linear",
+})`
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+`
 
 const ChangeImageButton = styled.button.attrs((props) => ({
   ...props,

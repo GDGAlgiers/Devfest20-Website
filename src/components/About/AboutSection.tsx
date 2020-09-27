@@ -1,5 +1,5 @@
 import React, { ReactElement, useLayoutEffect, useState } from "react"
-import { useAtleastMedium } from "../../utils/medias"
+import { useAtleastExtraSmall, useAtleastSmall } from "../../utils/medias"
 import styled from "styled-components"
 import Section from "../common/layout/Section"
 import AboutCard from "./AboutCard"
@@ -9,7 +9,8 @@ import { H1 } from "../typography/typography"
 interface Props {}
 
 function AboutSection(props: Props): ReactElement {
-  const isSM = useAtleastMedium()
+  const isES = useAtleastExtraSmall()
+  const isSM = useAtleastSmall()
   const [showCard, setShowCard] = useState(true)
   useLayoutEffect(() => {
     if (!isSM) setShowCard(false)
@@ -18,11 +19,17 @@ function AboutSection(props: Props): ReactElement {
     if (!isSM && showCard) return setShowCard(false)
     else if (isSM && !showCard) return setShowCard(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSM])
+  }, [isSM]) //"flex flex-col text-nightBlue mr-20 ml-20"
   return (
     <Section id="#about" className="bg-transparent">
-      <div className="flex flex-col text-nightBlue  mr-20 ml-20">
-        <H1 className=" mb-4 font-light">About Devfest</H1>
+      <div
+        className={
+          "flex flex-col md:flex-row text-nightBlue " + isES
+            ? "mr-5 ml-5"
+            : "mr-20 ml-20"
+        }
+      >
+        <H1 className={" mb-4 font-light" + !isES && "mr-10"}>About Devfest</H1>
         <div className="flex h-auto">
           <Description>
             But I must explain to you how all this mistaken idea of denouncing
@@ -43,7 +50,7 @@ function AboutSection(props: Props): ReactElement {
           </Description>
           {showCard && (
             <AboutCard
-              containerClassName="mt-8  w-full max-w-xl"
+              containerClassName="mt-4  w-full max-w-xl"
               contentAreaClassName="bg-nightBlue flex  pt-4 pb-3 "
               topBarColor="bg-yellow"
             />
@@ -55,7 +62,7 @@ function AboutSection(props: Props): ReactElement {
 }
 
 const Description = styled.p.attrs({
-  className: "mr-10 w-full font-medium leading-tight",
+  className: " w-full font-medium leading-tight",
 })`
   height: max-content;
   font-size: 22px;
