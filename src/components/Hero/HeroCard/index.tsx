@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import cls from "classnames"
 import Card from "../../common/Card/Card"
-import { H3, H2, H1, H4, H5, H6 } from "../../typography/typography"
+import { H3, H5 } from "../../typography/typography"
 import styled from "styled-components"
 
 interface HeroCardProps {

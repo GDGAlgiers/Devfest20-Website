@@ -16,7 +16,7 @@ function index({}: PageProps<Props>): ReactElement {
         <Link to="/example" className="no-underline hover:text-blue">
           Go to example page
         </Link>
-        <Button className="p-10 bg-yellow text-nightBlue"></Button>
+        <Button className="p-10 bg-yellow text-nightBlue">Test</Button>
         <Button className="p-10 bg-blue text-white">HHAAHHAAA</Button>
       </p>
       <AgendaSection></AgendaSection>

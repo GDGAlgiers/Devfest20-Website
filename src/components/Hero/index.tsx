@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react"
 import HeroCard from "./HeroCard"
+import HeroDescription from "./HeroDescription"
 import styled from "styled-components"
 import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 
@@ -15,7 +16,15 @@ function heroSection(): ReactElement {
               className="w-24"
             />
           </div>
-          <HeroCard containerClassName="mt-32 mr-64"></HeroCard>
+          <div
+            className="flex flex-col justify-center "
+            style={{
+              maxWidth: 560,
+            }}
+          >
+            <HeroCard />
+            <HeroDescription></HeroDescription>
+          </div>
         </div>
       </WithDotsBackgroundContainer>
     </Section>
