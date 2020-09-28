@@ -3,9 +3,20 @@ import styled from "styled-components"
 import cls from "classnames"
 import Button from "../../common/Button/Button"
 
-function HeroDescription(): ReactElement {
+interface HeroDescriptionProps {
+  containerClassName?: string
+}
+
+function HeroDescription({
+  containerClassName,
+}: HeroDescriptionProps): ReactElement {
   return (
-    <div className="bg-nightBlue text-white flex flex-col px-12 py-8 ">
+    <div
+      className={cls(
+        "bg-nightBlue text-white flex flex-col px-12 py-8 ",
+        containerClassName
+      )}
+    >
       <DescriptionText>
         Join a global community of developers celeberating coding!
       </DescriptionText>
