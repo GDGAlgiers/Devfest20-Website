@@ -16,14 +16,12 @@ interface QueryData {
 }
 
 interface SpeakerProps {
-  header?: string
   speakerName?: string
   speakerField?: string
   talkName?: string
   cardOptions: CardProps
-  containerClassName?: string
-  topBarColor: string
-  imageSpeaker: string
+  topBarColor?: string
+  imageSpeaker?: string
 }
 
 function SpeakerCard({
@@ -37,18 +35,34 @@ function SpeakerCard({
   const [hover, setHover] = useState(false)
 
   const query = graphql`
-    {
-      file(relativePath: { eq: "test.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
+    query {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   `
+  const getImage = (edge: any) => {
+    for (let i = 0; i < edge.length; i++) {
+      if (edge[i].node.relativePath === imageSpeaker) {
+        return edge[i].node.childImageSharp.fluid
+      }
+    }
+
+    return null
+  }
 
   const data = useStaticQuery<QueryData>(query)
+  const image = getImage(data.images.edges)
 
   return (
     <div
@@ -66,7 +80,7 @@ function SpeakerCard({
         <Image
           className="w-full"
           style={{ height: "250px" }}
-          fluid={data.file.childImageSharp.fluid}
+          fluid={image}
           alt="Sunset in the mountains"
         />
         <Speaker isHover={hover}>
@@ -85,7 +99,7 @@ export default SpeakerCard
 
 /// Styled Components
 
-const Speaker = styled.ul.attrs<{ isHover: boolean }>((props) => ({
+const Speaker = styled.div.attrs<{ isHover: boolean }>((props) => ({
   ...props,
   className: cls("transition-all ease duration-200 text-center", {
     display: !props.isHover,
@@ -102,7 +116,7 @@ const Speaker = styled.ul.attrs<{ isHover: boolean }>((props) => ({
   }
 `
 
-const Talk = styled.ul.attrs<{ isHover: boolean }>((props) => ({
+const Talk = styled.div.attrs<{ isHover: boolean }>((props) => ({
   ...props,
   className: cls("transition-all ease duration-200 text-center text-xl", {
     hideTalk: !props.isHover,
