@@ -41,7 +41,7 @@ function ChallengeCard({
   return (
     <div
       style={{ width: "18rem", height: "18rem" }}
-      className={cls("inline-block")}
+      className={cls("inline-block cursor-pointer")}
       onMouseEnter={(e) => setHover(true)}
       onMouseLeave={(e) => setHover(false)}
     >

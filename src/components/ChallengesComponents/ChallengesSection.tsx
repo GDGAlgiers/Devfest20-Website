@@ -62,7 +62,6 @@ function ChallengesSection(props: Props): ReactElement {
 export default ChallengesSection
 
 /// Styled Components :
-
 const ThickBorder = styled.div.attrs((props) => ({
   ...props,
   className: cls("w-full h-10"),
