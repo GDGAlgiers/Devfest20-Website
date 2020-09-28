@@ -9,7 +9,7 @@ interface Props {}
 
 function ChallengesSection(props: Props): ReactElement {
   return (
-    <Section id="#challenges" className="bg-nightBlue">
+    <Section id="challenges" className="bg-nightBlue">
       <ThickBorder className="bg-red"></ThickBorder>
       <div>
         <div className="flex flex-col w-full  m-auto px-6 py-4 md:flex-row md:w-7/8 sm:px-6 sm:py-2 lg:px-20">
