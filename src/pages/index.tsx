@@ -1,6 +1,7 @@
 import { PageProps } from "gatsby"
 import React, { ReactElement } from "react"
 import AgendaSection from "../components/Agenda/AgendaSection"
+import ChallengesSection from "../components/ChallengesComponents/ChallengesSection"
 import Layout from "../layout/Layout"
 import AboutSection from "../components/About/AboutSection"
 
@@ -16,6 +17,7 @@ function index(props: PageProps<Props>): ReactElement {
     >
       <AboutSection></AboutSection>
       <AgendaSection></AgendaSection>
+      <ChallengesSection></ChallengesSection>
     </Layout>
   )
 }
