@@ -7,9 +7,14 @@ import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 function heroSection(): ReactElement {
   return (
     <Section id="hero" className="bg-nightBlue">
-      <WithDotsBackgroundContainer>
-        <div className="w-full flex flex-row justify-center">
-          <div className=" text-white bg-nightBlue self-stretch mr-64 ">
+      <WithDotsBackgroundContainer className="flex flex-row justify-center">
+        <div
+          className="w-full flex flex-row justify-start"
+          style={{
+            maxWidth: 1300,
+          }}
+        >
+          <div className=" text-white bg-nightBlue self-start py-12 mr-64">
             <img
               src={require("../../assets/svgs/globe.svg")}
               alt="Glob"
@@ -17,13 +22,13 @@ function heroSection(): ReactElement {
             />
           </div>
           <div
-            className="flex flex-col justify-center "
+            className="flex flex-col justify-center flex-1"
             style={{
-              maxWidth: 560,
+              maxWidth: 540,
             }}
           >
-            <HeroCard />
-            <HeroDescription></HeroDescription>
+            <HeroCard containerClassName="mt-32 " />
+            <HeroDescription containerClassName="mb-16"></HeroDescription>
           </div>
         </div>
       </WithDotsBackgroundContainer>
