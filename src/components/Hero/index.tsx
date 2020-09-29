@@ -4,14 +4,17 @@ import HeroDescription from "./HeroDescription"
 import cls from "classnames"
 import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 
-interface HeroSectionProps {
-  classNameContainer?: string
-}
+interface HeroSectionProps {}
 
-function heroSection({ classNameContainer }: HeroSectionProps): ReactElement {
+function heroSection(props: HeroSectionProps): ReactElement {
   return (
-    <Section id="hero" className={cls("bg-nightBlue", classNameContainer)}>
-      <WithDotsBackgroundContainer className="flex flex-row justify-center">
+    <Section
+      id="hero"
+      className={cls(
+        "bg-nightBlue pt-20 h-screen flex justify-center items-center"
+      )}
+    >
+      <WithDotsBackgroundContainer className="flex flex-row justify-center h-full">
         <div
           className="w-full xl:w-8/12  flex flex-row justify-start"
           style={{

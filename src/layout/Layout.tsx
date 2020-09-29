@@ -2,6 +2,7 @@ import React, { PropsWithChildren, ReactElement } from "react"
 import Header from "./Header"
 import SEO, { SeoProps } from "./seo"
 import HeroSection from "../components/Hero"
+import { H3 } from "../components/typography/typography"
 
 interface Props {
   seo: Partial<SeoProps>
@@ -13,20 +14,11 @@ function Layout({ seo, children }: PropsWithChildren<Props>): ReactElement {
       <SEO {...seo} />
       <Header />
       <main>{children}</main>
-      <div
-        id="other"
-        style={{
-          height: "1000px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        className="bg-nightBlue text-yellow text-6xl"
-      >
-        OTHER SECTION
-      </div>
-      <footer>All rights reserved to GDG Algiers</footer>
+      <footer className="flex justify-center items-center py-4 bg-nightBlue">
+        <H3 className="text-yellow font-light text-base md:text-xl">
+          All rights reserved to GDG Algiers 2020
+        </H3>
+      </footer>
     </>
   )
 }
