@@ -4,6 +4,7 @@ import AgendaSection from "../components/Agenda/AgendaSection"
 import ChallengesSection from "../components/ChallengesComponents/ChallengesSection"
 import Layout from "../layout/Layout"
 import AboutSection from "../components/About/AboutSection"
+import HeroSection from "../components/Hero"
 
 interface Props {}
 
@@ -15,6 +16,7 @@ function index(props: PageProps<Props>): ReactElement {
         description: "Index page of devfest20 by GDG Algiers",
       }}
     >
+      <HeroSection classNameContainer="pt-20"></HeroSection>
       <AboutSection></AboutSection>
       <AgendaSection></AgendaSection>
       <ChallengesSection></ChallengesSection>
