@@ -8,15 +8,14 @@ interface HeroSectionProps {}
 
 function heroSection(props: HeroSectionProps): ReactElement {
   return (
-    <Section
-      id="hero"
+    <WithDotsBackgroundContainer
       className={cls(
-        "bg-nightBlue pt-20 h-screen flex justify-center items-center"
+        "bg-nightBlue  h-auto min-h-screen flex justify-center items-center"
       )}
     >
-      <WithDotsBackgroundContainer className="flex flex-row justify-center h-full">
+      <Section id="hero" className="w-full flex flex-row justify-center h-full">
         <div
-          className="w-full xl:w-8/12  flex flex-row justify-start"
+          className="w-full   flex flex-row justify-start"
           style={{
             maxWidth: 1300,
           }}
@@ -38,8 +37,8 @@ function heroSection(props: HeroSectionProps): ReactElement {
             <HeroDescription containerClassName="mb-16"></HeroDescription>
           </div>
         </div>
-      </WithDotsBackgroundContainer>
-    </Section>
+      </Section>
+    </WithDotsBackgroundContainer>
   )
 }
 
