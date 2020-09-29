@@ -22,6 +22,9 @@ module.exports = {
       blue: "#4285F4",
       teal: "#1CE9B6",
       nightBlue: "#191C48",
+      gray: "#E1E2E7",
+      grayDark: "#87888B",
+      nightBlueDark: "rgba(25, 28, 72, 0.9)",
     },
     fontFamily: {
       sans: ["Cairo", '"Open Sans"', "Roboto", "sans-serif"],
