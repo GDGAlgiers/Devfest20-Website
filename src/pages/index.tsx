@@ -16,7 +16,7 @@ function index(props: PageProps<Props>): ReactElement {
         description: "Index page of devfest20 by GDG Algiers",
       }}
     >
-      <HeroSection classNameContainer="pt-20"></HeroSection>
+      <HeroSection></HeroSection>
       <AboutSection></AboutSection>
       <AgendaSection></AgendaSection>
       <SpeakerSection
