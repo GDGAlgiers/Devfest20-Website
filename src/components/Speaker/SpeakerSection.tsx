@@ -59,9 +59,9 @@ function SpeakerSection({ speakers }: Props): ReactElement {
     <Section id="speakers">
       <div className="w-full pt-16">
         <div>
-          <div className="p-4 lg:mt-4 lg:ml-6">
-            <H1 className="mb-4 font-light">Speakers</H1>
-            <p className="text-xl">
+          <div className="p-4 lg:mt-4 lg:ml-6 text-nightBlue">
+            <H1 className="mb-4 lg:pl-20 pl-5 font-light">Speakers</H1>
+            <p className="lg:pl-20 pl-5 text-xl">
               Join a global community of developers celebrating coding! Lorem
               ipsum
             </p>
@@ -79,7 +79,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
               className="absolute w-16 bg-nightBlueDark"
               style={{
                 height: "450px",
-                zIndex: "99",
+                zIndex: "3",
                 left: "0px",
               }}
             ></div>
@@ -87,7 +87,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
               className="absolute w-16 bg-nightBlueDark"
               style={{
                 height: "450px",
-                zIndex: "99",
+                zIndex: "3",
                 right: "0px",
               }}
             ></div>
@@ -110,7 +110,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                 className="bg-opacity-75 absolute w-16 bg-grayDark"
                 style={{
                   height: "400px",
-                  zIndex: "98",
+                  zIndex: "2",
                   left: "-4rem",
                 }}
               ></div>
@@ -118,7 +118,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                 className="bg-opacity-75 absolute w-16 bg-grayDark"
                 style={{
                   height: "400px",
-                  zIndex: "98",
+                  zIndex: "2",
                   right: "-4rem",
                 }}
               ></div>
