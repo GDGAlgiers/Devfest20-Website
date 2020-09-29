@@ -13,7 +13,7 @@ function HeroDescription({
   return (
     <div
       className={cls(
-        "bg-nightBlue text-white flex flex-col px-12 py-8 ",
+        "bg-nightBlue text-white flex flex-col px-6 lg:px-12 py-8  ",
         containerClassName
       )}
     >

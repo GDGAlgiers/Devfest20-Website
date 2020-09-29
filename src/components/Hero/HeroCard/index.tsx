@@ -16,7 +16,7 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
       contentAreaClassName={cls("lg:px-12", "sm:px-0")}
     >
       <div>
-        <div className="flex md:flex-row mt-10 justify-center items-start">
+        <div className="flex md:flex-row pt-8 pb-2 justify-center items-start">
           <img
             src={require("../../../assets/svgs/gdgAlgiersLogo.svg")}
             alt="gdgAlgiers"
@@ -24,7 +24,9 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
           />
           <H5 className="font-hairline text-black-lighter">GDG Algiers</H5>
         </div>
-        <HeaderText>devfest</HeaderText>
+        <HeaderText className="text-7xl lg:text-8xl xl:text-8xl">
+          devfest
+        </HeaderText>
 
         <DateText>November 10th, 2020</DateText>
       </div>
@@ -34,14 +36,7 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
 
 const HeaderText = styled(H3).attrs((props) => ({
   ...props,
-  className: cls(
-    "text-nightBlue",
-    "leading-none",
-    "font-hairline",
-    "mb-4",
-    "lg:text-8xl",
-    "text-7xl"
-  ),
+  className: cls("text-nightBlue", "leading-none", "font-hairline", "mb-4"),
 }))``
 
 const DateText = styled.p.attrs((props) => ({

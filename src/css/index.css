@@ -16,10 +16,12 @@
 }
 
 @layer utilities {
-  .text-8xl {
-    font-size: 7.5rem;
-  }
-  .text-7xl {
-    font-size: 6rem;
+  @responsive {
+    .text-8xl {
+      font-size: 7.5rem;
+    }
+    .text-7xl {
+      font-size: 6rem;
+    }
   }
 }
