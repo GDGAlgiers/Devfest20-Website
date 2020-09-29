@@ -13,7 +13,7 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
     <Card
       containerClassName={cls("bg-white", containerClassName)}
       topBarClassName={cls("bg-yellow")}
-      contentAreaClassName={cls("px-12")}
+      contentAreaClassName={cls("lg:px-12", "sm:px-0")}
     >
       <div>
         <div className="flex md:flex-row mt-10 justify-center items-start">
@@ -34,10 +34,15 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
 
 const HeaderText = styled(H3).attrs((props) => ({
   ...props,
-  className: cls("text-nightBlue", "leading-none", "font-hairline", "mb-4"),
-}))`
-  font-size: 7.5rem;
-`
+  className: cls(
+    "text-nightBlue",
+    "leading-none",
+    "font-hairline",
+    "mb-4",
+    "lg:text-8xl",
+    "text-7xl"
+  ),
+}))``
 
 const DateText = styled.p.attrs((props) => ({
   ...props,

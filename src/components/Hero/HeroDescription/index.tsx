@@ -21,11 +21,8 @@ function HeroDescription({
         Join a global community of developers celeberating coding!
       </DescriptionText>
 
-      <div className="flex flex-row justify-between">
-        <HeroButton
-          className="bg-blue "
-          onClick={() => console.log("Register")}
-        >
+      <div className="flex flex-col justify-between lg:flex-row">
+        <HeroButton className="bg-blue" onClick={() => console.log("Register")}>
           Register
         </HeroButton>
         <HeroButton className="bg-yellow" onClick={() => console.log("AGENDA")}>
@@ -43,7 +40,7 @@ const DescriptionText = styled.p.attrs((props) => ({
 
 const HeroButton = styled(Button).attrs((props) => ({
   ...props,
-  className: cls("py-3", "text-xl", "px-16"),
+  className: cls("py-3", "text-xl", "lg:px-12", "lg:my-0", "my-2", "px-6"),
 }))``
 
 export default HeroDescription

@@ -5,11 +5,21 @@
 @tailwind utilities;
 
 @layer base {
-    html ,body {
-        width: 100%;
-        height: 100%;
-    }
-    html{
-        scroll-behavior: smooth;
-    }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-8xl {
+    font-size: 7.5rem;
+  }
+  .text-7xl {
+    font-size: 6rem;
+  }
 }
