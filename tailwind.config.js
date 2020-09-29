@@ -10,7 +10,6 @@ module.exports = {
         lighter: "#FFFFFF",
         default: "#F8F9FA",
       },
-
       green: {
         default: "#0CAD4D",
         darker: "#0F9D58",
@@ -21,13 +20,14 @@ module.exports = {
         default: "#F9AB00",
       },
       blue: "#4285F4",
+      teal: "#1CE9B6",
       nightBlue: "#191C48",
       gray: "#E1E2E7",
       grayDark: "#87888B",
       nightBlueDark: "rgba(25, 28, 72, 0.9)",
     },
     fontFamily: {
-      sans: ['"Product Sans"', "Roboto", "sans-serif"],
+      sans: ["Cairo", '"Open Sans"', "Roboto", "sans-serif"],
     },
     textIndent: {
       // defaults to {}

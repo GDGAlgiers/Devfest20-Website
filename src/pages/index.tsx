@@ -1,21 +1,23 @@
-import { Link, PageProps } from "gatsby"
+import { PageProps } from "gatsby"
 import React, { ReactElement } from "react"
 import AgendaSection from "../components/Agenda/AgendaSection"
-import { H1 } from "../components/typography/typography"
+import ChallengesSection from "../components/ChallengesComponents/ChallengesSection"
 import Layout from "../layout/Layout"
-import Card from "../components/common/Card/Card"
 import SpeakerSection from "../components/Speaker/SpeakerSection"
+import AboutSection from "../components/About/AboutSection"
+import HeroSection from "../components/Hero"
 interface Props {}
 
-function index({}: PageProps<Props>): ReactElement {
+function index(props: PageProps<Props>): ReactElement {
   return (
-    <Layout pageTitle="Index" pageDescription="GDG Algiers' Devfest20 Website">
-      <H1 className="text-blue">Hello in index page</H1>
-      <p>
-        <Link to="/example" className="no-underline hover:text-blue">
-          Go to example page
-        </Link>
-      </p>
+    <Layout
+      seo={{
+        title: "Index",
+        description: "Index page of devfest20 by GDG Algiers",
+      }}
+    >
+      <HeroSection classNameContainer="pt-20"></HeroSection>
+      <AboutSection></AboutSection>
       <AgendaSection></AgendaSection>
       <SpeakerSection
         speakers={[
@@ -77,6 +79,7 @@ function index({}: PageProps<Props>): ReactElement {
           },
         ]}
       ></SpeakerSection>
+      <ChallengesSection></ChallengesSection>
     </Layout>
   )
 }
