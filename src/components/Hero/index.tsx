@@ -9,22 +9,22 @@ function heroSection(): ReactElement {
     <Section id="hero" className="bg-nightBlue">
       <WithDotsBackgroundContainer className="flex flex-row justify-center">
         <div
-          className="w-full flex flex-row justify-start"
+          className="w-full xl:w-8/12  flex flex-row justify-start"
           style={{
             maxWidth: 1300,
           }}
         >
-          <div className=" text-white bg-nightBlue self-start py-12 mr-64">
+          <div className="hidden md:flex justify-center text-white bg-nightBlue self-start py-12 mr-64">
             <img
               src={require("../../assets/svgs/globe.svg")}
               alt="Glob"
-              className="w-24"
+              className="w-32"
             />
           </div>
           <div
-            className="flex flex-col justify-center flex-1"
+            className="flex flex-col justify-center flex-1 lg:mx-0 lg:w-auto w-full mx-auto "
             style={{
-              maxWidth: 540,
+              maxWidth: 500,
             }}
           >
             <HeroCard containerClassName="mt-32 " />
