@@ -21,7 +21,7 @@ function ChallengesSection(props: Props): ReactElement {
             </p>
           </div>
         </div>
-        <div className="mt-20 mb-10 lg:mb-0 md:mb-0 sm:mb-20 mx-auto grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 gap-y-32 gap-x-0 w-2/3">
+        <div className="mt-20 mb-10 lg:mb-0 md:mb-0 sm:mb-20 mx-auto grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 gap-y-32 gap-x-0 lg:w-2/3 max-w-full">
           {challenges.map((challenge, i) => (
             <div
               className={cls("mx-auto", {

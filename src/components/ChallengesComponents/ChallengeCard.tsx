@@ -45,7 +45,7 @@ function ChallengeCard({
       onMouseEnter={(e) => setHover(true)}
       onMouseLeave={(e) => setHover(false)}
     >
-      <div className="justify-end flex">
+      <div className="hidden md:justify-end md:flex">
         {logos.map((logo) => (
           <AnimatedImage
             src={require("../../assets/pngs/" + logo.src + ".png")}
@@ -145,8 +145,12 @@ const AnimatedImage = styled.img.attrs<{
 }>((props) => ({
   ...props,
   src: props.src,
-  className: cls("absolute transition duration-200 transform", props.imgStyle, {
-    [props.initialStyle]: !props.hover,
-    [props.translatedStyle]: props.hover,
-  }),
+  className: cls(
+    "absolute transition duration-200 transform overflow-hidden",
+    props.imgStyle,
+    {
+      [props.initialStyle]: !props.hover,
+      [props.translatedStyle]: props.hover,
+    }
+  ),
 }))``

@@ -60,7 +60,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
       <div className="w-full pt-16">
         <div>
           <div className="p-4 lg:mt-4 lg:ml-6 text-nightBlue">
-            <H1 className="mb-4 lg:pl-20 pl-5 font-light">Speakers</H1>
+            <H1 className="mb-4 lg:pl-20 pl-5">Speakers</H1>
             <p className="lg:pl-20 pl-5 text-xl">
               Join a global community of developers celebrating coding! Lorem
               ipsum
