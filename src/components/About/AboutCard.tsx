@@ -6,11 +6,13 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
 
 interface QueryData {
-  allImageSharp: {
+  allFile: {
     edges: [
       {
         node: {
-          fluid: FluidObject | FluidObject[]
+          childImageSharp: {
+            fluid: FluidObject | FluidObject[]
+          }
         }
       }
     ]
@@ -18,13 +20,18 @@ interface QueryData {
 }
 const query = graphql`
   query {
-    allImageSharp {
+    allFile(filter: { relativeDirectory: { eq: "AboutImgs" } }) {
       edges {
         node {
-          id
-          fluid {
-            ...GatsbyImageSharpFluid
-            originalName
+          childImageSharp {
+            fluid {
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
+              originalImg
+              originalName
+            }
           }
         }
       }
@@ -43,20 +50,20 @@ function AboutCard({
   topBarColor,
 }: AboutProps): ReactElement {
   const data = useStaticQuery<QueryData>(query)
-  const images = data.allImageSharp.edges.filter(
+  const images = data.allFile.edges.filter(
     (edge) =>
-      edge.node.fluid["originalName"] != "ArrowLeft.png" &&
-      edge.node.fluid["originalName"] != "ArrowRight.png"
+      edge.node.childImageSharp.fluid["originalName"] != "ArrowLeft.png" &&
+      edge.node.childImageSharp.fluid["originalName"] != "ArrowRight.png"
   )
-  const arrowLeft = data.allImageSharp.edges.filter(
-    (edge) => edge.node.fluid["originalName"] == "ArrowLeft.png"
+  const arrowLeft = data.allFile.edges.filter(
+    (edge) => edge.node.childImageSharp.fluid["originalName"] == "ArrowLeft.png"
   )
-  const arrowRight = data.allImageSharp.edges.filter(
-    (edge) => edge.node.fluid["originalName"] == "ArrowRight.png"
+  const arrowRight = data.allFile.edges.filter(
+    (edge) =>
+      edge.node.childImageSharp.fluid["originalName"] == "ArrowRight.png"
   )
   const [imageIndex, setImageIndex] = useState(0)
   const nextImage = () => {
-    var image1 = document.getElementById("image")
     setImageIndex(imageIndex + 1 < images.length ? imageIndex + 1 : 0)
   }
   const previousImage = () => {
@@ -76,14 +83,23 @@ function AboutCard({
         containerClassName={cls(containerClassName)}
       >
         <ChangeImageButton className="-mr-3" onClick={previousImage}>
-          <Image className=" w-8 " fluid={arrowLeft[0].node.fluid} />
+          <Image
+            className="w-8 h-8"
+            fluid={arrowLeft[0].node.childImageSharp.fluid}
+          />
         </ChangeImageButton>
-        <Images id="image">
-          <Image fluid={images[imageIndex].node.fluid} />
+        <Images>
+          <Image
+            className="h-64"
+            fluid={images[imageIndex].node.childImageSharp.fluid}
+          />
         </Images>
 
         <ChangeImageButton className="-ml-3" onClick={nextImage}>
-          <Image className=" w-8 " fluid={arrowRight[0].node.fluid} />
+          <Image
+            className=" w-8 h-8"
+            fluid={arrowRight[0].node.childImageSharp.fluid}
+          />
         </ChangeImageButton>
       </Card>
     </div>
