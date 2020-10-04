@@ -23,7 +23,7 @@ function AboutSection(props: Props): ReactElement {
     <Section id="about" className="bg-transparent p-4 sm:px-8 sm:py-12">
       <div className="flex flex-col  text-nightBlue mx-5 sm:mx-20">
         <Title>About Devfest</Title>
-        <div className="flex flex-col lg:flex-row h-auto">
+        <div className="flex flex-col pr-1 lg:flex-row h-auto">
           <Description>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta
             nobis optio nostrum! Aspernatur earum hic veniam itaque saepe alias?

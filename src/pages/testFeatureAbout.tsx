@@ -1,9 +1,6 @@
 import { PageProps } from "gatsby"
 import React, { ReactElement } from "react"
-import AgendaSection from "../components/Agenda/AgendaSection"
-import ChallengesSection from "../components/ChallengesComponents/ChallengesSection"
 import Layout from "../layout/Layout"
-import SpeakerSection from "../components/Speaker/SpeakerSection"
 import AboutSection from "../components/About/AboutSection"
 import HeroSection from "../components/Hero"
 interface Props {}
