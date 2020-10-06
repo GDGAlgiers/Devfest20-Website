@@ -6,6 +6,7 @@ import Layout from "../layout/Layout"
 import SpeakerSection from "../components/Speaker/SpeakerSection"
 import AboutSection from "../components/About/AboutSection"
 import HeroSection from "../components/Hero"
+import SponsorSection from "../components/Sponsor/SponsorSection"
 interface Props {}
 
 function index(props: PageProps<Props>): ReactElement {
@@ -80,6 +81,16 @@ function index(props: PageProps<Props>): ReactElement {
         ]}
       ></SpeakerSection>
       <ChallengesSection></ChallengesSection>
+      <SponsorSection
+        sponsors={[
+          {
+            sponsorLogo: "speaker.jpg",
+          },
+          {
+            sponsorLogo: "test.jpg",
+          },
+        ]}
+      ></SponsorSection>
     </Layout>
   )
 }

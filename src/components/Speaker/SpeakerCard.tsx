@@ -1,10 +1,8 @@
 import React, { ReactElement, useState } from "react"
 import styled from "styled-components"
 import Card, { CardProps } from "../common/Card/Card"
-import { H3 } from "../typography/typography"
 import cls from "classnames"
-import { EXTRA_SMALL } from "../../utils/medias"
-import { PageProps, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
 
 interface QueryData {
@@ -51,18 +49,14 @@ function SpeakerCard({
       }
     }
   `
-  const getImage = (edge: any) => {
-    for (let i = 0; i < edge.length; i++) {
-      if (edge[i].node.relativePath === imageSpeaker) {
-        return edge[i].node.childImageSharp.fluid
-      }
-    }
-
-    return null
-  }
 
   const data = useStaticQuery<QueryData>(query)
-  const image = getImage(data.images.edges)
+
+  //const image = getImage(data.images.edges)
+
+  const image = data.images.edges.filter(
+    (edge) => edge.node.relativePath === imageSpeaker
+  )[0].node.childImageSharp.fluid
 
   return (
     <div
