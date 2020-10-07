@@ -77,6 +77,7 @@ function AboutCard({
       >
         <ChangeImageButton
           className="-mr-3"
+          aria-label="Previous Image"
           onClick={previousImage}
           name="previous image"
         >
@@ -88,6 +89,7 @@ function AboutCard({
 
         <ChangeImageButton
           className="-ml-3"
+          aria-label="Next Image"
           onClick={nextImage}
           name="next image"
         >
