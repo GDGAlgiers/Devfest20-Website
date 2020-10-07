@@ -157,12 +157,13 @@ function SpeakerSection({ speakers }: Props): ReactElement {
 
         <br />
         <div className="text-center mb-48">
-          <button className="bg-gray p-3">
+          <button className="bg-gray p-3" aria-label="Speakers Buttons Groupe">
             <button
               className="p-2 previous shadow-lg border-nightBlue bg-yellow w-10 h-10"
               style={{
                 boxShadow: "6px 6px 0px -2px rgba(0,0,0,0.5)",
               }}
+              aria-label="Previous Speaker"
               name="previous speakers"
               onClick={() => {
                 prevSet()
@@ -174,7 +175,6 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                 return isLG && index % 3 === 0
               })
               .map((speaker, index) => {
-                console.log(index)
                 return (
                   <button
                     className={
@@ -182,6 +182,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                       " border-nightBlue p-2 ml-5 w-10 h-10"
                     }
                     name="speakers"
+                    aria-label={`Speaker Number: ${index + 1}`}
                     style={{
                       boxShadow: "6px 6px 0px -2px rgba(0,0,0,0.5)",
                     }}
@@ -195,6 +196,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
               style={{
                 boxShadow: "6px 6px 0px -2px rgba(0,0,0,0.5)",
               }}
+              aria-label="Next Speaker"
               name="next speakers"
               onClick={() => {
                 nextSet()
