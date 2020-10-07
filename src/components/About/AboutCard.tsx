@@ -75,14 +75,22 @@ function AboutCard({
         )}
         containerClassName={cls(containerClassName)}
       >
-        <ChangeImageButton className="-mr-3" onClick={previousImage}>
+        <ChangeImageButton
+          className="-mr-3"
+          onClick={previousImage}
+          name="previous image"
+        >
           <Image className=" w-8 " fluid={arrowLeft[0].node.fluid} />
         </ChangeImageButton>
         <Images id="image">
           <Image fluid={images[imageIndex].node.fluid} />
         </Images>
 
-        <ChangeImageButton className="-ml-3" onClick={nextImage}>
+        <ChangeImageButton
+          className="-ml-3"
+          onClick={nextImage}
+          name="next image"
+        >
           <Image className=" w-8 " fluid={arrowRight[0].node.fluid} />
         </ChangeImageButton>
       </Card>

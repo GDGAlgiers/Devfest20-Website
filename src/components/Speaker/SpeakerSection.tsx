@@ -163,6 +163,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
               style={{
                 boxShadow: "6px 6px 0px -2px rgba(0,0,0,0.5)",
               }}
+              name="previous speakers"
               onClick={() => {
                 prevSet()
               }}
@@ -180,6 +181,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                       (selected === index ? "bg-nightBlue" : "bg-white") +
                       " border-nightBlue p-2 ml-5 w-10 h-10"
                     }
+                    name="speakers"
                     style={{
                       boxShadow: "6px 6px 0px -2px rgba(0,0,0,0.5)",
                     }}
@@ -193,6 +195,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
               style={{
                 boxShadow: "6px 6px 0px -2px rgba(0,0,0,0.5)",
               }}
+              name="next speakers"
               onClick={() => {
                 nextSet()
               }}
