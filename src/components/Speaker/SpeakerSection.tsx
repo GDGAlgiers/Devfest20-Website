@@ -1,6 +1,6 @@
-import React, { ReactElement, useState, useEffect } from "react"
+import React, { ReactElement, useState } from "react"
 import styled, { keyframes } from "styled-components"
-import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
+import Section from "../common/layout/Section"
 import cls from "classnames"
 import { H1 } from "../typography/typography"
 import SpeakerCard from "./SpeakerCard"
