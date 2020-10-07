@@ -49,6 +49,7 @@ function ChallengeCard({
         {logos.map((logo) => (
           <AnimatedImage
             src={require("../../assets/pngs/" + logo.src + ".png")}
+            alt={logo.src}
             hover={hover}
             imgStyle={logo.imgStyle}
             initialStyle={logo.initialStyle}
@@ -87,6 +88,7 @@ function ChallengeCard({
         <ActionTextContainer>
           <AnimatedImage
             src={require("../../assets/pngs/" + icon.src + ".png")}
+            alt={icon.src}
             hover={hover}
             imgStyle={icon.imgStyle}
             initialStyle={icon.initialStyle}
