@@ -123,7 +123,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                 }}
               ></div>
             </div>
-            <div className="flex justify-around flex-wrap">
+            <div className="flex justify-around flex-wrap overflow-x-hidden overflow-y-hidden">
               {speakers
                 .filter((speaker, index) => {
                   return (
