@@ -115,7 +115,7 @@ const Images = styled.div.attrs({
   className:
     "w-full border-solid border-white transition-all duration-500 linear",
 })`
-  height: 346px;
+  height: 345px;
   border-width: 3px;
   transition-property: all;
   transition-duration: 1s;
