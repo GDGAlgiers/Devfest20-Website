@@ -69,35 +69,37 @@ function AboutCard({
   const previousImage = () => {
     setImageIndex(imageIndex - 1 >= 0 ? imageIndex - 1 : images.length - 1)
   }
-
+  console.log(images)
   return (
     <div className={cls(containerClassName)}>
       <Card
-        containerStyle={{ borderColor: "#fff", borderWidth: 2 + "px" }}
-        contentAreaClassName={cls(contentAreaClassName, "flex flex-row")}
+        containerStyle={{
+          borderColor: "#fff",
+          borderWidth: 2 + "px",
+          height: 415 + "px",
+        }}
+        contentAreaClassName={cls(contentAreaClassName, "flex flex-row px-4")}
         contentAreaStyle={{ flexDirection: "row" }}
-        topBarClassName={cls(
-          topBarColor,
-          "h-5 border-b-2 border-solid  border-white"
-        )}
+        topBarClassName={cls(topBarColor, "h-6 border-solid  border-white")}
+        topBarStyle={{ borderBottomWidth: "3px" }}
         containerClassName={cls(containerClassName)}
       >
         <ChangeImageButton className="-mr-3" onClick={previousImage}>
           <Image
-            className="w-8 h-8"
+            className="w-10 h-10"
             fluid={arrowLeft[0].node.childImageSharp.fluid}
           />
         </ChangeImageButton>
         <Images>
           <Image
-            className="h-64"
+            className="w-full h-full"
             fluid={images[imageIndex].node.childImageSharp.fluid}
           />
         </Images>
 
-        <ChangeImageButton className="-ml-3" onClick={nextImage}>
+        <ChangeImageButton className=" -ml-3" onClick={nextImage}>
           <Image
-            className=" w-8 h-8"
+            className=" w-10 h-10"
             fluid={arrowRight[0].node.childImageSharp.fluid}
           />
         </ChangeImageButton>
@@ -110,8 +112,10 @@ export default AboutCard
 
 const Images = styled.div.attrs({
   className:
-    "w-full max-w-sm border-2 border-solid border-white transition-all duration-500 linear",
+    "w-full border-solid border-white transition-all duration-500 linear",
 })`
+  height: 346px;
+  border-width: 3px;
   transition-property: all;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;

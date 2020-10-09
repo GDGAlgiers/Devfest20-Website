@@ -21,7 +21,7 @@ function AboutSection(props: Props): ReactElement {
   }, [isSM]) //"flex flex-col text-nightBlue mr-20 ml-20"
   return (
     <Section id="about" className="bg-transparent p-4 sm:px-8 sm:py-12">
-      <div className="flex flex-col  text-nightBlue mx-5 sm:mx-20">
+      <div className="flex flex-col  text-nightBlue mx-5 sm:mx-10">
         <Title>About Devfest</Title>
         <div className="flex flex-col pr-1 lg:flex-row h-auto">
           <Description>
@@ -42,8 +42,8 @@ function AboutSection(props: Props): ReactElement {
           </Description>
           {showCard && (
             <AboutCard
-              containerClassName="lg:w-full xl:max-w-lg"
-              contentAreaClassName="bg-nightBlue flex  pt-4 pb-3 "
+              containerClassName="lg:w-full xl:max-w-xl mt-3"
+              contentAreaClassName="bg-nightBlue flex  pt-5 pb-4 "
               topBarColor="bg-yellow"
             />
           )}
@@ -57,7 +57,7 @@ const Title = styled(H1).attrs((props) => ({
   className: cls("mb-4"),
 }))``
 const Description = styled.p.attrs((props) => ({
-  className: cls("w-full font-medium text-2xl leading-tight lg:mr-10"),
+  className: cls("lg:w-full font-medium  text-2xl leading-tight lg:mr-10"),
 }))``
 
 export default AboutSection
