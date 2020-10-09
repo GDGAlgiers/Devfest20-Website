@@ -1,10 +1,8 @@
 import React, { ReactElement, useState } from "react"
 import styled from "styled-components"
 import Card, { CardProps } from "../common/Card/Card"
-import { H3 } from "../typography/typography"
 import cls from "classnames"
-import { EXTRA_SMALL } from "../../utils/medias"
-import { PageProps, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
 
 interface QueryData {

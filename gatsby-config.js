@@ -1,8 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Tailwind`,
-    description: `An example config of Gatsby + TypeScript + Tailwind CSS`,
-    author: `@gatsbyjs`,
+    title: `Devfest20`,
+    description: `GDG DevFests are large community-run developer events happening around the globe focused on community building and learning about Google’s technologies. We organize DevFest 2020 in its 8th edition to offer speaker sessions, codelabs, workshops and a fascinating development challenges in all fields.`,
+    author: `@GDG_Algiers`,
+    siteUrl: "https://devfest20-gdgalgiers-1.netlify.app",
+    keywords: [
+      "GDG",
+      "Devfest",
+      "Algiers",
+      "Algeria",
+      "Dev",
+      "Development",
+      "Technology",
+      "Technologies",
+      "Web",
+      "Mobile",
+      "Machine Learning",
+      "Information",
+    ],
   },
   plugins: [
     {
@@ -15,6 +30,7 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-next-seo`,
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,8 +55,8 @@ module.exports = {
         name: `gatsby-tailwind-styled-components`,
         short_name: `tailwindsc`,
         start_url: `/`,
-        background_color: `#f5f5f5`,
-        theme_color: `#f5f5f5`,
+        background_color: `#191C48`,
+        theme_color: `#191C48`,
         display: `standalone`,
         icon: `docs/logo.svg`, // This path is relative to the root of the site.
       },
