@@ -25,6 +25,7 @@ function Header(props: HeaderProps): ReactElement {
       <Link to="/">
         <Brand
           src={require("../assets/svgs/devfest.svg")}
+          alt="Devfest20"
           className={cls({
             "opacity-0": !showBrand ?? true,
             "opacity-100": showBrand,

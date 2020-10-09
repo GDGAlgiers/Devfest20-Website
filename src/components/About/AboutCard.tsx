@@ -85,7 +85,12 @@ function AboutCard({
         topBarStyle={{ borderBottomWidth: "3px" }}
         containerClassName={cls(containerClassName)}
       >
-        <ChangeImageButton className="-mr-3" onClick={previousImage}>
+        <ChangeImageButton 
+          className="-mr-3"
+          aria-label="Previous Image"
+          onClick={previousImage}
+          name="previous image"
+          >
           <Image
             className="w-10 h-10"
             fluid={arrowLeft[0].node.childImageSharp.fluid}
@@ -98,7 +103,12 @@ function AboutCard({
           />
         </Images>
 
-        <ChangeImageButton className=" -ml-3" onClick={nextImage}>
+        <ChangeImageButton
+          className=" -ml-3"
+          aria-label="Next Image"
+          onClick={nextImage}
+          name="next image"
+          >
           <Image
             className=" w-10 h-10"
             fluid={arrowRight[0].node.childImageSharp.fluid}
