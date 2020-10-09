@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from "react"
 import styled from "styled-components"
-import Card, { CardProps } from "../common/Card/Card"
+import Card from "../common/Card/Card"
 import cls from "classnames"
 import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
@@ -52,15 +52,16 @@ function AboutCard({
   const data = useStaticQuery<QueryData>(query)
   const images = data.allFile.edges.filter(
     (edge) =>
-      edge.node.childImageSharp.fluid["originalName"] != "ArrowLeft.png" &&
-      edge.node.childImageSharp.fluid["originalName"] != "ArrowRight.png"
+      edge.node.childImageSharp.fluid["originalName"] !== "ArrowLeft.png" &&
+      edge.node.childImageSharp.fluid["originalName"] !== "ArrowRight.png"
   )
   const arrowLeft = data.allFile.edges.filter(
-    (edge) => edge.node.childImageSharp.fluid["originalName"] == "ArrowLeft.png"
+    (edge) =>
+      edge.node.childImageSharp.fluid["originalName"] === "ArrowLeft.png"
   )
   const arrowRight = data.allFile.edges.filter(
     (edge) =>
-      edge.node.childImageSharp.fluid["originalName"] == "ArrowRight.png"
+      edge.node.childImageSharp.fluid["originalName"] === "ArrowRight.png"
   )
   const [imageIndex, setImageIndex] = useState(0)
   const nextImage = () => {
