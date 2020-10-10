@@ -205,7 +205,8 @@ function SpeakerSection({ speakers }: Props): ReactElement {
           </button>
         </div>
       </div>
-      <ThickBorder className="bg-red"></ThickBorder>
+      {/* <ThickBorder className="bg-red"></ThickBorder> */}
+      {/* This border was duplicated */}
     </Section>
   )
 }
