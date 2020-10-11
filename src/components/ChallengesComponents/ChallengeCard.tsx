@@ -90,7 +90,7 @@ function ChallengeCard({
             src={require("../../assets/pngs/" + icon.src + ".png")}
             alt={icon.src}
             hover={hover}
-            imgStyle={icon.imgStyle}
+            imgStyle={`${icon.imgStyle}`}
             initialStyle={icon.initialStyle}
             translatedStyle={icon.translatedStyle}
           />
@@ -134,7 +134,7 @@ const ActionText = styled(H4).attrs<{ hover: boolean }>((props) => ({
     props.color,
     {
       "translate-y-0": props.hover,
-      "translate-y-32": !props.hover,
+      "translate-y-0 md:translate-y-32": !props.hover,
     }
   ),
 }))``
@@ -148,7 +148,7 @@ const AnimatedImage = styled.img.attrs<{
   ...props,
   src: props.src,
   className: cls(
-    "absolute transition duration-200 transform overflow-hidden",
+    " hidden md:block md:absolute md:transition md:duration-200 transform",
     props.imgStyle,
     {
       [props.initialStyle]: !props.hover,
