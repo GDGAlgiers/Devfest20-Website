@@ -69,56 +69,56 @@ function Index(props: PageProps<Props>): ReactElement {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 1",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-green",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 2",
-            imageSpeaker: "test.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-yellow",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 3",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-blue",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 4",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-white",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 5",
-            imageSpeaker: "test.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-gray",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 6",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-yellow",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 7",
-            imageSpeaker: "test.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-nightBlue",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 8",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-red",
           },
         ]}
@@ -127,10 +127,10 @@ function Index(props: PageProps<Props>): ReactElement {
       <SponsorSection
         sponsors={[
           {
-            sponsorLogo: "speaker.jpg",
+            sponsorLogo: "speakers/speaker.jpg",
           },
           {
-            sponsorLogo: "test.jpg",
+            sponsorLogo: "speakers/speaker.jpg",
           },
         ]}
       ></SponsorSection>

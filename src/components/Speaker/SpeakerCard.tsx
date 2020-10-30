@@ -6,10 +6,16 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
 
 interface QueryData {
-  file: {
-    childImageSharp: {
-      fluid: FluidObject | FluidObject[]
-    }
+  images: {
+    edges: {
+      node: {
+        relativePath: string
+        name: string
+        childImageSharp: {
+          fluid: FluidObject | FluidObject[]
+        }
+      }
+    }[]
   }
 }
 
@@ -53,7 +59,7 @@ function SpeakerCard({
   const data = useStaticQuery<QueryData>(query)
 
   //const image = getImage(data.images.edges)
-
+  console.log(data.images)
   const image = data.images.edges.filter(
     (edge) => edge.node.relativePath === imageSpeaker
   )[0].node.childImageSharp.fluid
