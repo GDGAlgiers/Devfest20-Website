@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import Section from "../common/layout/Section"
 import cls from "classnames"
 import { H1 } from "../typography/typography"
@@ -60,7 +60,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
       <div className="w-full pt-16">
         <div>
           <div className="p-4 lg:mt-4 lg:ml-6 text-nightBlue">
-            <H1 className="mb-4 lg:pl-20 pl-5">Speakers</H1>
+            <H1 className="mb-4 lg:pl-20 pl-5 font-light">Speakers</H1>
             <p className="lg:pl-20 pl-5 text-xl">
               Join a global community of developers celebrating coding! Lorem
               ipsum
@@ -123,7 +123,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                 }}
               ></div>
             </div>
-            <div className="flex justify-around flex-wrap">
+            <div className="flex justify-around flex-wrap overflow-x-hidden overflow-y-hidden">
               {speakers
                 .filter((speaker, index) => {
                   return (
@@ -213,16 +213,6 @@ function SpeakerSection({ speakers }: Props): ReactElement {
 export default SpeakerSection
 
 /// Styled Components :
-
-const Apparition = keyframes`
-  0% {
-    transform: translateX(300px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0px,0px);
-    opacity: 1;
-  }`
 
 const ThickBorder = styled.div.attrs((props) => ({
   ...props,

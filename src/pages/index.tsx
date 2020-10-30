@@ -6,6 +6,7 @@ import Layout from "../layout/Layout"
 import SpeakerSection from "../components/Speaker/SpeakerSection"
 import AboutSection from "../components/About/AboutSection"
 import HeroSection from "../components/Hero"
+import SponsorSection from "../components/Sponsor/SponsorSection"
 import { SeoProps } from "../layout/seo"
 interface Props {}
 
@@ -68,61 +69,71 @@ function Index(props: PageProps<Props>): ReactElement {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 1",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-green",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 2",
-            imageSpeaker: "test.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-yellow",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 3",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-blue",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 4",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-white",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 5",
-            imageSpeaker: "test.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-gray",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 6",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-yellow",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 7",
-            imageSpeaker: "test.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-nightBlue",
           },
           {
             speakerName: "John Doe",
             speakerField: "Software Engineer",
             talkName: "Title of Talk 8",
-            imageSpeaker: "speaker.jpg",
+            imageSpeaker: "speakers/speaker.jpg",
             topBarColor: "bg-red",
           },
         ]}
       ></SpeakerSection>
       <ChallengesSection></ChallengesSection>
+      <SponsorSection
+        sponsors={[
+          {
+            sponsorLogo: "speakers/speaker.jpg",
+          },
+          {
+            sponsorLogo: "speakers/speaker.jpg",
+          },
+        ]}
+      ></SponsorSection>
     </Layout>
   )
 }
