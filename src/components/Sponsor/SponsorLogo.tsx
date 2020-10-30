@@ -1,12 +1,18 @@
-import React, { ReactElement, useState } from "react"
+import React, { ReactElement } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
 
 interface QueryData {
-  file: {
-    childImageSharp: {
-      fluid: FluidObject | FluidObject[]
-    }
+  images: {
+    edges: {
+      node: {
+        relativePath: string
+        name: string
+        childImageSharp: {
+          fluid: FluidObject | FluidObject[]
+        }
+      }
+    }[]
   }
 }
 
@@ -15,8 +21,6 @@ interface SponsorLogoProp {
 }
 
 function SponsorLogo({ sponsorLogo }: SponsorLogoProp): ReactElement {
-  const [hover, setHover] = useState(false)
-
   const query = graphql`
     query {
       images: allFile {

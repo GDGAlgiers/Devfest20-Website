@@ -59,7 +59,6 @@ function SpeakerCard({
   const data = useStaticQuery<QueryData>(query)
 
   //const image = getImage(data.images.edges)
-  console.log(data.images)
   const image = data.images.edges.filter(
     (edge) => edge.node.relativePath === imageSpeaker
   )[0].node.childImageSharp.fluid

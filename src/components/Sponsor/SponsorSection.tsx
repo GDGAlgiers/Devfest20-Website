@@ -1,11 +1,10 @@
-import React, { ReactElement, useState } from "react"
+import React, { ReactElement } from "react"
 import styled from "styled-components"
 import Section from "../common/layout/Section"
 import cls from "classnames"
 import { H1 } from "../typography/typography"
-import { useAtleastLarge } from "../../utils/medias"
 import Card from "../common/Card/Card"
-import { H3, H5 } from "../typography/typography"
+import { H5 } from "../typography/typography"
 
 import SponsorLogo from "./SponsorLogo"
 
@@ -18,10 +17,6 @@ interface Props {
 }
 
 function SponsorsSection({ sponsors }: Props): ReactElement {
-  const isLG = useAtleastLarge()
-  const [selected, setSelected] = useState(0)
-  const [animate, setAnimate] = useState(true)
-
   return (
     <Section id="sponsors">
       <div className="w-full pt-16 mb-20">
@@ -91,20 +86,4 @@ export default SponsorsSection
 const ThickBorder = styled.div.attrs((props) => ({
   ...props,
   className: cls("w-full h-10"),
-}))``
-
-const HeaderText = styled(H3).attrs((props) => ({
-  ...props,
-  className: cls("text-yellow", "leading-none", "font-hairline", "mb-4"),
-}))``
-
-const DateText = styled.p.attrs((props) => ({
-  ...props,
-  className: cls(
-    "text-center",
-    "text-xl",
-    "text-black-lighter",
-    "mb-6",
-    "font-hairline"
-  ),
 }))``

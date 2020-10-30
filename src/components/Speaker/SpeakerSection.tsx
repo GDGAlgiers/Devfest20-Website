@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import Section from "../common/layout/Section"
 import cls from "classnames"
 import { H1 } from "../typography/typography"
@@ -213,16 +213,6 @@ function SpeakerSection({ speakers }: Props): ReactElement {
 export default SpeakerSection
 
 /// Styled Components :
-
-const Apparition = keyframes`
-  0% {
-    transform: translateX(300px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0px,0px);
-    opacity: 1;
-  }`
 
 const ThickBorder = styled.div.attrs((props) => ({
   ...props,
