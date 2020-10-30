@@ -1,4 +1,4 @@
-import { PageProps } from "gatsby"
+import { graphql, PageProps, useStaticQuery } from "gatsby"
 import React, { ReactElement } from "react"
 import AgendaSection from "../components/Agenda/AgendaSection"
 import ChallengesSection from "../components/ChallengesComponents/ChallengesSection"
@@ -7,14 +7,57 @@ import SpeakerSection from "../components/Speaker/SpeakerSection"
 import AboutSection from "../components/About/AboutSection"
 import HeroSection from "../components/Hero"
 import SponsorSection from "../components/Sponsor/SponsorSection"
+import { SeoProps } from "../layout/seo"
 interface Props {}
 
-function index(props: PageProps<Props>): ReactElement {
+const INDEX_SEO: SeoProps = {
+  title: "Home",
+  description:
+    "GDG DevFests are large community-run developer events happening around the globe focused on community building and learning about Google’s technologies. We organize DevFest 2020 in its 8th edition to offer speaker sessions, codelabs, workshops and a fascinating development challenges in all fields.",
+  openGraph: {
+    url: "https://devfest20-gdgalgiers-1.netlify.app",
+    title: "Devfest 20 Home",
+    description: "Devfest20 event from GDG Algiers",
+    images: [
+      {
+        url: "https://i.ibb.co/kQgBCJD/devfest-Card.png",
+        width: 800,
+        height: 600,
+        alt: "devfest",
+      },
+    ],
+    site_name: "Devfest20 GDG Algiers",
+  },
+}
+
+function Index(props: PageProps<Props>): ReactElement {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+            keywords
+            siteUrl
+          }
+        }
+      }
+    `
+  )
   return (
     <Layout
       seo={{
-        title: "Index",
-        description: "Index page of devfest20 by GDG Algiers",
+        twitter: {
+          handle: site.siteMetadata.author,
+          cardType: "summary_large_image",
+        },
+        metaTags: [
+          {
+            property: "keywords",
+            content: site.siteMetadata.keywords.join(","),
+          },
+        ],
+        ...INDEX_SEO,
       }}
     >
       <HeroSection></HeroSection>
@@ -95,4 +138,4 @@ function index(props: PageProps<Props>): ReactElement {
   )
 }
 
-export default index
+export default Index

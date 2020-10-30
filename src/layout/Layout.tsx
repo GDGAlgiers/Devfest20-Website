@@ -1,7 +1,6 @@
 import React, { PropsWithChildren, ReactElement } from "react"
 import Header from "./Header"
 import SEO, { SeoProps } from "./seo"
-import HeroSection from "../components/Hero"
 import { H3 } from "../components/typography/typography"
 
 interface Props {

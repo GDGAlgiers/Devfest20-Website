@@ -1,16 +1,18 @@
-import React, { ReactElement, useState } from "react"
-import styled from "styled-components"
-import Card, { CardProps } from "../common/Card/Card"
+import React, { ReactElement, useEffect, useState } from "react"
+import styled, { keyframes } from "styled-components"
+import Card from "../common/Card/Card"
 import cls from "classnames"
 import { graphql, useStaticQuery } from "gatsby"
 import Image, { FluidObject } from "gatsby-image"
 
 interface QueryData {
-  allImageSharp: {
+  allFile: {
     edges: [
       {
         node: {
-          fluid: FluidObject | FluidObject[]
+          childImageSharp: {
+            fluid: FluidObject | FluidObject[]
+          }
         }
       }
     ]
@@ -18,13 +20,18 @@ interface QueryData {
 }
 const query = graphql`
   query {
-    allImageSharp {
+    allFile(filter: { relativeDirectory: { eq: "AboutImgs" } }) {
       edges {
         node {
-          id
-          fluid {
-            ...GatsbyImageSharpFluid
-            originalName
+          childImageSharp {
+            fluid {
+              base64
+              tracedSVG
+              srcWebp
+              srcSetWebp
+              originalImg
+              originalName
+            }
           }
         }
       }
@@ -43,47 +50,118 @@ function AboutCard({
   topBarColor,
 }: AboutProps): ReactElement {
   const data = useStaticQuery<QueryData>(query)
-  const images = data.allImageSharp.edges.filter(
+  const images = data.allFile.edges.filter(
     (edge) =>
-      edge.node.fluid["originalName"] != "ArrowLeft.png" &&
-      edge.node.fluid["originalName"] != "ArrowRight.png"
+      edge.node.childImageSharp.fluid["originalName"] !== "ArrowLeft.png" &&
+      edge.node.childImageSharp.fluid["originalName"] !== "ArrowRight.png"
   )
-  const arrowLeft = data.allImageSharp.edges.filter(
-    (edge) => edge.node.fluid["originalName"] == "ArrowLeft.png"
+  const arrowLeft = data.allFile.edges.filter(
+    (edge) =>
+      edge.node.childImageSharp.fluid["originalName"] === "ArrowLeft.png"
   )
-  const arrowRight = data.allImageSharp.edges.filter(
-    (edge) => edge.node.fluid["originalName"] == "ArrowRight.png"
+  const arrowRight = data.allFile.edges.filter(
+    (edge) =>
+      edge.node.childImageSharp.fluid["originalName"] === "ArrowRight.png"
   )
   const [imageIndex, setImageIndex] = useState(0)
+
   const nextImage = () => {
-    var image1 = document.getElementById("image")
+    var image = document.getElementById("images")
+    image?.animate(
+      {
+        opacity: [1, 0.7, 0],
+      },
+      {
+        duration: 500,
+        easing: "ease-out",
+      }
+    )
     setImageIndex(imageIndex + 1 < images.length ? imageIndex + 1 : 0)
+    image?.animate(
+      {
+        opacity: [0, 0.7, 1],
+      },
+      {
+        duration: 700,
+        easing: "ease-in",
+      }
+    )
   }
+
   const previousImage = () => {
+    var image = document.getElementById("images")
+    image?.animate(
+      {
+        opacity: [1, 0.7, 0],
+      },
+      {
+        duration: 500,
+        easing: "ease-out",
+      }
+    )
     setImageIndex(imageIndex - 1 >= 0 ? imageIndex - 1 : images.length - 1)
+    image?.animate(
+      {
+        opacity: [0, 0.7, 1],
+      },
+      {
+        duration: 700,
+        easing: "ease-in",
+      }
+    )
   }
+
+  useEffect(() => {
+    const next = setTimeout(() => {
+      nextImage()
+    }, 3000)
+    // Clear timeout if the component is unmounted
+    return () => clearTimeout(next)
+  })
 
   return (
     <div className={cls(containerClassName)}>
       <Card
-        containerStyle={{ borderColor: "#fff", borderWidth: 2 + "px" }}
-        contentAreaClassName={cls(contentAreaClassName, "flex flex-row")}
+        containerStyle={{
+          borderColor: "#fff",
+          borderWidth: 2 + "px",
+          height: 415 + "px",
+        }}
+        contentAreaClassName={cls(contentAreaClassName, "flex flex-row px-4")}
         contentAreaStyle={{ flexDirection: "row" }}
-        topBarClassName={cls(
-          topBarColor,
-          "h-5 border-b-2 border-solid  border-white"
-        )}
+        topBarClassName={cls(topBarColor, "h-6 border-solid  border-white")}
+        topBarStyle={{ borderBottomWidth: "3px" }}
         containerClassName={cls(containerClassName)}
       >
-        <ChangeImageButton className="-mr-3" onClick={previousImage}>
-          <Image className=" w-8 " fluid={arrowLeft[0].node.fluid} />
+        <ChangeImageButton
+          className="-mr-3"
+          aria-label="Previous Image"
+          onClick={previousImage}
+          name="previous image"
+        >
+          <Image
+            className="w-10 h-10"
+            fluid={arrowLeft[0].node.childImageSharp.fluid}
+          />
         </ChangeImageButton>
-        <Images id="image">
-          <Image fluid={images[imageIndex].node.fluid} />
+        <Images id="images">
+          <Image
+            fadeIn={false}
+            className="w-full h-full"
+            fluid={images[imageIndex].node.childImageSharp.fluid}
+          />
         </Images>
 
-        <ChangeImageButton className="-ml-3" onClick={nextImage}>
-          <Image className=" w-8 " fluid={arrowRight[0].node.fluid} />
+        <ChangeImageButton
+          className=" -ml-3"
+          aria-label="Next Image"
+          onClick={nextImage}
+          name="next image"
+        >
+          <Image
+            className=" w-10 h-10"
+            fluid={arrowRight[0].node.childImageSharp.fluid}
+          />
         </ChangeImageButton>
       </Card>
     </div>
@@ -92,13 +170,21 @@ function AboutCard({
 
 export default AboutCard
 
-const Images = styled.div.attrs({
-  className:
-    "w-full max-w-sm border-2 border-solid border-white transition-all duration-500 linear",
-})`
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+const imagesAnimation = keyframes`
+ from { opacity: 0 }
+ to   { opacity: 1 } 
+ `
+
+const Images = styled.div.attrs((props) => ({
+  ...props,
+  className: cls(props.className, "w-full border-solid border-white "),
+}))`
+  height: 345px;
+  border-width: 3px;
+  animation-name: ${imagesAnimation};
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 `
 
 const ChangeImageButton = styled.button.attrs((props) => ({
