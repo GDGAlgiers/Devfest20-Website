@@ -1,5 +1,5 @@
-import React, { ReactElement, useState } from "react"
-import styled from "styled-components"
+import React, { ReactElement, useEffect, useState } from "react"
+import styled, { keyframes } from "styled-components"
 import Card from "../common/Card/Card"
 import cls from "classnames"
 import { graphql, useStaticQuery } from "gatsby"
@@ -64,13 +64,61 @@ function AboutCard({
       edge.node.childImageSharp.fluid["originalName"] === "ArrowRight.png"
   )
   const [imageIndex, setImageIndex] = useState(0)
+
   const nextImage = () => {
+    var image = document.getElementById("images")
+    image?.animate(
+      {
+        opacity: [1, 0.7, 0],
+      },
+      {
+        duration: 500,
+        easing: "ease-out",
+      }
+    )
     setImageIndex(imageIndex + 1 < images.length ? imageIndex + 1 : 0)
+    image?.animate(
+      {
+        opacity: [0, 0.7, 1],
+      },
+      {
+        duration: 700,
+        easing: "ease-in",
+      }
+    )
   }
+
   const previousImage = () => {
+    var image = document.getElementById("images")
+    image?.animate(
+      {
+        opacity: [1, 0.7, 0],
+      },
+      {
+        duration: 500,
+        easing: "ease-out",
+      }
+    )
     setImageIndex(imageIndex - 1 >= 0 ? imageIndex - 1 : images.length - 1)
+    image?.animate(
+      {
+        opacity: [0, 0.7, 1],
+      },
+      {
+        duration: 700,
+        easing: "ease-in",
+      }
+    )
   }
-  console.log(images)
+
+  useEffect(() => {
+    const next = setTimeout(() => {
+      nextImage()
+    }, 3000)
+    // Clear timeout if the component is unmounted
+    return () => clearTimeout(next)
+  })
+
   return (
     <div className={cls(containerClassName)}>
       <Card
@@ -96,8 +144,9 @@ function AboutCard({
             fluid={arrowLeft[0].node.childImageSharp.fluid}
           />
         </ChangeImageButton>
-        <Images>
+        <Images id="images">
           <Image
+            fadeIn={false}
             className="w-full h-full"
             fluid={images[imageIndex].node.childImageSharp.fluid}
           />
@@ -121,15 +170,21 @@ function AboutCard({
 
 export default AboutCard
 
-const Images = styled.div.attrs({
-  className:
-    "w-full border-solid border-white transition-all duration-500 linear",
-})`
+const imagesAnimation = keyframes`
+ from { opacity: 0 }
+ to   { opacity: 1 } 
+ `
+
+const Images = styled.div.attrs((props) => ({
+  ...props,
+  className: cls(props.className, "w-full border-solid border-white "),
+}))`
   height: 345px;
   border-width: 3px;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  animation-name: ${imagesAnimation};
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 `
 
 const ChangeImageButton = styled.button.attrs((props) => ({
