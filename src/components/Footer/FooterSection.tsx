@@ -1,9 +1,6 @@
 import React, { ReactElement } from "react"
-import styled from "styled-components"
 import Section from "../common/layout/Section"
-import cls from "classnames"
 import { H3 } from "../typography/typography"
-import Card from "../common/Card/Card"
 import { H5 } from "../typography/typography"
 import { Link } from "gatsby"
 
@@ -94,9 +91,3 @@ function FooterSection(): ReactElement {
 }
 
 export default FooterSection
-
-/// Styled Components :
-const ThickBorder = styled.div.attrs((props) => ({
-  ...props,
-  className: cls("w-full h-10"),
-}))``
