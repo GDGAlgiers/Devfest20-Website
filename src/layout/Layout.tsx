@@ -13,11 +13,12 @@ function Layout({ seo, children }: PropsWithChildren<Props>): ReactElement {
       <SEO {...seo} />
       <Header />
       <main>{children}</main>
-      <footer className="flex justify-center items-center py-4 bg-nightBlue">
+      {/*<footer className="flex justify-center items-center py-4 bg-nightBlue">
         <H3 className="text-yellow font-light text-base md:text-xl">
           All rights reserved to GDG Algiers 2020
         </H3>
       </footer>
+      */}
     </>
   )
 }

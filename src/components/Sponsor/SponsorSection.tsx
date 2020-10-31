@@ -75,7 +75,6 @@ function SponsorsSection({ sponsors }: Props): ReactElement {
           </div>
         </div>
       </div>
-      <ThickBorder className="bg-red"></ThickBorder>
     </Section>
   )
 }
