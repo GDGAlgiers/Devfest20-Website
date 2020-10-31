@@ -25,20 +25,15 @@ function AboutSection(props: Props): ReactElement {
         <Title>About Devfest</Title>
         <div className="flex flex-col pr-1 lg:flex-row h-auto">
           <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta
-            nobis optio nostrum! Aspernatur earum hic veniam itaque saepe alias?
-            Fugiat dolorum cumque eius reprehenderit inventore velit ab vel
-            minus. Sequi mollitia, voluptate nobis, cupiditate enim fugiat
-            obcaecati blanditiis iure quae nam quas unde exercitationem
-            doloribus eum libero eaque vel porro. Maxime labore temporibus
-            impedit dolorem tempora recusandae hic libero. Quas nisi optio at
-            vel aperiam recusandae culpa quae quibusdam natus fuga, excepturi
-            mollitia, blanditiis quod a exercitationem molestias dolorem
-            quaerat, nihil quidem? Obcaecati nesciunt, accusamus culpa delectus
-            deleniti adipisci? Facilis cum ratione at, corporis sequi sit
-            doloribus ad quasi, fugit nobis numquam amet modi? Magnam quidem
-            blanditiis nobis, ducimus architecto ipsa vel pariatur unde et
-            placeat commodi sit non?
+            Devfest Algiers is one of the biggest annual events organised by GDG
+            Algiers in order to celebrate tech with the community. This year's
+            Devfest will last for two continuous days on the 13th and the 14th
+            of November. These days will be full of interesting talks presented
+            by a group of amazing experts and professionals, in addition to a
+            competition that will allow developers to celebrate the developer
+            festival by solving challenges in four different tracks, a panel
+            brought to you by WTM Algiers and a ”Gender Equity In Tech”
+            Workshop.
           </Description>
           {showCard && (
             <AboutCard
@@ -57,7 +52,9 @@ const Title = styled(H1).attrs((props) => ({
   className: cls("mb-4"),
 }))``
 const Description = styled.p.attrs((props) => ({
-  className: cls("lg:w-full font-medium  text-2xl leading-tight lg:mr-10"),
+  className: cls(
+    "lg:w-full font-medium lg:px-12 lg:text-3xl text-xl font-medium leading-tight lg:mr-10"
+  ),
 }))``
 
 export default AboutSection
