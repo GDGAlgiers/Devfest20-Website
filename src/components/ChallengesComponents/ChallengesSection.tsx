@@ -15,10 +15,7 @@ function ChallengesSection(props: Props): ReactElement {
         <div className="flex flex-col w-full  m-auto px-6 py-4 md:flex-row md:w-7/8 sm:px-6 sm:py-2 lg:px-20">
           <div className="p-4 lg:mt-4 lg:ml-6 bg-nightBlue">
             <H1 className="text-white mb-4 font-light">Challenges</H1>
-            <p className="text-white text-xl">
-              Join a global community of developers celebrating coding! Lorem
-              ipsum
-            </p>
+            <p className="text-white text-xl">Multiple Tracks to compete on</p>
           </div>
         </div>
         <div className="mt-20 mb-10 lg:mb-0 md:mb-0 sm:mb-20 mx-auto grid md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 gap-y-32 gap-x-0 lg:w-2/3 max-w-full">
