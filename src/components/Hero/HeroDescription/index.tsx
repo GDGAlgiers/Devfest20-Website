@@ -2,6 +2,7 @@ import React, { ReactElement } from "react"
 import styled from "styled-components"
 import cls from "classnames"
 import Button from "../../common/Button/Button"
+import { navigate } from "gatsby"
 
 interface HeroDescriptionProps {
   containerClassName?: string
@@ -22,7 +23,10 @@ function HeroDescription({
       </DescriptionText>
 
       <div className="flex flex-col justify-between lg:flex-row">
-        <HeroButton className="bg-blue" onClick={() => console.log("Register")}>
+        <HeroButton
+          className="bg-blue"
+          onClick={() => navigate("/register/challenges")}
+        >
           Register
         </HeroButton>
         <HeroButton className="bg-yellow" onClick={() => console.log("AGENDA")}>
