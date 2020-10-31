@@ -11,7 +11,7 @@ export default function (props: PageProps) {
         className="transition-all duration-200 ease border-2 border-solid rounded-md p-2 text-yellow-lighter absolute top-0 left-0 m-4 hover:bg-yellow-lighter hover:text-nightBlue"
       >
         {" "}
-        {"<- "} Take me back
+        {"</ "} Take me back
       </Link>
       <Title>
         <span className="text-yellow-lighter font-medium">404</span>

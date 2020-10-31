@@ -1,0 +1,5 @@
+export const WEB_PARTICIPANTS = "web_participants"
+export const MOBILE_PARTICIPANTS = "mobile_participants"
+export const ML_PARTICIPANTS = "ml_participants"
+export const AUTOMATION_PARTICIPANTS = "automation_participants"
+export const ONLINE_SAFETY_PARTICIPANTS = "online_safety_participants"

@@ -4,3 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 import "./src/css/index.css"
+import "firebase/firestore"
+import "firebase/analytics"
