@@ -83,7 +83,7 @@ function FooterSection(): ReactElement {
         </Link>
 
         <Link to="#">
-          <H3 className="text-white text-base md:text-xl">2019 edition</H3>
+          <H3 className="text-white text-base md:text-xl">2020 edition</H3>
         </Link>
       </footer>
     </Section>
