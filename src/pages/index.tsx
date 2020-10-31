@@ -7,6 +7,7 @@ import SpeakerSection from "../components/Speaker/SpeakerSection"
 import AboutSection from "../components/About/AboutSection"
 import HeroSection from "../components/Hero"
 import SponsorSection from "../components/Sponsor/SponsorSection"
+import FooterSection from "../components/Footer/FooterSection"
 import { SeoProps } from "../layout/seo"
 interface Props {}
 
@@ -134,6 +135,7 @@ function Index(props: PageProps<Props>): ReactElement {
           },
         ]}
       ></SponsorSection>
+      <FooterSection></FooterSection>
     </Layout>
   )
 }
