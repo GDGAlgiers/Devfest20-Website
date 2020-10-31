@@ -6,8 +6,8 @@ export default [
     icon: {
       src: "mlIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-6 translate-y-8",
-      translatedStyle: "-translate-x-32 translate-y-8",
+      initialStyle: "md:-translate-x-6 md:translate-y-8",
+      translatedStyle: "md:-translate-x-32 md:translate-y-8",
     },
     dark: true,
     secondaryColor: {
@@ -18,8 +18,8 @@ export default [
       {
         src: "mlLogo",
         imgStyle: "w-20",
-        initialStyle: "translate-x-12 -translate-y-8",
-        translatedStyle: "translate-x-20 -translate-y-16",
+        initialStyle: "md:translate-x-12 md:-translate-y-8",
+        translatedStyle: "md:translate-x-20 md:-translate-y-16",
       },
     ],
   },
@@ -28,9 +28,9 @@ export default [
     description: "Front End Front End Front End Front End Front End Front End",
     icon: {
       src: "frontendIcon",
-      imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      imgStyle: "hidden md:block md:flex md:w-16",
+      initialStyle: "md:-translate-x-4 md:translate-y-12",
+      translatedStyle: "md:-translate-x-32 md:translate-y-12",
     },
     dark: false,
     secondaryColor: {
@@ -41,20 +41,26 @@ export default [
       {
         src: "vueLogo",
         imgStyle: "w-16",
-        initialStyle: " translate-x-12 translate-y-6 rotate-45",
-        translatedStyle: "translate-x-16 translate-y-6 rotate-45",
+        initialStyle:
+          " md:translate-x-12 md:translate-y-6 md:rotate-45 -translate-x-24 -translate-y-12",
+        translatedStyle:
+          "md:translate-x-16 md:translate-y-6 md:rotate-45 -translate-x-24 -translate-y-12",
       },
       {
         src: "reactLogo",
         imgStyle: "w-32",
-        initialStyle: "translate-x-16 -translate-y-10",
-        translatedStyle: "translate-x-20 -translate-y-20",
+        initialStyle:
+          "md:translate-x-16 md:-translate-y-10 -translate-x-32 -translate-y-12",
+        translatedStyle:
+          "md:translate-x-20 md:-translate-y-20 -translate-x-32 -translate-y-12",
       },
       {
         src: "angularLogo",
         imgStyle: "w-16",
-        initialStyle: "-translate-x-8 -translate-y-8",
-        translatedStyle: "-translate-x-8 -translate-y-16",
+        initialStyle:
+          "md:-translate-x-8 md:-translate-y-8 -translate-x-8 -translate-y-8 rotate-45",
+        translatedStyle:
+          "md:-translate-x-8 md:-translate-y-16 -translate-x-8 -translate-y-8 rotate-45",
       },
     ],
   },
@@ -64,8 +70,8 @@ export default [
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "md:-translate-x-4 md:translate-y-12",
+      translatedStyle: "md:-translate-x-32 md:translate-y-12",
     },
     dark: false,
     secondaryColor: {
@@ -76,8 +82,8 @@ export default [
       {
         src: "mlLogo",
         imgStyle: "w-20",
-        initialStyle: "translate-x-12 -translate-y-8",
-        translatedStyle: "translate-x-20 -translate-y-16",
+        initialStyle: "md:translate-x-12 md:-translate-y-8",
+        translatedStyle: "md:translate-x-20 md:-translate-y-16",
       },
     ],
   },
@@ -88,8 +94,8 @@ export default [
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "md:-translate-x-4 md:translate-y-12",
+      translatedStyle: "md:-translate-x-32 md:translate-y-12",
     },
     dark: false,
     secondaryColor: {
@@ -100,20 +106,20 @@ export default [
       {
         src: "laravelLogo",
         imgStyle: "w-16",
-        initialStyle: "-translate-x-8 -translate-y-8",
-        translatedStyle: "-translate-x-8 -translate-y-16",
+        initialStyle: "md:-translate-x-8 md:-translate-y-8",
+        translatedStyle: "md:-translate-x-8 md:-translate-y-16",
       },
       {
         src: "djangoLogo",
         imgStyle: "w-20 rounded",
-        initialStyle: "translate-x-12 -translate-y-6 rotate-45",
-        translatedStyle: "translate-x-16 -translate-y-12 rotate-45",
+        initialStyle: "md:translate-x-12 md:-translate-y-6 md:rotate-45",
+        translatedStyle: "md:translate-x-16 md:-translate-y-12 md:rotate-45",
       },
       {
         src: "nodeLogo",
         imgStyle: "w-16",
-        initialStyle: " translate-x-16 translate-y-10",
-        translatedStyle: "translate-x-20 translate-y-12",
+        initialStyle: " md:translate-x-16 md:translate-y-10",
+        translatedStyle: "md:translate-x-20 md:translate-y-12",
       },
     ],
   },
@@ -123,8 +129,8 @@ export default [
     icon: {
       src: "wtmIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-8",
-      translatedStyle: "-translate-x-32 translate-y-8",
+      initialStyle: "md:-translate-x-4 md:translate-y-8",
+      translatedStyle: "md:-translate-x-32 md:translate-y-8",
     },
     dark: false,
     secondaryColor: {
@@ -135,8 +141,8 @@ export default [
       {
         src: "onlineSafetyLogo",
         imgStyle: "w-20 ",
-        initialStyle: "translate-x-12 -translate-y-8",
-        translatedStyle: "translate-x-20 -translate-y-16",
+        initialStyle: "md:translate-x-12 md:-translate-y-8",
+        translatedStyle: "md:translate-x-20 md:-translate-y-16",
       },
     ],
   },
