@@ -28,7 +28,7 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
           devfest
         </HeaderText>
 
-        <DateText>November 10th, 2020</DateText>
+        <DateText>November 13th-14th | virtual</DateText>
       </div>
     </Card>
   )

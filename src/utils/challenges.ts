@@ -2,7 +2,7 @@ export default [
   {
     name: "Machine Learning",
     description:
-      "Machine Learning Machine Learning Machine Learning Machine Learning",
+      "Test your knowledge, develop your skills and of course have fun hacking your way into the field",
     icon: {
       src: "mlIcon",
       imgStyle: "w-16",
@@ -16,16 +16,23 @@ export default [
     },
     logos: [
       {
-        src: "mlLogo",
-        imgStyle: "w-20",
-        initialStyle: "translate-x-12 -translate-y-8",
-        translatedStyle: "translate-x-20 -translate-y-16",
+        src: "tensorflow",
+        imgStyle: "w-16",
+        initialStyle: " translate-x-12 translate-y-6 rotate-45",
+        translatedStyle: "translate-x-16 translate-y-6 rotate-45",
+      },
+      {
+        src: "pytorch",
+        imgStyle: "w-16",
+        initialStyle: "translate-x-16 -translate-y-10",
+        translatedStyle: "translate-x-20 -translate-y-20",
       },
     ],
   },
   {
-    name: "Front End",
-    description: "Front End Front End Front End Front End Front End Front End",
+    name: "Web Development",
+    description:
+      "Hack your way in the track and impose yourself as the web master",
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
@@ -59,8 +66,9 @@ export default [
     ],
   },
   {
-    name: "Competetive Prog",
-    description: "Competetive Prog Competetive Prog Competetive Prog",
+    name: "IT Automation",
+    description:
+      "This will mainly contain challenges that automate some tasks like web scrapping, files manipulation",
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
@@ -82,9 +90,9 @@ export default [
     ],
   },
   {
-    name: "Back End",
+    name: "Mobile Development",
     description:
-      "Back End Back End Back End Back End Back End Back End Back End",
+      "Join the mobile developers competition and impose yourself by making awesome Mobile Apps",
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
@@ -119,7 +127,8 @@ export default [
   },
   {
     name: "Online Safety Challenge",
-    description: "WTM challenges WTM challenges WTM challenges WTM challenges",
+    description:
+      "WTM bring you challenges in 4 different tracks! but with a little twist The theme will ALWAYS be Safety Online! ",
     icon: {
       src: "wtmIcon",
       imgStyle: "w-16",

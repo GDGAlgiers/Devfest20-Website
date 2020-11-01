@@ -17,8 +17,8 @@ function AgendaSection(props: Props): ReactElement {
           <div className="p-4 lg:mt-4 lg:ml-6 bg-nightBlue">
             <H1 className="text-white mb-4 font-light">Agenda</H1>
             <p className="text-white text-xl">
-              Join a global community of developers celebrating coding! Lorem
-              ipsum
+              Don’t miss a minute of Devfest: we will be adding more sessions
+              and speakers
             </p>
           </div>
           <div

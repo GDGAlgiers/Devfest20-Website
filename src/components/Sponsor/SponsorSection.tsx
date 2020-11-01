@@ -23,10 +23,7 @@ function SponsorsSection({ sponsors }: Props): ReactElement {
         <div>
           <div className="p-4 lg:mt-4 lg:ml-6 text-nightBlue">
             <H1 className="mb-4 lg:pl-20 pl-5 font-light">Sponsors</H1>
-            <p className="lg:pl-20 pl-5 text-xl">
-              Join a global community of developers celebrating coding! Lorem
-              ipsum
-            </p>
+            <p className="lg:pl-20 pl-5 text-2xl">Thank you to our sponsors</p>
           </div>
           <br />
           <div className="w-full lg:w-9/12 m-auto">
