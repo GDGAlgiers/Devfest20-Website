@@ -5,4 +5,3 @@
  */
 import "./src/css/index.css"
 import "firebase/firestore"
-import "firebase/analytics"
