@@ -40,7 +40,7 @@ const TABComponent: React.FC<{
   return (
     <li
       className={cls(
-        "cursor-pointer transition-all duration-200 ease-linear flex-1 border-l-2 p-4 font-semibold text-center border-nightBlue bg-yellow",
+        "cursor-pointer text-xs sm:text-sm md:text-base flex items-center justify-center transition-all duration-200 ease-linear flex-1 border-b-2 border-l-2 p-4 font-semibold text-center border-nightBlue bg-yellow",
         {
           "bg-blue": isActive,
           "text-white": isActive,
@@ -183,7 +183,7 @@ function Scoreboard(props: PageProps<Props>): ReactElement {
                 onChangeTab={setTab}
               />
             </TABS>
-            <p className="text-yellow-lighter opacity-50 mt-20">
+            <p className="text-yellow-lighter opacity-50 mt-20 ml-2 md:ml-0">
               🛈 scroll to show more
             </p>
             <ScoreboardItems>
@@ -191,10 +191,10 @@ function Scoreboard(props: PageProps<Props>): ReactElement {
                 sortContent(getScoreboardContent(), "desc").map((item) => (
                   <>
                     <ScoreboardItem key={item.name}>
-                      <div className="text-center flex-1 text-white font-semibold text-2xl">
+                      <div className="text-center flex-1 text-white font-semibold md:text-2xl">
                         {item.name}
                       </div>
-                      <div className="text-center flex-1  text-yellow font-semibold  text-2xl">
+                      <div className="text-center flex-1  text-yellow font-semibold  md:text-2xl">
                         {(item.points ?? 0) + "pts"}
                       </div>
                       <div style={{ flex: 0.2 }}>
@@ -221,14 +221,17 @@ function Scoreboard(props: PageProps<Props>): ReactElement {
 export default Scoreboard
 
 const Wrapper = styled.div.attrs((props) => ({
-  className: "overflow-y-hidden pt-32 px-10 md:w-2/3 bg-nightBlue self-start",
+  className:
+    "overflow-y-hidden pt-32 md:px-10 md:w-2/3 bg-nightBlue self-start",
 }))`
   box-sizing: content-box;
 `
 
 const Title = styled(H1)``
 
-const TABS = styled.ul.attrs((props) => ({ className: "flex w-full mt-20" }))`
+const TABS = styled.ul.attrs((props) => ({
+  className: "flex w-full mt-20 flex-wrap",
+}))`
   ${customShadow}
 `
 const ScoreboardWrapper = styled.div``
