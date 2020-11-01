@@ -123,14 +123,14 @@ function Index(props: PageProps<Props>): ReactElement {
             speakerName: "Mais Alharaki",
             speakerField: "Software Engineer, Flutter GDE",
             talkName: "FlutterFire: Query like a Hero",
-            imageSpeaker: "speakers/benhamida.jpg",
+            imageSpeaker: "speakers/mais.jpg",
             topBarColor: "bg-white",
           },
           {
             speakerName: "Fatima Zohra Benhamida",
             speakerField: "Assistant professor",
             talkName: "Is the world smarter using IOT?",
-            imageSpeaker: "speakers/mais.jpeg",
+            imageSpeaker: "speakers/benhamida.jpeg",
             topBarColor: "bg-gray",
           },
           {
