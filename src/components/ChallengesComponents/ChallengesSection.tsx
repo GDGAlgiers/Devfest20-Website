@@ -34,6 +34,7 @@ function ChallengesSection(props: Props): ReactElement {
                 headerText={challenge.name}
                 bodyText={challenge.description}
                 actionText="Participate Now!"
+                narrowCard={challenge.narrowCard}
               />
             </div>
           ))}
@@ -45,7 +46,7 @@ function ChallengesSection(props: Props): ReactElement {
           }}
         >
           <img
-            src={require("../../assets/pngs/dinausor.png")}
+            src={require("../../assets/pngs/dinosor1.png")}
             alt="globe"
             className="max-h-full max-w-full"
           />

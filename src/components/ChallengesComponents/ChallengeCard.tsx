@@ -13,6 +13,7 @@ export interface ChallengeProps {
   icon: ImageProps
   secondaryColor: SecondaryColorProps
   logos: LogosProps
+  narrowCard: boolean
 }
 interface LogosProps extends Array<ImageProps> {}
 
@@ -36,6 +37,7 @@ function ChallengeCard({
   icon,
   logos,
   cardOptions,
+  narrowCard,
 }: ChallengeProps): ReactElement {
   const [hover, setHover] = useState(false)
   return (
@@ -94,7 +96,11 @@ function ChallengeCard({
             initialStyle={icon.initialStyle}
             translatedStyle={icon.translatedStyle}
           />
-          <ActionText hover={hover} color={secondaryColor?.actionTextColor}>
+          <ActionText
+            hover={hover}
+            narrowCard={narrowCard}
+            color={secondaryColor?.actionTextColor}
+          >
             {actionText}
           </ActionText>
         </ActionTextContainer>
@@ -108,7 +114,7 @@ export default ChallengeCard
 
 const HeaderText = styled(H4).attrs<{ dark: boolean }>((props) => ({
   ...props,
-  className: cls("font-light my-4 mx-4", {
+  className: cls("font-light mt-2 mb-4 mx-4", {
     "text-nightBlue": !props.dark,
     "text-white": props.dark,
   }),
@@ -116,7 +122,7 @@ const HeaderText = styled(H4).attrs<{ dark: boolean }>((props) => ({
 
 const BodyText = styled.div.attrs<{ dark: boolean }>((props) => ({
   ...props,
-  className: cls("px-6", {
+  className: cls("px-4", {
     "text-nightBlue": !props.dark,
     "text-white": props.dark,
   }),
@@ -124,20 +130,23 @@ const BodyText = styled.div.attrs<{ dark: boolean }>((props) => ({
 
 const ActionTextContainer = styled.div.attrs((props) => ({
   ...props,
-  className: cls("h-24"),
+  className: cls("h-16"),
 }))``
 
-const ActionText = styled(H4).attrs<{ hover: boolean }>((props) => ({
-  ...props,
-  className: cls(
-    "font-light my-8 transition duration-200 transform",
-    props.color,
-    {
-      "translate-y-0": props.hover,
-      "translate-y-32": !props.hover,
-    }
-  ),
-}))``
+const ActionText = styled(H4).attrs<{ hover: boolean; narrowCard: boolean }>(
+  (props) => ({
+    ...props,
+    className: cls(
+      "font-light my-8 transition duration-200 transform",
+      props.color,
+      {
+        "translate-y-0": props.hover,
+        "translate-y-32": !props.hover,
+        "-translate-y-6": props.hover && props.narrowCard,
+      }
+    ),
+  })
+)``
 
 const AnimatedImage = styled.img.attrs<{
   initialStyle: string

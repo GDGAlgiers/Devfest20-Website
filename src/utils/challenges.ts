@@ -6,7 +6,7 @@ export default [
     icon: {
       src: "mlIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-6 translate-y-8",
+      initialStyle: "-translate-x-6 translate-y-6",
       translatedStyle: "-translate-x-32 translate-y-8",
     },
     dark: true,
@@ -14,7 +14,7 @@ export default [
       topBarBgColor: "bg-yellow",
       actionTextColor: "text-yellow",
     },
-    logos: [
+    logos2: [
       {
         src: "tensorflow",
         imgStyle: "w-16",
@@ -28,6 +28,15 @@ export default [
         translatedStyle: "translate-x-20 -translate-y-20",
       },
     ],
+    logos: [
+      {
+        src: "mlLogo",
+        imgStyle: "w-24",
+        initialStyle: "translate-x-12 -translate-y-8",
+        translatedStyle: "translate-x-20 -translate-y-16",
+      },
+    ],
+    narrowCard: false,
   },
   {
     name: "Web Development",
@@ -36,8 +45,8 @@ export default [
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "-translate-x-6 translate-y-10",
+      translatedStyle: "-translate-x-32 translate-y-10",
     },
     dark: false,
     secondaryColor: {
@@ -64,6 +73,7 @@ export default [
         translatedStyle: "-translate-x-8 -translate-y-16",
       },
     ],
+    narrowCard: false,
   },
   {
     name: "IT Automation",
@@ -72,8 +82,8 @@ export default [
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "-translate-x-6 translate-y-6",
+      translatedStyle: "-translate-x-32 translate-y-6",
     },
     dark: false,
     secondaryColor: {
@@ -88,6 +98,7 @@ export default [
         translatedStyle: "translate-x-20 -translate-y-16",
       },
     ],
+    narrowCard: false,
   },
   {
     name: "Mobile Development",
@@ -96,8 +107,8 @@ export default [
     icon: {
       src: "frontendIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "-translate-x-6 translate-y-2",
+      translatedStyle: "-translate-x-32 translate-y-2",
     },
     dark: false,
     secondaryColor: {
@@ -124,6 +135,7 @@ export default [
         translatedStyle: "translate-x-20 translate-y-12",
       },
     ],
+    narrowCard: true,
   },
   {
     name: "Online Safety Challenge",
@@ -132,8 +144,8 @@ export default [
     icon: {
       src: "wtmIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-8",
-      translatedStyle: "-translate-x-32 translate-y-8",
+      initialStyle: "-translate-x-6 translate-y-0",
+      translatedStyle: "-translate-x-32 translate-y-0",
     },
     dark: false,
     secondaryColor: {
@@ -143,10 +155,11 @@ export default [
     logos: [
       {
         src: "onlineSafetyLogo",
-        imgStyle: "w-20 ",
-        initialStyle: "translate-x-12 -translate-y-8",
+        imgStyle: "w-24 ",
+        initialStyle: "translate-x-12 -translate-y-10",
         translatedStyle: "translate-x-20 -translate-y-16",
       },
     ],
+    narrowCard: true,
   },
 ]
