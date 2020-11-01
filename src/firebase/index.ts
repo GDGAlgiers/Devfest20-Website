@@ -1,5 +1,4 @@
 import firebase from "firebase"
-
 /**
  * const config = {
   apiKey: process.env.GATSBY_apiKey,
@@ -23,5 +22,4 @@ const firebaseConfig = {
 }
 
 export const app = firebase.initializeApp(firebaseConfig)
-export const analytics = app.analytics()
 export const firestore = app.firestore()
