@@ -74,11 +74,11 @@ export default [
       },
       {
         src: "angularLogo",
-        imgStyle: "md:w-16 w-20",
+        imgStyle: "md:w-16 w-16",
         initialStyle:
-          "md:-translate-x-8 md:-translate-y-8 translate-x-16 -translate-y-12 rotate-45",
+          "md:-translate-x-8 md:-translate-y-8 md:rotate-0 translate-x-16 -translate-y-8 rotate-45",
         translatedStyle:
-          "md:-translate-x-8 md:-translate-y-16 translate-x-16 -translate-y-12 rotate-45",
+          "md:-translate-x-8 md:-translate-y-16 md:rotate-0 translate-x-16 -translate-y-8 rotate-45",
       },
     ],
     narrowCard: false,
