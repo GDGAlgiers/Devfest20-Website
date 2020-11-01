@@ -6,6 +6,7 @@
   "author": "MeridjaNassim <ha_meridja@esi.dz>",
   "dependencies": {
     "classnames": "^2.2.6",
+    "firebase": "^8.0.0",
     "gatsby-plugin-next-seo": "^1.6.1",
     "gatsby-plugin-robots-txt": "^1.5.3",
     "gatsby-plugin-web-font-loader": "^1.0.4",
