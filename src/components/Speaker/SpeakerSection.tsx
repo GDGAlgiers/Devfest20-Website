@@ -204,7 +204,6 @@ function SpeakerSection({ speakers }: Props): ReactElement {
           </button>
         </div>
       </div>
-      <ThickBorder className="bg-red"></ThickBorder>
     </Section>
   )
 }

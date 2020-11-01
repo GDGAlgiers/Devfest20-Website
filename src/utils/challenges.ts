@@ -6,38 +6,49 @@ export default [
     icon: {
       src: "mlIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-6 translate-y-8",
-      translatedStyle: "-translate-x-32 translate-y-8",
+      initialStyle: "md:-translate-x-6 md:translate-y-6",
+      translatedStyle: "md:-translate-x-32 md:translate-y-8",
     },
     dark: true,
     secondaryColor: {
       topBarBgColor: "bg-yellow",
       actionTextColor: "text-yellow",
     },
-    logos: [
+    logos2: [
       {
         src: "tensorflow",
         imgStyle: "w-16",
-        initialStyle: " translate-x-12 translate-y-6 rotate-45",
-        translatedStyle: "translate-x-16 translate-y-6 rotate-45",
+        initialStyle: " md:translate-x-12 md:translate-y-6 md:rotate-45",
+        translatedStyle: "md:translate-x-16 md:translate-y-6 md:rotate-45",
       },
       {
         src: "pytorch",
         imgStyle: "w-16",
-        initialStyle: "translate-x-16 -translate-y-10",
-        translatedStyle: "translate-x-20 -translate-y-20",
+        initialStyle: "md:translate-x-16 md:-translate-y-10",
+        translatedStyle: "md:translate-x-20 md:-translate-y-20",
       },
     ],
+    logos: [
+      {
+        src: "mlLogo",
+        imgStyle: "md:w-24",
+        initialStyle:
+          "md:translate-x-12 md:-translate-y-8 -translate-y-16 w-32",
+        translatedStyle:
+          "md:translate-x-20 md:-translate-y-16 -translate-y-16 w-32",
+      },
+    ],
+    narrowCard: false,
   },
   {
     name: "Web Development",
     description:
       "Hack your way in the track and impose yourself as the web master",
     icon: {
-      src: "frontendIcon",
+      src: "webIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "md:-translate-x-6 md:translate-y-10",
+      translatedStyle: "md:-translate-x-32 md:translate-y-10",
     },
     dark: false,
     secondaryColor: {
@@ -47,33 +58,40 @@ export default [
     logos: [
       {
         src: "vueLogo",
-        imgStyle: "w-16",
-        initialStyle: " translate-x-12 translate-y-6 rotate-45",
-        translatedStyle: "translate-x-16 translate-y-6 rotate-45",
+        imgStyle: "md:w-16 w-20",
+        initialStyle:
+          " md:translate-x-12 md:translate-y-6 md:rotate-45 -translate-y-12",
+        translatedStyle:
+          "md:translate-x-16 md:translate-y-6 md:rotate-45 -translate-y-12",
       },
       {
         src: "reactLogo",
         imgStyle: "w-32",
-        initialStyle: "translate-x-16 -translate-y-10",
-        translatedStyle: "translate-x-20 -translate-y-20",
+        initialStyle:
+          "md:translate-x-16 md:-translate-y-10 -translate-y-12 -translate-x-16",
+        translatedStyle:
+          "md:translate-x-20 md:-translate-y-20 -translate-y-12 -translate-x-16",
       },
       {
         src: "angularLogo",
-        imgStyle: "w-16",
-        initialStyle: "-translate-x-8 -translate-y-8",
-        translatedStyle: "-translate-x-8 -translate-y-16",
+        imgStyle: "md:w-16 w-20",
+        initialStyle:
+          "md:-translate-x-8 md:-translate-y-8 translate-x-16 -translate-y-12 rotate-45",
+        translatedStyle:
+          "md:-translate-x-8 md:-translate-y-16 translate-x-16 -translate-y-12 rotate-45",
       },
     ],
+    narrowCard: false,
   },
   {
     name: "IT Automation",
     description:
       "This will mainly contain challenges that automate some tasks like web scrapping, files manipulation",
     icon: {
-      src: "frontendIcon",
+      src: "autoIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "md:-translate-x-6 md:translate-y-8",
+      translatedStyle: "md:-translate-x-32 md:translate-y-6",
     },
     dark: false,
     secondaryColor: {
@@ -82,22 +100,23 @@ export default [
     },
     logos: [
       {
-        src: "mlLogo",
-        imgStyle: "w-20",
-        initialStyle: "translate-x-12 -translate-y-8",
-        translatedStyle: "translate-x-20 -translate-y-16",
+        src: "autoLogo",
+        imgStyle: "md:w-24 w-32",
+        initialStyle: "md:translate-x-12 md:-translate-y-8 -translate-y-16",
+        translatedStyle: "md:translate-x-20 md:-translate-y-16 -translate-y-16",
       },
     ],
+    narrowCard: false,
   },
   {
     name: "Mobile Development",
     description:
       "Join the mobile developers competition and impose yourself by making awesome Mobile Apps",
     icon: {
-      src: "frontendIcon",
+      src: "mobileIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-12",
-      translatedStyle: "-translate-x-32 translate-y-12",
+      initialStyle: "md:-translate-x-6 md:translate-y-2",
+      translatedStyle: "md:-translate-x-32 md:translate-y-2",
     },
     dark: false,
     secondaryColor: {
@@ -106,24 +125,29 @@ export default [
     },
     logos: [
       {
-        src: "laravelLogo",
-        imgStyle: "w-16",
-        initialStyle: "-translate-x-8 -translate-y-8",
-        translatedStyle: "-translate-x-8 -translate-y-16",
+        src: "flutterLogo",
+        imgStyle: "md:w-16 w-20",
+        initialStyle: "md:-translate-x-8 md:-translate-y-12 -translate-y-20",
+        translatedStyle: "md:-translate-x-8 md:-translate-y-16 -translate-y-20",
       },
       {
-        src: "djangoLogo",
-        imgStyle: "w-20 rounded",
-        initialStyle: "translate-x-12 -translate-y-6 rotate-45",
-        translatedStyle: "translate-x-16 -translate-y-12 rotate-45",
+        src: "androidLogo",
+        imgStyle: "w-32",
+        initialStyle:
+          "md:translate-x-20 md:-translate-y-12 md:rotate-45 -translate-y-16 rotate-45 translate-x-20",
+        translatedStyle:
+          "md:translate-x-24 md:-translate-y-16 md:rotate-45 -translate-y-16 rotate-45 translate-x-20",
       },
       {
-        src: "nodeLogo",
-        imgStyle: "w-16",
-        initialStyle: " translate-x-16 translate-y-10",
-        translatedStyle: "translate-x-20 translate-y-12",
+        src: "swiftLogo",
+        imgStyle: "w-12",
+        initialStyle:
+          " md:translate-x-12 md:translate-y-10 -translate-y-10 -translate-x-16",
+        translatedStyle:
+          "md:translate-x-20 md:translate-y-12 -translate-y-10 -translate-x-16",
       },
     ],
+    narrowCard: true,
   },
   {
     name: "Online Safety Challenge",
@@ -132,8 +156,8 @@ export default [
     icon: {
       src: "wtmIcon",
       imgStyle: "w-16",
-      initialStyle: "-translate-x-4 translate-y-8",
-      translatedStyle: "-translate-x-32 translate-y-8",
+      initialStyle: "md:-translate-x-6 md:translate-y-0",
+      translatedStyle: "md:-translate-x-32 md:translate-y-0",
     },
     dark: false,
     secondaryColor: {
@@ -143,10 +167,11 @@ export default [
     logos: [
       {
         src: "onlineSafetyLogo",
-        imgStyle: "w-20 ",
-        initialStyle: "translate-x-12 -translate-y-8",
-        translatedStyle: "translate-x-20 -translate-y-16",
+        imgStyle: "md:w-24 w-32",
+        initialStyle: "md:translate-x-12 md:-translate-y-10 -translate-y-16",
+        translatedStyle: "md:translate-x-20 md:-translate-y-16 -translate-y-16",
       },
     ],
+    narrowCard: true,
   },
 ]
