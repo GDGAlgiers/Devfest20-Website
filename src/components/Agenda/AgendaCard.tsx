@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react"
+import React, { ReactElement, useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import Card, { CardProps } from "../common/Card/Card"
 import { H3 } from "../typography/typography"
@@ -31,9 +31,29 @@ function AgendaCard({
   items,
 }: AgendaProps): ReactElement {
   const [hover, setHover] = useState(false)
+  const wrapperRef = useRef<HTMLDivElement>()
+  const textRef = useRef<HTMLHeadingElement>()
+  const [translation, setTranslation] = useState(0)
+  useLayoutEffect(() => {
+    setTranslation(calculateTranslation())
+  }, [textRef, wrapperRef])
+  const calculateTranslation = () => {
+    let element = wrapperRef.current
+    let textElement = textRef.current
+    if (!element || !textElement) return 0
+    let computedStyle = getComputedStyle(element)
+    let computedTextStyle = getComputedStyle(textElement)
+    console.log("height : ", computedStyle.height)
+    console.log("height / 2 : ", parseInt(computedStyle.height) / 2)
+    return (
+      parseInt(computedStyle.height) / 2 -
+      2 * parseInt(computedTextStyle.height)
+    )
+  }
 
   return (
     <div
+      ref={wrapperRef}
       className={cls(
         "inline-block transition-all ease-in-out duration-500 border-nightBlue",
         containerClassName
@@ -44,6 +64,7 @@ function AgendaCard({
       <Card
         contentAreaClassName={cls(cardOptions.contentAreaClassName)}
         containerClassName={cls(
+          "h-full",
           cardOptions?.containerClassName,
           "max-h-screen"
         )}
@@ -56,7 +77,15 @@ function AgendaCard({
           }
         )}
       >
-        <HeaderText hover={hover} className={cls(headerClassName)}>
+        <HeaderText
+          ref={textRef}
+          hover={hover}
+          className={cls(headerClassName)}
+          style={{
+            transform:
+              !hover === true ? `translateY(${translation}px)` : undefined,
+          }}
+        >
           {header}
         </HeaderText>
         <Agenda show={hover}>
@@ -80,7 +109,6 @@ const HeaderText = styled(H3).attrs<{ hover: boolean }>((props) => ({
   className: cls(
     "transform translate-all ease duration-500 text-4xl sm:text-5xl font-light",
     {
-      "translate-y-full": !props.hover,
       "translate-y-0": props.hover,
     }
   ),
@@ -88,13 +116,14 @@ const HeaderText = styled(H3).attrs<{ hover: boolean }>((props) => ({
 const Agenda = styled.ul.attrs<{ show: boolean }>((props) => ({
   ...props,
   className: cls(
-    "text-center mt-2 sm:mt-0 origin-bottom-right transition-all ease duration-500 font-bold text-sm sm:text-xl",
+    "text-justify mt-2 sm:mt-0 origin-bottom-right transition-all ease duration-500 font-bold text-sm sm:text-xl flex flex-col justify-around",
     {
       collapse: !props.show,
       show: props.show,
     }
   ),
 }))`
+  height: 90%;
   &.collapse {
     opacity: 0;
     transform: scale(0);
