@@ -29,7 +29,7 @@ function HeroDescription({
         >
           Register
         </HeroButton>
-        <HeroButton className="bg-yellow" onClick={() => console.log("AGENDA")}>
+        <HeroButton className="bg-yellow" onClick={() => navigate("#agenda")}>
           Agenda
         </HeroButton>
       </div>
