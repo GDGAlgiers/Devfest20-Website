@@ -46,29 +46,46 @@ function AgendaSection(props: Props): ReactElement {
               header="<DayOne/ >"
               items={[
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
+                  startHour: "12h:30",
+                  endHour: "13h:00",
                   name: "Openning Ceremony",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "13h00",
+                  endHour: "14h:00",
+                  name:
+                    "Running Serverless apps on GCP with Cloud Run By Abdelfettah Sghiour",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "14h00",
+                  endHour: "15h:00",
+                  name: "How to keep kids safe online By Abdulaziz Alhammadi",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "15h00",
+                  endHour: "16h:00",
+                  name: "Privacy-Preserving Machine Learning By Ayoub benaissa",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "16h00",
+                  endHour: "17h:00",
+                  name:
+                    " كيف تخذلين المجرم الالكتروني عن طريق الهندسة الاجتماعية العكسية ",
+                },
+                {
+                  startHour: "17h00",
+                  endHour: "18h:00",
+                  name: "Is the world smarter using IOT? By benhamida Fatima",
+                },
+                {
+                  startHour: "17h00",
+                  endHour: "18h:00",
+                  name: "Formation Design thinking for kids",
+                },
+                {
+                  startHour: "18h00",
+                  endHour: "19h:00",
+                  name: "Gender equity in tech Workshop",
                 },
               ]}
               cardOptions={{
@@ -82,29 +99,40 @@ function AgendaSection(props: Props): ReactElement {
               containerClassName="flex-1"
               items={[
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "12h00",
+                  endHour: "13h:00",
+                  name: "Design Thinking for AI based apps By Asmaa Ibrahim",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "13h00",
+                  endHour: "14h:00",
+                  name:
+                    "Interesting facts about Jetpack Compose - Alpha Edition By Oussama Haffersas",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "14h00",
+                  endHour: "15h:00",
+                  name: "Women Can code Panel",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "15h00",
+                  endHour: "16h:00",
+                  name: "AI & Deep Tech Innovation in Africa by Karim Beguir",
                 },
                 {
-                  startHour: "10h00",
-                  endHour: "11h:00",
-                  name: "Openning Ceremony",
+                  startHour: "16h00",
+                  endHour: "17h:00",
+                  name: "Flutter Fire : Query like a hero By Meys el haraki  ",
+                },
+                {
+                  startHour: "15h00",
+                  endHour: "17h:00",
+                  name: "Design thinking compétition for kids",
+                },
+                {
+                  startHour: "17h00",
+                  endHour: "18h:00",
+                  name: "closing ceremony",
                 },
               ]}
               header="<DayTwo/ >"
