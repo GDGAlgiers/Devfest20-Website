@@ -27,12 +27,12 @@ function FooterSection(): ReactElement {
           />
 
           <p className="text-center mt-6 text-nightBlue">
-            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
-            in laying out print, graphic or web designs. The passage is
-            attributed to
+            One weekend, Multi Tracks, Multiple Challenges. Join This global
+            moment that empowers developers to teach, learn, and connect when
+            they may need it the most
           </p>
           <div className="mt-5 flex justify-center">
-            <Link to="#">
+            <Link to="https://www.instagram.com/gdg_algiers/">
               <img
                 src={require("../../assets/svgs/instagram.svg")}
                 alt="gdgAlgiers"
@@ -43,7 +43,7 @@ function FooterSection(): ReactElement {
               />
             </Link>
 
-            <Link to="#">
+            <Link to="https://twitter.com/GDG_Algiers">
               <img
                 src={require("../../assets/svgs/twitter.svg")}
                 alt="gdgAlgiers"
@@ -53,7 +53,7 @@ function FooterSection(): ReactElement {
               />
             </Link>
 
-            <Link to="#">
+            <Link to="https://www.facebook.com/GDGAlgiers/">
               <img
                 src={require("../../assets/svgs/facebook.svg")}
                 alt="gdgAlgiers"
@@ -68,22 +68,22 @@ function FooterSection(): ReactElement {
       </div>
 
       <footer className="flex justify-around items-center py-4 bg-nightBlue">
-        <Link to="#">
+        <Link to="https://gdg.community.dev/devfest/">
           <H3 className="text-white text-base md:text-xl">
             Devfest in the world
           </H3>
         </Link>
 
-        <Link to="#">
+        <Link to="https://www.gdgalgiers.com/">
           <H3 className="text-white text-base md:text-xl">GDG Algiers</H3>
         </Link>
 
-        <Link to="#">
+        <Link to="https://www.wtm-algiers.tech/">
           <H3 className="text-white text-base md:text-xl">WTM Algiers</H3>
         </Link>
 
-        <Link to="#">
-          <H3 className="text-white text-base md:text-xl">2020 edition</H3>
+        <Link to="https://www.facebook.com/events/enp-ecole-nationale-polytechnique-dalger/devfest-algiers-2019/1345054435675671/">
+          <H3 className="text-white text-base md:text-xl">2019 edition</H3>
         </Link>
       </footer>
     </Section>
