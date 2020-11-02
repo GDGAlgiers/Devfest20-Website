@@ -35,12 +35,7 @@ function AgendaSection(props: Props): ReactElement {
           </div>
         </div>
         <div className="w-full">
-          <div
-            className="w-full  xl:w-8/12   m-auto flex flex-col lg:flex-row  justify-evenly items-center "
-            style={{
-              maxWidth: 960,
-            }}
-          >
+          <div className="w-full  xl:w-10/12   m-auto flex flex-col lg:flex-row  justify-evenly">
             <AgendaCard
               containerClassName="mb-6 lg:mb-0 lg:mr-20 flex-1"
               header="<DayOne/ >"
@@ -144,12 +139,7 @@ function AgendaSection(props: Props): ReactElement {
               hoverTopBarColor="bg-green"
             />
           </div>
-          <div
-            className="w-full  xl:w-8/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-sm text-white opacity-75 xl:pl-10 pb-12"
-            style={{
-              maxWidth: 960,
-            }}
-          >
+          <div className="w-full  xl:w-10/12 flex justify-center lg:justify-end text-center lg:text-right m-auto items-center text-sm text-white opacity-75 xl:pl-10 pb-12">
             🛈 {!isLG ? "Click" : "Hover"} to check detailed agenda
           </div>
         </div>

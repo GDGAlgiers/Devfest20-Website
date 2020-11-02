@@ -38,6 +38,10 @@ const links = [
     linkName: "Sponsors",
     linkUrl: INDEX_SPONSORS_SECTION,
   },
+  {
+    linkName: "Register",
+    linkUrl: "/register/challenges",
+  },
 ]
 interface NavBarProps {
   className?: string
