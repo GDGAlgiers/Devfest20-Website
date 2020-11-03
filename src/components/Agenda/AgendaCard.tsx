@@ -43,8 +43,6 @@ function AgendaCard({
     if (!element || !textElement) return 0
     let computedStyle = getComputedStyle(element)
     let computedTextStyle = getComputedStyle(textElement)
-    console.log("height : ", computedStyle.height)
-    console.log("height / 2 : ", parseInt(computedStyle.height) / 2)
     return (
       parseInt(computedStyle.height) / 2 -
       2 * parseInt(computedTextStyle.height)
@@ -90,7 +88,7 @@ function AgendaCard({
         </HeaderText>
         <Agenda show={hover}>
           {items.map((item) => (
-            <AgendaItem className={cls(itemClassName)}>
+            <AgendaItem className={cls(itemClassName)} key={item.name}>
               <span>{item.startHour}</span> - <span>{item.endHour}</span>
               <span> {item.name}</span>
             </AgendaItem>

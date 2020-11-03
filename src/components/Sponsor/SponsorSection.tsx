@@ -63,7 +63,7 @@ function SponsorsSection({ sponsors }: Props): ReactElement {
               <div className="w-full mt-16 flex justify-around flex-wrap mb-20">
                 {sponsors.map((sponsor) => {
                   return (
-                    <div className="w-56 h-56 m-5">
+                    <div className="w-56 h-56 m-5" key={sponsor.sponsorName}>
                       <SponsorLogo
                         sponsorLogo={sponsor.sponsorLogo}
                         sponsorName={sponsor.sponsorName}
