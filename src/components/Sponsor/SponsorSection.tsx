@@ -10,6 +10,7 @@ import SponsorLogo from "./SponsorLogo"
 
 interface SponsorInfos {
   sponsorLogo?: string
+  sponsorName: string
 }
 
 interface Props {
@@ -63,7 +64,10 @@ function SponsorsSection({ sponsors }: Props): ReactElement {
                 {sponsors.map((sponsor) => {
                   return (
                     <div className="w-56 h-56 m-5">
-                      <SponsorLogo sponsorLogo={sponsor.sponsorLogo} />
+                      <SponsorLogo
+                        sponsorLogo={sponsor.sponsorLogo}
+                        sponsorName={sponsor.sponsorName}
+                      />
                     </div>
                   )
                 })}

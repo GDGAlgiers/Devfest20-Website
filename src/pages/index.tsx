@@ -163,6 +163,7 @@ function Index(props: PageProps<Props>): ReactElement {
         sponsors={[
           {
             sponsorLogo: "sponsors/salamat.jpg",
+            sponsorName: "Salamat",
           },
         ]}
       ></SponsorSection>
