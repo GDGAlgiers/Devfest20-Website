@@ -62,7 +62,7 @@ function Navbar({ className }: NavBarProps): ReactElement {
   const toggleNavbar = () => setOpen(!open)
   const renderLinks = () => {
     return links.map((link) => (
-      <NavLink>
+      <NavLink key={link.linkName}>
         <Link to={link.linkUrl} activeClassName="text-yellow-lighter underline">
           {link.linkName}
         </Link>

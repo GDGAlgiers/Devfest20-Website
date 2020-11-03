@@ -24,6 +24,7 @@ function ChallengesSection(props: Props): ReactElement {
               className={cls("mx-auto", {
                 "md:col-span-auto lg:col-span-2 sm:col-span-auto": i === 4,
               })}
+              key={i}
             >
               <ChallengeCard
                 cardOptions={{}}

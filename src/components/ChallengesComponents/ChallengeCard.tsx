@@ -50,6 +50,7 @@ function ChallengeCard({
       <div className="justify-center md:justify-end flex">
         {logos.map((logo) => (
           <AnimatedImage
+            key={logo.src}
             src={require("../../assets/pngs/" + logo.src + ".png")}
             alt={logo.src}
             hover={hover}

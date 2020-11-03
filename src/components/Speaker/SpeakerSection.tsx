@@ -134,7 +134,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
                 })
                 .map((speaker, index) => {
                   return (
-                    <SpeakerAnimation disp={animate}>
+                    <SpeakerAnimation disp={animate} key={speaker.speakerName}>
                       <SpeakerCard
                         speakerName={speaker.speakerName}
                         speakerField={speaker.speakerField}
@@ -176,6 +176,7 @@ function SpeakerSection({ speakers }: Props): ReactElement {
               .map((speaker, index) => {
                 return (
                   <button
+                    key={index}
                     className={
                       (selected === index ? "bg-nightBlue" : "bg-white") +
                       " border-nightBlue p-2 ml-5 w-10 h-10"

@@ -18,9 +18,13 @@ interface QueryData {
 
 interface SponsorLogoProp {
   sponsorLogo?: string
+  sponsorName: string
 }
 
-function SponsorLogo({ sponsorLogo }: SponsorLogoProp): ReactElement {
+function SponsorLogo({
+  sponsorLogo,
+  sponsorName,
+}: SponsorLogoProp): ReactElement {
   const query = graphql`
     query {
       images: allFile {
@@ -49,7 +53,11 @@ function SponsorLogo({ sponsorLogo }: SponsorLogoProp): ReactElement {
 
   return (
     <>
-      <Image fluid={image} className="w-full relative inset-0 h-full" />
+      <Image
+        fluid={image}
+        className="w-full relative inset-0 h-full"
+        alt={sponsorName}
+      />
     </>
   )
 }

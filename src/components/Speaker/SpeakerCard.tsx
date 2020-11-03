@@ -80,7 +80,7 @@ function SpeakerCard({
           className="w-full"
           style={{ height: "250px" }}
           fluid={image}
-          alt="Sunset in the mountains"
+          alt={speakerName}
         />
         <Speaker isHover={hover}>
           <span className={cls("text-xl")}>{speakerName}</span>
