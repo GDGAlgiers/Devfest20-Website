@@ -48,8 +48,7 @@ function AgendaSection(props: Props): ReactElement {
                 {
                   startHour: "13h00",
                   endHour: "14h:00",
-                  name:
-                    "Running Serverless apps on GCP with Cloud Run By Abdelfettah Sghiour",
+                  name: "Privacy-Preserving Machine Learning By Ayoub benaissa",
                 },
                 {
                   startHour: "14h00",
@@ -59,7 +58,8 @@ function AgendaSection(props: Props): ReactElement {
                 {
                   startHour: "15h00",
                   endHour: "16h:00",
-                  name: "Privacy-Preserving Machine Learning By Ayoub benaissa",
+                  name:
+                    "Running Serverless apps on GCP with Cloud Run By Abdelfettah Sghiour",
                 },
                 {
                   startHour: "16h00",
