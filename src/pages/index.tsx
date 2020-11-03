@@ -124,7 +124,7 @@ function Index(props: PageProps<Props>): ReactElement {
             speakerField: "Software Engineer, Flutter GDE",
             talkName: "FlutterFire: Query like a Hero",
             imageSpeaker: "speakers/mais.jpeg",
-            topBarColor: "bg-white",
+            topBarColor: "bg-yellow",
           },
           {
             speakerName: "Fatima Zohra Benhamida",
@@ -134,11 +134,19 @@ function Index(props: PageProps<Props>): ReactElement {
             topBarColor: "bg-gray",
           },
           {
+            speakerName: "Asmaa Ibrahim",
+            speakerField:
+              "Founder of Seba, ML & NLP.Data Platform Manager in Vodafone Roaming Service",
+            talkName: "FlutterFire: Query like a Hero",
+            imageSpeaker: "speakers/asmaa_ibrahim.jpg",
+            topBarColor: "bg-blue",
+          },
+          {
             speakerName: "Asmaa Haidour",
             speakerField: "WTM Algiers Lead, WTM Ambassador",
             talkName: "Gender equity in tech session (Workshop) ",
             imageSpeaker: "speakers/asmaa.jpg",
-            topBarColor: "bg-white",
+            topBarColor: "bg-green",
           },
           {
             speakerName: "Dr. Djalila Rahali",
@@ -146,7 +154,7 @@ function Index(props: PageProps<Props>): ReactElement {
               "CEO & Founder @NafsiyaTECH, Cyberpsychologist researcher since 1999",
             talkName: "WTM Online Safety Talk",
             imageSpeaker: "speakers/doctor.png",
-            topBarColor: "bg-gray",
+            topBarColor: "bg-yellow",
           },
         ]}
       ></SpeakerSection>
