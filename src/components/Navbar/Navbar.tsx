@@ -16,6 +16,8 @@ import {
   INDEX_SPONSORS_SECTION,
 } from "../../utils/links"
 import { Link } from "gatsby"
+import Dropdown from "../common/Dropdown"
+import Button from "../common/Button/Button"
 
 const links = [
   {
@@ -38,10 +40,6 @@ const links = [
     linkName: "Sponsors",
     linkUrl: INDEX_SPONSORS_SECTION,
   },
-  {
-    linkName: "Register",
-    linkUrl: "/register/challenges",
-  },
 ]
 interface NavBarProps {
   className?: string
@@ -49,6 +47,7 @@ interface NavBarProps {
 function Navbar({ className }: NavBarProps): ReactElement {
   /// when true it means the screen is atleast 640px wide
   const isLG = useAtleastLarge()
+  const [showDropDown, setShowDropDown] = useState(false)
   const [open, setOpen] = useState(false)
   /// If it detects that the device is small screen device, it sets the navbar to closed
   useLayoutEffect(() => {
@@ -81,7 +80,41 @@ function Navbar({ className }: NavBarProps): ReactElement {
           fill="#FBBC04"
         ></DownArrowSVG>
       </MenuButton>
-      <NavLinks open={open}>{renderLinks()}</NavLinks>
+      <NavLinks open={open}>
+        {renderLinks()}
+        <div className="relative">
+          <Button
+            className="p-2 bg-blue cursor-pointer"
+            onClick={() => setShowDropDown(true)}
+          >
+            Register
+          </Button>
+          {showDropDown && (
+            <Dropdown
+              onClose={() => setShowDropDown(false)}
+              className="dropdown  absolute scale-0 transition-all duration-100 ease-linear bg-nightBlue p-10"
+              options={[
+                <NavLink>
+                  <Link
+                    to="/register/challenges"
+                    activeClassName="text-yellow-lighter underline"
+                  >
+                    Challenges
+                  </Link>
+                </NavLink>,
+                <NavLink>
+                  <Link
+                    to="/register/genderEquity"
+                    activeClassName="text-yellow-lighter underline"
+                  >
+                    Gender Equity in tech
+                  </Link>
+                </NavLink>,
+              ]}
+            />
+          )}
+        </div>
+      </NavLinks>
     </StyledNav>
   )
 }
