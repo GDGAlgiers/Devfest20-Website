@@ -84,7 +84,7 @@ function Navbar({ className }: NavBarProps): ReactElement {
         {renderLinks()}
         <div className="relative">
           <Button
-            className="p-2 bg-blue cursor-pointer"
+            className="py-2 px-4 bg-blue cursor-pointer"
             onClick={() => setShowDropDown(true)}
           >
             Register
@@ -94,18 +94,18 @@ function Navbar({ className }: NavBarProps): ReactElement {
               onClose={() => setShowDropDown(false)}
               className="dropdown  absolute scale-0 transition-all duration-100 ease-linear bg-nightBlue p-10"
               options={[
-                <NavLink>
+                <NavLink className="border-b-2 border-yellow">
                   <Link
                     to="/register/challenges"
-                    activeClassName="text-yellow-lighter underline"
+                    activeClassName="text-yellow-lighter"
                   >
                     Challenges
                   </Link>
                 </NavLink>,
-                <NavLink>
+                <NavLink className="border-b-2  border-yellow">
                   <Link
                     to="/register/genderEquity"
-                    activeClassName="text-yellow-lighter underline"
+                    activeClassName="text-yellow-lighter"
                   >
                     Gender Equity in tech
                   </Link>
