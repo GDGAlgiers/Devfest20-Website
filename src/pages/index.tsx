@@ -142,6 +142,14 @@ function Index(props: PageProps<Props>): ReactElement {
             topBarColor: "bg-blue",
           },
           {
+            speakerName: "Abdulaziz Alhammadi",
+            speakerField:
+              "GDC Saudi Leada, Gsuit Google Developer Expert and TechTrans CO CEO",
+            talkName: "HOw to keep kids safe online",
+            imageSpeaker: "speakers/abdulaziz.jpg",
+            topBarColor: "bg-blue",
+          },
+          {
             speakerName: "Asmaa Haidour",
             speakerField: "WTM Algiers Lead, WTM Ambassador",
             talkName: "Gender equity in tech session (Workshop) ",
@@ -164,6 +172,10 @@ function Index(props: PageProps<Props>): ReactElement {
           {
             sponsorLogo: "sponsors/salamat.jpg",
             sponsorName: "Salamat",
+          },
+          {
+            sponsorLogo: "sponsors/github.jpg",
+            sponsorName: "Github Education",
           },
         ]}
       ></SponsorSection>
