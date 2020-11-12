@@ -180,6 +180,6 @@ export default [
     ],
     narrowCard: true,
     link:
-      "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/Mobile/online%20safety",
+      "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/OnlineSafety",
   },
 ]
