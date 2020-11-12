@@ -25,6 +25,7 @@ function ChallengesSection(props: Props): ReactElement {
                 "md:col-span-auto lg:col-span-2 sm:col-span-auto": i === 4,
               })}
               key={i}
+              onClick={() => (window.location.href = challenge.link)}
             >
               <ChallengeCard
                 cardOptions={{}}
