@@ -62,20 +62,20 @@ function AgendaSection(props: Props): ReactElement {
                     "Running Serverless apps on GCP with Cloud Run By Abdelfettah Sghiour",
                 },
                 {
+                  startHour: "15h00",
+                  endHour: "16h:00",
+                  name: "Programming for kids workshop with Snai3i",
+                },
+                {
                   startHour: "16h00",
                   endHour: "17h:00",
                   name:
-                    " كيف تخذلين المجرم الالكتروني عن طريق الهندسة الاجتماعية العكسية ",
+                    " By Dr Djalila Rahaliكيف تخذلين المجرم الالكتروني عن طريق الهندسة الاجتماعية العكسية ",
                 },
                 {
                   startHour: "17h00",
                   endHour: "18h:00",
                   name: "Is the world smarter using IOT? By benhamida Fatima",
-                },
-                {
-                  startHour: "17h00",
-                  endHour: "18h:00",
-                  name: "Formation Design thinking for kids",
                 },
                 {
                   startHour: "18h00",
@@ -118,11 +118,6 @@ function AgendaSection(props: Props): ReactElement {
                   startHour: "16h00",
                   endHour: "17h:00",
                   name: "Flutter Fire : Query like a hero By Meys el haraki  ",
-                },
-                {
-                  startHour: "15h00",
-                  endHour: "17h:00",
-                  name: "Design thinking compétition for kids",
                 },
                 {
                   startHour: "17h00",
