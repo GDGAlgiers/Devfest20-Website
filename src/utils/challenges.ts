@@ -39,6 +39,7 @@ export default [
       },
     ],
     narrowCard: false,
+    link: "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/ML",
   },
   {
     name: "Web Development",
@@ -82,6 +83,7 @@ export default [
       },
     ],
     narrowCard: false,
+    link: "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/Web",
   },
   {
     name: "IT Automation",
@@ -107,6 +109,8 @@ export default [
       },
     ],
     narrowCard: false,
+    link:
+      "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/ItAutomation",
   },
   {
     name: "Mobile Development",
@@ -148,6 +152,8 @@ export default [
       },
     ],
     narrowCard: true,
+    link:
+      "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/Mobile",
   },
   {
     name: "Online Safety Challenge",
@@ -173,5 +179,7 @@ export default [
       },
     ],
     narrowCard: true,
+    link:
+      "https://github.com/GDGAlgiers/Devfest20Challenges/tree/master/OnlineSafety",
   },
 ]
