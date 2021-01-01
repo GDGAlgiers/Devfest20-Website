@@ -2,22 +2,27 @@ import React, { ReactElement } from "react"
 import HeroCard from "./HeroCard"
 import HeroDescription from "./HeroDescription"
 import cls from "classnames"
+import Button from "../common/Button/Button"
+import styled from "styled-components"
 import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 
 interface HeroSectionProps {}
 
 function heroSection(props: HeroSectionProps): ReactElement {
   return (
-    <WithDotsBackgroundContainer
-      className={cls(
-        "bg-nightBlue  h-auto min-h-screen flex justify-center items-center"
-      )}
+    <Section
+      id="hero"
+      className="w-full flex flex-row justify-center items-start h-full "
     >
-      <Section id="hero" className="w-full flex flex-row justify-center h-full">
+      <WithDotsBackgroundContainer
+        className={cls(
+          "bg-nightBlue  h-auto min-h-screen flex justify-center items-start pt-32"
+        )}
+      >
         <div
-          className="w-full   flex flex-row justify-start"
+          className="w-full   flex flex-col justify-start"
           style={{
-            maxWidth: 1300,
+            maxWidth: 1400,
           }}
         >
           <div className="hidden md:flex justify-center text-white bg-nightBlue self-start py-12 px-12 mr-40">
@@ -27,19 +32,51 @@ function heroSection(props: HeroSectionProps): ReactElement {
               className="w-32"
             />
           </div>
-          <div
-            className="flex flex-col justify-center flex-1 lg:mx-0 lg:w-auto w-full mx-auto  "
-            style={{
-              maxWidth: 500,
-            }}
-          >
-            <HeroCard containerClassName="mt-32 " />
-            <HeroDescription containerClassName="mb-16"></HeroDescription>
+          <div className="flex flex-row justify-between flex-1 lg:mx-0 lg:w-auto w-full mx-auto  ">
+            <div className="flex flex-col mb-6 mt-4">
+              <div className="bg-nightBlue text-white-lighter flex-1 flex flex-col justify-center">
+                <ThanksText
+                  style={{
+                    maxWidth: 700,
+                  }}
+                >
+                  Thank you for attending Devfest Algiers 2020 which was held
+                  Virtually in 13-14 November
+                </ThanksText>
+              </div>
+
+              <FeaturedSessionButton
+                style={{
+                  maxWidth: 380,
+                }}
+              >
+                Check out featured sessions
+              </FeaturedSessionButton>
+            </div>
+            <HeroCard />
+            {/**
+             * <HeroDescription containerClassName="mb-16"></HeroDescription>
+             */}
           </div>
         </div>
-      </Section>
-    </WithDotsBackgroundContainer>
+      </WithDotsBackgroundContainer>
+    </Section>
   )
 }
-
+const ThanksText = styled.p.attrs((props) => ({
+  ...props,
+  className: cls("text-white", "text-3xl", "font-semibold"),
+}))``
+const FeaturedSessionButton = styled(Button).attrs((props) => ({
+  ...props,
+  className: cls(
+    "bg-yellow",
+    "py-4",
+    "px-4",
+    "text-2xl",
+    "items-start",
+    "font-medium",
+    "text-white-lighter"
+  ),
+}))``
 export default heroSection
