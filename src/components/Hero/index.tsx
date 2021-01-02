@@ -4,6 +4,7 @@ import HeroDescription from "./HeroDescription"
 import cls from "classnames"
 import Button from "../common/Button/Button"
 import styled from "styled-components"
+import { navigate } from "gatsby"
 import Section, { WithDotsBackgroundContainer } from "../common/layout/Section"
 
 interface HeroSectionProps {}
@@ -49,6 +50,7 @@ function heroSection(props: HeroSectionProps): ReactElement {
                 style={{
                   maxWidth: 380,
                 }}
+                onClick={() => navigate("#agenda")}
               >
                 Check out featured sessions
               </FeaturedSessionButton>
@@ -65,7 +67,7 @@ function heroSection(props: HeroSectionProps): ReactElement {
 }
 const ThanksText = styled.p.attrs((props) => ({
   ...props,
-  className: cls("text-white", "text-3xl", "font-semibold"),
+  className: cls("text-white-lighter", "text-3xl", "font-semibold"),
 }))``
 const FeaturedSessionButton = styled(Button).attrs((props) => ({
   ...props,
