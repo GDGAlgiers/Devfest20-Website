@@ -17,13 +17,13 @@ function heroSection(props: HeroSectionProps): ReactElement {
     >
       <WithDotsBackgroundContainer
         className={cls(
-          "bg-nightBlue  h-auto min-h-screen flex justify-center items-start pt-32"
+          "bg-nightBlue  h-auto min-h-screen flex justify-center items-start pt-32 pb-8"
         )}
       >
         <div
           className="w-full   flex flex-col justify-start"
           style={{
-            maxWidth: 1400,
+            maxWidth: 1200,
           }}
         >
           <div className="hidden md:flex justify-center text-white bg-nightBlue self-start py-12 px-12 mr-40">
@@ -34,7 +34,7 @@ function heroSection(props: HeroSectionProps): ReactElement {
             />
           </div>
           <div className="flex flex-row justify-between flex-1 lg:mx-0 lg:w-auto w-full mx-auto  ">
-            <div className="flex flex-col mb-6 mt-4">
+            <div className="flex flex-col mb-6 mt-4 items-center lg:items-start">
               <div className="bg-nightBlue text-white-lighter flex-1 flex flex-col justify-center">
                 <ThanksText
                   style={{
@@ -51,11 +51,12 @@ function heroSection(props: HeroSectionProps): ReactElement {
                   maxWidth: 380,
                 }}
                 onClick={() => navigate("#agenda")}
+                className="lg:mt-0 mt-10"
               >
                 Check out featured sessions
               </FeaturedSessionButton>
             </div>
-            <HeroCard />
+            <HeroCard containerClassName="hidden lg:inline-block" />
             {/**
              * <HeroDescription containerClassName="mb-16"></HeroDescription>
              */}
