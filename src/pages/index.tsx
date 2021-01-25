@@ -48,7 +48,7 @@ function Index(props: PageProps<Props>): ReactElement {
   console.log(`
   ***********************************************************************
   *                                                                     *
-  *             This is definetly not the code part :)                  *
+  *             This is definitely not the code part :)                  *
   *                       gdGhlICN3aD                                   *
   *                                                                     *
   ***********************************************************************
