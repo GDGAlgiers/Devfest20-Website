@@ -82,7 +82,8 @@ function Navbar({ className }: NavBarProps): ReactElement {
       </MenuButton>
       <NavLinks open={open}>
         {renderLinks()}
-        <div className="relative">
+        {/**
+           * <div className="relative">
           <Button
             className="py-2 px-4 bg-blue cursor-pointer"
             onClick={() => setShowDropDown(true)}
@@ -114,6 +115,7 @@ function Navbar({ className }: NavBarProps): ReactElement {
             />
           )}
         </div>
+           */}
       </NavLinks>
     </StyledNav>
   )

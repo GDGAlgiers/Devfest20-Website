@@ -24,11 +24,11 @@ function HeroCard({ containerClassName }: HeroCardProps): ReactElement {
           />
           <H5 className="font-hairline text-black-lighter">GDG Algiers</H5>
         </div>
-        <HeaderText className="text-7xl lg:text-8xl xl:text-8xl">
+        <HeaderText className="text-7xl lg:text-8xl xl:text-8xl mb-20">
           devfest
         </HeaderText>
 
-        <DateText>November 13th-14th | virtual</DateText>
+        {/* <DateText>November 13th-14th | virtual</DateText> */}
       </div>
     </Card>
   )
